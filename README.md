@@ -31,7 +31,7 @@ The web application (Next.js UI, auth, API server). That's private. The catalog 
 The daily CI pipeline commits fresh CVE data to `packages/catalog-data/` — cloning this repo gives you the latest threat data without running any pipeline scripts.
 
 ```bash
-git clone https://github.com/aigently/catalog
+git clone https://github.com/aelbuni/aigently-catalog
 cd catalog
 npm install
 
