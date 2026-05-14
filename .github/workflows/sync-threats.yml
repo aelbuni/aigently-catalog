@@ -54,7 +54,7 @@ jobs:
       - name: Phase 4 — Export catalog to JSON
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: npm run export:catalog -w web
+        run: npm run export:catalog
 
       - name: Phase 5 — Commit updated catalog artifacts
         run: |

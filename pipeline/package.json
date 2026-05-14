@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "db:migrate": "drizzle-kit migrate",
     "db:seed": "tsx scripts/seed.ts",
     "db:seed:upsert": "SEED_MODE=upsert tsx scripts/seed.ts",
     "sync:threats": "tsx scripts/sync-threats.ts",
