@@ -1,0 +1,449 @@
+{
+  "threatStackRows": [
+    {
+      "threatId": "CVE-2022-0235",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2024-34351",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2022-23539",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2024-46982",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2021-3749",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2021-23337",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2024-51479",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2025-27152",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "GHSA-npm-1111391",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "GHSA-npm-1112182",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "GHSA-npm-1112653",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-25639",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2025-29927",
+      "stackSlug": "nextjs",
+      "severity": "critical"
+    },
+    {
+      "threatId": "CVE-2026-4800",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "GHSA-npm-1116376",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-42043",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-42033",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-42035",
+      "stackSlug": "nextjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2021-3749",
+      "stackSlug": "react-spa",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2021-23337",
+      "stackSlug": "react-spa",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2025-27152",
+      "stackSlug": "react-spa",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-25639",
+      "stackSlug": "react-spa",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-4800",
+      "stackSlug": "react-spa",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-42043",
+      "stackSlug": "react-spa",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-42033",
+      "stackSlug": "react-spa",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-42035",
+      "stackSlug": "react-spa",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2023-25813",
+      "stackSlug": "express",
+      "severity": "critical"
+    },
+    {
+      "threatId": "CVE-2023-22578",
+      "stackSlug": "express",
+      "severity": "critical"
+    },
+    {
+      "threatId": "CVE-2022-2564",
+      "stackSlug": "express",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2023-3696",
+      "stackSlug": "express",
+      "severity": "critical"
+    },
+    {
+      "threatId": "CVE-2022-24304",
+      "stackSlug": "express",
+      "severity": "critical"
+    },
+    {
+      "threatId": "CVE-2022-23539",
+      "stackSlug": "express",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2025-47944",
+      "stackSlug": "express",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2025-48997",
+      "stackSlug": "express",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2025-47935",
+      "stackSlug": "express",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2025-7338",
+      "stackSlug": "express",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2021-23337",
+      "stackSlug": "express",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2024-53900",
+      "stackSlug": "express",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-3304",
+      "stackSlug": "express",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-2359",
+      "stackSlug": "express",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-3520",
+      "stackSlug": "express",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-30951",
+      "stackSlug": "express",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-4800",
+      "stackSlug": "express",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2025-23061",
+      "stackSlug": "express",
+      "severity": "critical"
+    },
+    {
+      "threatId": "CVE-2023-22579",
+      "stackSlug": "express",
+      "severity": "critical"
+    },
+    {
+      "threatId": "CVE-2026-42334",
+      "stackSlug": "express",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2021-3749",
+      "stackSlug": "nuxt",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2025-27415",
+      "stackSlug": "nuxt",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2021-23337",
+      "stackSlug": "nuxt",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2025-27152",
+      "stackSlug": "nuxt",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-25639",
+      "stackSlug": "nuxt",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-4800",
+      "stackSlug": "nuxt",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-42043",
+      "stackSlug": "nuxt",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-42033",
+      "stackSlug": "nuxt",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-42035",
+      "stackSlug": "nuxt",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2022-23539",
+      "stackSlug": "nestjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2021-3749",
+      "stackSlug": "nestjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2021-23337",
+      "stackSlug": "nestjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2025-27152",
+      "stackSlug": "nestjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-25639",
+      "stackSlug": "nestjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-4800",
+      "stackSlug": "nestjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-42043",
+      "stackSlug": "nestjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-42033",
+      "stackSlug": "nestjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2026-42035",
+      "stackSlug": "nestjs",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2025-46814",
+      "stackSlug": "fastapi",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2025-54365",
+      "stackSlug": "fastapi",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2025-59034",
+      "stackSlug": "fastapi",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2021-32677",
+      "stackSlug": "fastapi",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2025-3248",
+      "stackSlug": "fastapi",
+      "severity": "critical"
+    },
+    {
+      "threatId": "CVE-2024-53907",
+      "stackSlug": "django",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2024-45230",
+      "stackSlug": "django",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2024-38875",
+      "stackSlug": "django",
+      "severity": "high"
+    },
+    {
+      "threatId": "DJANGO-CWE-530",
+      "stackSlug": "django",
+      "severity": "high"
+    },
+    {
+      "threatId": "DJANGO-CWE-915",
+      "stackSlug": "django",
+      "severity": "high"
+    },
+    {
+      "threatId": "DJANGO-CWE-284",
+      "stackSlug": "django",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2024-26143",
+      "stackSlug": "rails",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2024-26142",
+      "stackSlug": "rails",
+      "severity": "high"
+    },
+    {
+      "threatId": "RAILS-CWE-915",
+      "stackSlug": "rails",
+      "severity": "high"
+    },
+    {
+      "threatId": "RAILS-CWE-284",
+      "stackSlug": "rails",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2024-24790",
+      "stackSlug": "go",
+      "severity": "critical"
+    },
+    {
+      "threatId": "CVE-2023-39325",
+      "stackSlug": "go",
+      "severity": "high"
+    },
+    {
+      "threatId": "GO-CWE-89",
+      "stackSlug": "go",
+      "severity": "high"
+    },
+    {
+      "threatId": "GO-CWE-798",
+      "stackSlug": "go",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2024-23296",
+      "stackSlug": "ios",
+      "severity": "critical"
+    },
+    {
+      "threatId": "IOS-CWE-312",
+      "stackSlug": "ios",
+      "severity": "high"
+    },
+    {
+      "threatId": "IOS-CWE-295",
+      "stackSlug": "ios",
+      "severity": "high"
+    },
+    {
+      "threatId": "AND-CWE-312",
+      "stackSlug": "android",
+      "severity": "high"
+    },
+    {
+      "threatId": "AND-CWE-295",
+      "stackSlug": "android",
+      "severity": "high"
+    },
+    {
+      "threatId": "CVE-2024-0045",
+      "stackSlug": "android",
+      "severity": "high"
+    }
+  ]
+}

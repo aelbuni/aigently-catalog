@@ -1,0 +1,17 @@
+{
+  "name": "@aigently/mvp-catalog",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./launch": "./src/launch.ts",
+    "./threat-ship": "./src/threat-ship.ts"
+  },
+  "dependencies": {
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  }
+}

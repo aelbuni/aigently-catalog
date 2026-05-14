@@ -1,0 +1,1799 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-05-06T01:08:28.907284",
+  "totalThreats": 61,
+  "stacks": [
+    "nextjs",
+    "react-spa",
+    "express",
+    "nuxt",
+    "nestjs",
+    "fastapi",
+    "django",
+    "rails",
+    "go",
+    "ios",
+    "android"
+  ],
+  "threats": [
+    {
+      "publicId": "CVE-2022-0235",
+      "externalId": "1095073",
+      "cveId": "CVE-2022-0235",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-r683-j2x4-v87g",
+      "family": "owasp_web",
+      "name": "node-fetch forwards secure headers to untrusted sites",
+      "description": "node-fetch forwards secure headers such as `authorization`, `www-authenticate`, `cookie`, & `cookie2` when redirecting to a untrusted site.",
+      "severity": "high",
+      "owaspRefs": [
+        "A02"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "node-fetch",
+          "vulnerableVersions": "<2.6.7",
+          "patchedVersions": ">=2.6.7"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054483",
+      "stacks": [
+        "nextjs"
+      ],
+      "ruleHint": "Upgrade to version 2.6.7 or later"
+    },
+    {
+      "publicId": "CVE-2024-34351",
+      "externalId": "1097295",
+      "cveId": "CVE-2024-34351",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-fr5h-rqp8-mj6g",
+      "family": "owasp_web",
+      "name": "Next.js Server-Side Request Forgery in Server Actions",
+      "description": "### Impact\nA Server-Side Request Forgery (SSRF) vulnerability was identified in Next.js Server Actions by security researchers at Assetnote. If the `Host` header is modified, and the below conditions are also met, an attacker may be able to make requests that appear to be originating from the Next.js application server itself.\n\n#### Prerequisites\n* Next.js (`<14.1.1`) is running in a self-hosted* manner.\n* The Next.js application makes use of Server Actions.\n* The Server Action performs a redire",
+      "severity": "high",
+      "owaspRefs": [
+        "A10"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "next",
+          "vulnerableVersions": ">=13.4.0 <14.1.1",
+          "patchedVersions": ">=14.1.1"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054538",
+      "stacks": [
+        "nextjs"
+      ],
+      "ruleHint": "Upgrade to version 14.1.1 or later"
+    },
+    {
+      "publicId": "CVE-2022-23539",
+      "externalId": "1097690",
+      "cveId": "CVE-2022-23539",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-8cf7-32gw-wr33",
+      "family": "owasp_web",
+      "name": "jsonwebtoken unrestricted key type could lead to legacy keys usage ",
+      "description": "# Overview\n\nVersions `<=8.5.1` of `jsonwebtoken` library could be misconfigured so that legacy, insecure key types are used for signature verification. For example, DSA keys could be used with the RS256 algorithm. \n\n# Am I affected?\n\nYou are affected if you are using an algorithm and a key type other than the combinations mentioned below\n\n| Key type |  algorithm                                    |\n|----------|------------------------------------------|\n| ec           | ES256, ES384, ES512      ",
+      "severity": "high",
+      "owaspRefs": [
+        "A07"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "jsonwebtoken",
+          "vulnerableVersions": "<=8.5.1",
+          "patchedVersions": ">=9.0.0"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054553",
+      "stacks": [
+        "nextjs",
+        "express",
+        "nestjs"
+      ],
+      "ruleHint": "Upgrade to version 9.0.0 or later"
+    },
+    {
+      "publicId": "CVE-2024-46982",
+      "externalId": "1099638",
+      "cveId": "CVE-2024-46982",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-gp8f-8m3g-qvj9",
+      "family": "owasp_web",
+      "name": "Next.js Cache Poisoning",
+      "description": "### Impact\n\nBy sending a crafted HTTP request, it is possible to poison the cache of a non-dynamic server-side rendered route in the pages router (this does not affect the app router). When this crafted request is sent it could coerce Next.js to cache a route that is meant to not be cached and send a `Cache-Control: s-maxage=1, stale-while-revalidate` header which some upstream CDNs may cache as well. \n\nTo be potentially affected all of the following must apply: \n\n- Next.js between 13.5.1 and 14",
+      "severity": "high",
+      "owaspRefs": [
+        "A08",
+        "A01"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "next",
+          "vulnerableVersions": ">=14.0.0 <14.2.10",
+          "patchedVersions": ">=14.2.10"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054564",
+      "stacks": [
+        "nextjs"
+      ],
+      "ruleHint": "Upgrade to version 14.2.10 or later"
+    },
+    {
+      "publicId": "CVE-2021-3749",
+      "externalId": "1102326",
+      "cveId": "CVE-2021-3749",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-cph5-m8f7-6c5x",
+      "family": "owasp_web",
+      "name": "axios Inefficient Regular Expression Complexity vulnerability",
+      "description": "axios before v0.21.2 is vulnerable to Inefficient Regular Expression Complexity.",
+      "severity": "high",
+      "owaspRefs": [
+        "A06"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "axios",
+          "vulnerableVersions": "<0.21.2",
+          "patchedVersions": ">=0.21.2"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054573",
+      "stacks": [
+        "nextjs",
+        "react-spa",
+        "nuxt",
+        "nestjs"
+      ],
+      "ruleHint": "Upgrade to version 0.21.2 or later"
+    },
+    {
+      "publicId": "CVE-2021-23337",
+      "externalId": "1106913",
+      "cveId": "CVE-2021-23337",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-35jh-r3h4-6jhm",
+      "family": "owasp_web",
+      "name": "Command Injection in lodash",
+      "description": "`lodash` versions prior to 4.17.21 are vulnerable to Command Injection via the template function.",
+      "severity": "high",
+      "owaspRefs": [
+        "A03"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "lodash",
+          "vulnerableVersions": "<4.17.21",
+          "patchedVersions": ">=4.17.21"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054581",
+      "stacks": [
+        "nextjs",
+        "react-spa",
+        "express",
+        "nuxt",
+        "nestjs"
+      ],
+      "ruleHint": "Upgrade to version 4.17.21 or later"
+    },
+    {
+      "publicId": "CVE-2024-51479",
+      "externalId": "1107420",
+      "cveId": "CVE-2024-51479",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-7gfc-8cq8-jh5f",
+      "family": "owasp_web",
+      "name": "Next.js authorization bypass vulnerability",
+      "description": "### Impact\nIf a Next.js application is performing authorization in middleware based on pathname, it was possible for this authorization to be bypassed.\n\n### Patches\nThis issue was patched in Next.js `14.2.15` and later.\n\nIf your Next.js application is hosted on Vercel, this vulnerability has been automatically mitigated, regardless of Next.js version.\n\n### Workarounds\nThere are no official workarounds for this vulnerability.\n\n#### Credits\nWe'd like to thank [tyage](http://github.com/tyage) (GMO ",
+      "severity": "high",
+      "owaspRefs": [
+        "A01"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "next",
+          "vulnerableVersions": ">=9.5.5 <14.2.15",
+          "patchedVersions": ">=14.2.15"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054589",
+      "stacks": [
+        "nextjs"
+      ],
+      "ruleHint": "Upgrade to version 14.2.15 or later"
+    },
+    {
+      "publicId": "CVE-2025-27152",
+      "externalId": "1111034",
+      "cveId": "CVE-2025-27152",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-jr5f-v2jv-69x6",
+      "family": "owasp_web",
+      "name": "axios Requests Vulnerable To Possible SSRF and Credential Leakage via Absolute URL",
+      "description": "### Summary\n\nA previously reported issue in axios demonstrated that using protocol-relative URLs could lead to SSRF (Server-Side Request Forgery). Reference: axios/axios#6463\n\nA similar problem that occurs when passing absolute URLs rather than protocol-relative URLs to axios has been identified. Even if \u2060`baseURL` is set, axios sends the request to the specified absolute URL, potentially causing SSRF and credential leakage. This issue impacts both server-side and client-side usage of axios.\n\n##",
+      "severity": "high",
+      "owaspRefs": [
+        "A10"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "axios",
+          "vulnerableVersions": "<0.30.0",
+          "patchedVersions": ">=0.30.0"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054601",
+      "stacks": [
+        "nextjs",
+        "react-spa",
+        "nuxt",
+        "nestjs"
+      ],
+      "ruleHint": "Upgrade to version 0.30.0 or later"
+    },
+    {
+      "publicId": "GHSA-npm-1111391",
+      "externalId": "1111391",
+      "cveId": null,
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-mwv6-3258-q52c",
+      "family": "owasp_web",
+      "name": "Next Vulnerable to Denial of Service with Server Components",
+      "description": "A vulnerability affects certain React packages for versions 19.0.0, 19.0.1, 19.1.0, 19.1.1, 19.1.2, 19.2.0, and 19.2.1 and frameworks that use the affected packages, including Next.js 15.x and 16.x using the App Router. The issue is tracked upstream as [CVE-2025-55184](https://www.cve.org/CVERecord?id=CVE-2025-55184).\n\nA malicious HTTP request can be crafted and sent to any App Router endpoint that, when deserialized, can cause the server process to hang and consume CPU. This can result in denia",
+      "severity": "high",
+      "owaspRefs": [
+        "A06"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "next",
+          "vulnerableVersions": ">=13.3.0 <14.2.34",
+          "patchedVersions": ">=14.2.34"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054608",
+      "stacks": [
+        "nextjs"
+      ],
+      "ruleHint": "Upgrade to version 14.2.34 or later"
+    },
+    {
+      "publicId": "GHSA-npm-1112182",
+      "externalId": "1112182",
+      "cveId": null,
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-5j59-xgg2-r9c4",
+      "family": "owasp_web",
+      "name": "Next has a Denial of Service with Server Components - Incomplete Fix Follow-Up",
+      "description": "It was discovered that the fix for [CVE-2025-55184](https://github.com/advisories/GHSA-2m3v-v2m8-q956) in React Server Components was incomplete and did not fully mitigate denial-of-service conditions across all payload types.  As a result, certain crafted inputs could still trigger excessive resource consumption. \n\nThis vulnerability affects React versions 19.0.2, 19.1.3, and 19.2.2, as well as frameworks that bundle or depend on these versions, including Next.js 13.x, 14.x, 15.x, and 16.x when",
+      "severity": "high",
+      "owaspRefs": [
+        "A06"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "next",
+          "vulnerableVersions": ">=13.3.1-canary.0 <14.2.35",
+          "patchedVersions": ">=14.2.35"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054616",
+      "stacks": [
+        "nextjs"
+      ],
+      "ruleHint": "Upgrade to version 14.2.35 or later"
+    },
+    {
+      "publicId": "GHSA-npm-1112653",
+      "externalId": "1112653",
+      "cveId": null,
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-h25m-26qc-wcjf",
+      "family": "owasp_web",
+      "name": "Next.js HTTP request deserialization can lead to DoS when using insecure React Server Components",
+      "description": "A vulnerability affects certain React Server Components packages for versions 19.0.x, 19.1.x, and 19.2.x and frameworks that use the affected packages, including Next.js 13.x, 14.x, 15.x, and 16.x using the App Router. The issue is tracked upstream as [CVE-2026-23864](https://github.com/facebook/react/security/advisories/GHSA-83fc-fqcc-2hmg).\n\nA specially crafted HTTP request can be sent to any App Router Server Function endpoint that, when deserialized, may trigger excessive CPU usage, out-of-m",
+      "severity": "high",
+      "owaspRefs": [
+        "A06"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "next",
+          "vulnerableVersions": ">=13.0.0 <15.0.8",
+          "patchedVersions": ">=15.0.8"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054626",
+      "stacks": [
+        "nextjs"
+      ],
+      "ruleHint": "Upgrade to version 15.0.8 or later"
+    },
+    {
+      "publicId": "CVE-2026-25639",
+      "externalId": "1113274",
+      "cveId": "CVE-2026-25639",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-43fc-jf86-j433",
+      "family": "owasp_web",
+      "name": "Axios is Vulnerable to Denial of Service via __proto__ Key in mergeConfig",
+      "description": "# Denial of Service via **proto** Key in mergeConfig\n\n### Summary\n\nThe `mergeConfig` function in axios crashes with a TypeError when processing configuration objects containing `__proto__` as an own property. An attacker can trigger this by providing a malicious configuration object created via `JSON.parse()`, causing complete denial of service.\n\n### Details\n\nThe vulnerability exists in `lib/core/mergeConfig.js` at lines 98-101:\n\n```javascript\nutils.forEach(Object.keys({ ...config1, ...config2 }",
+      "severity": "high",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "axios",
+          "vulnerableVersions": "<=0.30.2",
+          "patchedVersions": ">=0.30.3"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054633",
+      "stacks": [
+        "nextjs",
+        "react-spa",
+        "nuxt",
+        "nestjs"
+      ],
+      "ruleHint": "Upgrade to version 0.30.3 or later"
+    },
+    {
+      "publicId": "CVE-2025-29927",
+      "externalId": "1113689",
+      "cveId": "CVE-2025-29927",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-f82v-jwr5-mffw",
+      "family": "owasp_web",
+      "name": "Authorization Bypass in Next.js Middleware",
+      "description": "# Impact\nIt is possible to bypass authorization checks within a Next.js application, if the authorization check occurs in middleware.\n\n# Patches\n* For Next.js 15.x, this issue is fixed in `15.2.3`\n* For Next.js 14.x, this issue is fixed in `14.2.25`\n* For Next.js 13.x, this issue is fixed in 13.5.9\n* For Next.js 12.x, this issue is fixed in 12.3.5\n* For Next.js 11.x, consult the below workaround.\n\n_Note: Next.js deployments hosted on Vercel are automatically protected against this vulnerability.",
+      "severity": "critical",
+      "owaspRefs": [
+        "A01"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "next",
+          "vulnerableVersions": ">=14.0.0 <14.2.25",
+          "patchedVersions": ">=14.2.25"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054639",
+      "stacks": [
+        "nextjs"
+      ],
+      "ruleHint": "Upgrade to version 14.2.25 or later"
+    },
+    {
+      "publicId": "CVE-2026-4800",
+      "externalId": "1115806",
+      "cveId": "CVE-2026-4800",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-r5fr-rjxr-66jc",
+      "family": "owasp_web",
+      "name": "lodash vulnerable to Code Injection via `_.template` imports key names",
+      "description": "### Impact\n\nThe fix for [CVE-2021-23337](https://github.com/advisories/GHSA-35jh-r3h4-6jhm) added validation for the `variable` option in `_.template` but did not apply the same validation to `options.imports` key names. Both paths flow into the same `Function()` constructor sink.\n\nWhen an application passes untrusted input as `options.imports` key names, an attacker can inject default-parameter expressions that execute arbitrary code at template compilation time.\n\nAdditionally, `_.template` use",
+      "severity": "high",
+      "owaspRefs": [
+        "A03"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "lodash",
+          "vulnerableVersions": ">=4.0.0 <=4.17.23",
+          "patchedVersions": ">=4.18.0"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054647",
+      "stacks": [
+        "nextjs",
+        "react-spa",
+        "express",
+        "nuxt",
+        "nestjs"
+      ],
+      "ruleHint": "Upgrade to version 4.18.0 or later"
+    },
+    {
+      "publicId": "GHSA-npm-1116376",
+      "externalId": "1116376",
+      "cveId": null,
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-q4gf-8mx6-v5v3",
+      "family": "owasp_web",
+      "name": "Next.js has a Denial of Service with Server Components",
+      "description": "A vulnerability affects certain React Server Components packages for versions 19.x and frameworks that use the affected packages, including Next.js 13.x, 14.x, 15.x, and 16.x using the App Router. The issue is tracked upstream as [CVE-2026-23869](https://github.com/facebook/react/security/advisories/GHSA-479c-33wc-g2pg). You can read more about this advisory our [this changelog](https://vercel.com/changelog/summary-of-cve-2026-23869).\n\nA specially crafted HTTP request can be sent to any App Rout",
+      "severity": "high",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "next",
+          "vulnerableVersions": ">=13.0.0 <15.5.15",
+          "patchedVersions": ">=15.5.15"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054654",
+      "stacks": [
+        "nextjs"
+      ],
+      "ruleHint": "Upgrade to version 15.5.15 or later"
+    },
+    {
+      "publicId": "CVE-2026-42043",
+      "externalId": "1117575",
+      "cveId": "CVE-2026-42043",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-pmwg-cvhr-8vh7",
+      "family": "owasp_web",
+      "name": "Axios: Incomplete Fix for CVE-2025-62718 \u2014 NO_PROXY Protection Bypassed via RFC 1122 Loopback Subnet (127.0.0.0/8) in Axios 1.15.0",
+      "description": "**1. Executive Summary**\nThis report documents an **incomplete security patch** for the previously disclosed vulnerability **GHSA-3p68-rc4w-qgx5 (CVE-2025-62718)**, which affects the `NO_PROXY` hostname resolution logic in the Axios HTTP library.\n\n**Background \u2014 The Original Vulnerability**\nThe original vulnerability (GHSA-3p68-rc4w-qgx5) disclosed that Axios did not normalize hostnames before comparing them against `NO_PROXY` rules. Specifically, a request to `http://localhost./` (with a traili",
+      "severity": "high",
+      "owaspRefs": [
+        "A10"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "axios",
+          "vulnerableVersions": "<=0.31.0",
+          "patchedVersions": ">=0.31.1"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054662",
+      "stacks": [
+        "nextjs",
+        "react-spa",
+        "nuxt",
+        "nestjs"
+      ],
+      "ruleHint": "Upgrade to version 0.31.1 or later"
+    },
+    {
+      "publicId": "CVE-2026-42033",
+      "externalId": "1117590",
+      "cveId": "CVE-2026-42033",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-pf86-5x62-jrwf",
+      "family": "owasp_web",
+      "name": "Axios: Prototype Pollution Gadgets - Response Tampering, Data Exfiltration, and Request Hijacking",
+      "description": "## Summary\n\nWhen `Object.prototype` has been polluted by any co-dependency with keys that axios reads without a `hasOwnProperty` guard, an attacker can (a) silently intercept and modify every JSON response before the application sees it, or (b) fully hijack the underlying HTTP transport, gaining access to request credentials, headers, and body. The precondition is prototype pollution from a separate source in the same process -- lodash < 4.17.21, or any of several other common npm packages with ",
+      "severity": "high",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "axios",
+          "vulnerableVersions": "<=0.31.0",
+          "patchedVersions": ">=0.31.1"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054672",
+      "stacks": [
+        "nextjs",
+        "react-spa",
+        "nuxt",
+        "nestjs"
+      ],
+      "ruleHint": "Upgrade to version 0.31.1 or later"
+    },
+    {
+      "publicId": "CVE-2026-42035",
+      "externalId": "1117592",
+      "cveId": "CVE-2026-42035",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-6chq-wfr3-2hj9",
+      "family": "owasp_web",
+      "name": "Axios: Header Injection via Prototype Pollution",
+      "description": "### Summary\n\nA prototype pollution gadget exists in the Axios HTTP adapter (lib/adapters/http.js) that allows an attacker to inject arbitrary HTTP headers into outgoing requests. The vulnerability exploits duck-type checking of the data payload, where if Object.prototype is polluted with getHeaders, append, pipe, on, once, and Symbol.toStringTag, Axios misidentifies any plain object payload as a FormData instance and calls the attacker-controlled getHeaders() function, merging the returned heade",
+      "severity": "high",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "axios",
+          "vulnerableVersions": "<=0.31.0",
+          "patchedVersions": ">=0.31.1"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.054680",
+      "stacks": [
+        "nextjs",
+        "react-spa",
+        "nuxt",
+        "nestjs"
+      ],
+      "ruleHint": "Upgrade to version 0.31.1 or later"
+    },
+    {
+      "publicId": "CVE-2023-25813",
+      "externalId": "1091121",
+      "cveId": "CVE-2023-25813",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-wrh9-cjv3-2hpw",
+      "family": "owasp_web",
+      "name": "Sequelize vulnerable to SQL Injection via replacements",
+      "description": "### Impact\n\nThe SQL injection exploit is related to replacements. Here is such an example: \n\nIn the following query, some parameters are passed through replacements, and some are passed directly through the `where` option.\n\n```typescript\nUser.findAll({\n  where: or(\n    literal('soundex(\"firstName\") = soundex(:firstName)'),\n    { lastName: lastName },\n  ),\n  replacements: { firstName },\n})\n```\n\nThis is a very legitimate use case, but this query was vulnerable to SQL injection due to how Sequelize",
+      "severity": "critical",
+      "owaspRefs": [
+        "A03"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "sequelize",
+          "vulnerableVersions": "<6.19.1",
+          "patchedVersions": ">=6.19.1"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599214",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 6.19.1 or later"
+    },
+    {
+      "publicId": "CVE-2023-22578",
+      "externalId": "1091149",
+      "cveId": "CVE-2023-22578",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-f598-mfpv-gmfx",
+      "family": "owasp_web",
+      "name": "Sequelize - Default support for \u201craw attributes\u201d when using parentheses",
+      "description": "### Impact\n\nSequelize 6.28.2 and prior has a dangerous feature where using parentheses in the attribute option would make Sequelize use the string as-is in the SQL\n\n```ts\nUser.findAll({\n  attributes: [\n    ['count(id)', 'count']\n  ]\n});\n```\n\nProduced\n\n```sql\nSELECT count(id) AS \"count\" FROM \"users\"\n```\n\n### Patches\n\nThis feature was deprecated in Sequelize 5, and using it prints a deprecation warning.\n\nThis issue has been patched in [`@sequelize/core@7.0.0.alpha-20`](https://github.com/sequelize",
+      "severity": "critical",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "sequelize",
+          "vulnerableVersions": "<6.29.0",
+          "patchedVersions": ">=6.29.0"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599236",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 6.29.0 or later"
+    },
+    {
+      "publicId": "CVE-2022-2564",
+      "externalId": "1095078",
+      "cveId": "CVE-2022-2564",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-f825-f98c-gj3g",
+      "family": "owasp_web",
+      "name": "automattic/mongoose vulnerable to Prototype pollution via Schema.path",
+      "description": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Affected versions of this package are vulnerable to Prototype Pollution. The `Schema.path()` function is vulnerable to prototype pollution when setting the schema object. This vulnerability allows modification of the Object prototype and could be manipulated into a Denial of Service (DoS) attack.",
+      "severity": "high",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "mongoose",
+          "vulnerableVersions": "<5.13.15",
+          "patchedVersions": ">=5.13.15"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599245",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 5.13.15 or later"
+    },
+    {
+      "publicId": "CVE-2023-3696",
+      "externalId": "1095080",
+      "cveId": "CVE-2023-3696",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-9m93-w8w6-76hh",
+      "family": "owasp_web",
+      "name": "Mongoose Prototype Pollution vulnerability",
+      "description": "Prototype Pollution in GitHub repository automattic/mongoose prior to 7.3.3, 6.11.3, and 5.13.20.",
+      "severity": "critical",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "mongoose",
+          "vulnerableVersions": "<5.13.20",
+          "patchedVersions": ">=5.13.20"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599252",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 5.13.20 or later"
+    },
+    {
+      "publicId": "CVE-2022-24304",
+      "externalId": "1097158",
+      "cveId": "CVE-2022-24304",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-h8hf-x3f4-xwgp",
+      "family": "owasp_web",
+      "name": "Mongoose Vulnerable to Prototype Pollution in Schema Object",
+      "description": "### Description\nMongoose is a MongoDB object modeling tool designed to work in an asynchronous environment.\n\nAffected versions of this package are vulnerable to Prototype Pollution. The `Schema.path()` function is vulnerable to prototype pollution when setting the `schema` object. This vulnerability allows modification of the Object prototype and could be manipulated into a Denial of Service (DoS) attack.\n\n### Proof of Concept\n```js\n// poc.js\nconst mongoose = require('mongoose');\nconst schema = ",
+      "severity": "critical",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "mongoose",
+          "vulnerableVersions": "<5.13.15",
+          "patchedVersions": ">=5.13.15"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599259",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 5.13.15 or later"
+    },
+    {
+      "publicId": "CVE-2025-47944",
+      "externalId": "1104780",
+      "cveId": "CVE-2025-47944",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-4pg4-qvpc-4q3h",
+      "family": "owasp_web",
+      "name": "Multer vulnerable to Denial of Service from maliciously crafted requests",
+      "description": "### Impact\nA vulnerability in Multer versions >=1.4.4-lts.1 allows an attacker to trigger a Denial of Service (DoS) by sending a malformed multi-part upload request. This request causes an unhandled exception, leading to a crash of the process.\n\n### Patches\nUsers should upgrade to `2.0.0`\n\n### Workarounds\nNone\n\n### References\n\n- https://github.com/expressjs/multer/issues/1176\n- https://github.com/expressjs/multer/commit/2c8505f207d923dd8de13a9f93a4563e59933665",
+      "severity": "high",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "multer",
+          "vulnerableVersions": ">=1.4.4-lts.1 <2.0.0",
+          "patchedVersions": ">=2.0.0"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599318",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 2.0.0 or later"
+    },
+    {
+      "publicId": "CVE-2025-48997",
+      "externalId": "1105262",
+      "cveId": "CVE-2025-48997",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-g5hg-p3ph-g8qg",
+      "family": "owasp_web",
+      "name": "Multer vulnerable to Denial of Service via unhandled exception",
+      "description": "### Impact\n\nA vulnerability in Multer versions >=1.4.4-lts.1, <2.0.1 allows an attacker to trigger a Denial of Service (DoS) by sending an upload file request with an empty string field name. This request causes an unhandled exception, leading to a crash of the process.\n\n### Patches\n\nUsers should upgrade to `2.0.1`\n\n### Workarounds\n\nNone\n\n### References\n\nhttps://github.com/expressjs/multer/commit/35a3272b611945155e046dd5cef11088587635e9\nhttps://github.com/expressjs/multer/issues/1233\nhttps://git",
+      "severity": "high",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "multer",
+          "vulnerableVersions": ">=1.4.4-lts.1 <2.0.1",
+          "patchedVersions": ">=2.0.1"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599330",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 2.0.1 or later"
+    },
+    {
+      "publicId": "CVE-2025-47935",
+      "externalId": "1105267",
+      "cveId": "CVE-2025-47935",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-44fp-w29j-9vj5",
+      "family": "owasp_web",
+      "name": "Multer vulnerable to Denial of Service via memory leaks from unclosed streams",
+      "description": "### Impact\n\nMulter <2.0.0 is vulnerable to a resource exhaustion and memory leak issue due to improper stream handling. When the HTTP request stream emits an error, the internal `busboy` stream is not closed, violating Node.js stream safety guidance.\n\nThis leads to unclosed streams accumulating over time, consuming memory and file descriptors. Under sustained or repeated failure conditions, this can result in denial of service, requiring manual server restarts to recover. All users of Multer han",
+      "severity": "high",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "multer",
+          "vulnerableVersions": "<2.0.0",
+          "patchedVersions": ">=2.0.0"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599339",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 2.0.0 or later"
+    },
+    {
+      "publicId": "CVE-2025-7338",
+      "externalId": "1106463",
+      "cveId": "CVE-2025-7338",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-fjgf-rc76-4x9p",
+      "family": "owasp_web",
+      "name": "Multer vulnerable to Denial of Service via unhandled exception from malformed request",
+      "description": "### Impact\n\nA vulnerability in Multer versions >= 1.4.4-lts.1, < 2.0.2 allows an attacker to trigger a Denial of Service (DoS) by sending a malformed request. This request causes an unhandled exception, leading to a crash of the process.\n\n### Patches\n\nUsers should upgrade to `2.0.2`\n\n### Workarounds\n\nNone",
+      "severity": "high",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "multer",
+          "vulnerableVersions": ">=1.4.4-lts.1 <2.0.2",
+          "patchedVersions": ">=2.0.2"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599347",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 2.0.2 or later"
+    },
+    {
+      "publicId": "CVE-2024-53900",
+      "externalId": "1112939",
+      "cveId": "CVE-2024-53900",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-m7xq-9374-9rvx",
+      "family": "owasp_web",
+      "name": "Mongoose search injection vulnerability",
+      "description": "Mongoose versions prior to 8.8.3, 7.8.3, 6.13.5, and 5.13.23 are vulnerable to improper use of the $where operator. This vulnerability arises from the ability of the $where clause to execute arbitrary JavaScript code in MongoDB queries, potentially leading to code injection attacks and unauthorized access or manipulation of database data.",
+      "severity": "high",
+      "owaspRefs": [
+        "A03"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "mongoose",
+          "vulnerableVersions": ">=3.6.0-rc0 <5.13.23",
+          "patchedVersions": ">=5.13.23"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599363",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 5.13.23 or later"
+    },
+    {
+      "publicId": "CVE-2026-3304",
+      "externalId": "1113635",
+      "cveId": "CVE-2026-3304",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-xf7r-hgr6-v32p",
+      "family": "owasp_web",
+      "name": "Multer vulnerable to Denial of Service via incomplete cleanup",
+      "description": "### Impact\n\nA vulnerability in Multer versions < 2.1.0 allows an attacker to trigger a Denial of Service (DoS) by sending malformed requests, potentially causing resource exhaustion.\n\n### Patches\n\nUsers should upgrade to `2.1.0`\n\n### Workarounds\n\nNone",
+      "severity": "high",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "multer",
+          "vulnerableVersions": "<2.1.0",
+          "patchedVersions": ">=2.1.0"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599369",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 2.1.0 or later"
+    },
+    {
+      "publicId": "CVE-2026-2359",
+      "externalId": "1113636",
+      "cveId": "CVE-2026-2359",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-v52c-386h-88mc",
+      "family": "owasp_web",
+      "name": "Multer vulnerable to Denial of Service via resource exhaustion",
+      "description": "### Impact\n\nA vulnerability in Multer versions < 2.1.0 allows an attacker to trigger a Denial of Service (DoS) by dropping connection during file upload, potentially causing resource exhaustion.\n\n### Patches\n\nUsers should upgrade to `2.1.0`\n\n### Workarounds\n\nNone",
+      "severity": "high",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "multer",
+          "vulnerableVersions": "<2.1.0",
+          "patchedVersions": ">=2.1.0"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599376",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 2.1.0 or later"
+    },
+    {
+      "publicId": "CVE-2026-3520",
+      "externalId": "1113996",
+      "cveId": "CVE-2026-3520",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-5528-5vmv-3xc2",
+      "family": "owasp_web",
+      "name": "Multer Vulnerable to Denial of Service via Uncontrolled Recursion",
+      "description": "### Impact\n\nA vulnerability in Multer versions < 2.1.1 allows an attacker to trigger a Denial of Service (DoS) by sending malformed requests, potentially causing stack overflow.\n\n### Patches\n\nUsers should upgrade to `2.1.1`\n\n### Workarounds\n\nNone\n\n### Resources\n\n- https://github.com/expressjs/multer/security/advisories/GHSA-5528-5vmv-3xc2\n- https://www.cve.org/CVERecord?id=CVE-2026-3520\n- https://github.com/expressjs/multer/commit/7e66481f8b2e6c54b982b34c152479e096ce2752\n- https://cna.openjsf.or",
+      "severity": "high",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "multer",
+          "vulnerableVersions": "<2.1.1",
+          "patchedVersions": ">=2.1.1"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599388",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 2.1.1 or later"
+    },
+    {
+      "publicId": "CVE-2026-30951",
+      "externalId": "1114318",
+      "cveId": "CVE-2026-30951",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-6457-6jrx-69cr",
+      "family": "owasp_web",
+      "name": "Sequelize v6 Vulnerable to SQL Injection via JSON Column Cast Type",
+      "description": "### Summary\n\nSQL injection via unescaped cast type in JSON/JSONB `where` clause processing. The `_traverseJSON()` function splits JSON path keys on `::` to extract a cast type, which is interpolated raw into `CAST(... AS <type>)` SQL. An attacker who controls JSON object keys can inject arbitrary SQL and exfiltrate data from any table.\n\nAffected: v6.x through 6.37.7. v7 (`@sequelize/core`) is not affected.\n\n### Details\n\nIn `src/dialects/abstract/query-generator.js`, `_traverseJSON()` extracts a ",
+      "severity": "high",
+      "owaspRefs": [
+        "A03"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "sequelize",
+          "vulnerableVersions": ">=6.0.0-beta.1 <=6.37.7",
+          "patchedVersions": ">=6.37.8"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599395",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 6.37.8 or later"
+    },
+    {
+      "publicId": "CVE-2025-23061",
+      "externalId": "1117404",
+      "cveId": "CVE-2025-23061",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-vg7j-7cwx-8wgw",
+      "family": "owasp_web",
+      "name": "Mongoose search injection vulnerability",
+      "description": "Mongoose versions prior to 8.9.5, 7.8.4, and 6.13.6 are vulnerable to improper use of the `$where` operator. This vulnerability arises from the ability of the `$where` clause to execute arbitrary JavaScript code in MongoDB queries, potentially leading to code injection attacks and unauthorized access or manipulation of database data.\n\nNOTE: this issue exists because of an incomplete fix for CVE-2024-53900.",
+      "severity": "critical",
+      "owaspRefs": [
+        "A03"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "mongoose",
+          "vulnerableVersions": "<6.13.6",
+          "patchedVersions": ">=6.13.6"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599409",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 6.13.6 or later"
+    },
+    {
+      "publicId": "CVE-2023-22579",
+      "externalId": "1117429",
+      "cveId": "CVE-2023-22579",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-vqfx-gj96-3w95",
+      "family": "owasp_web",
+      "name": "Unsafe fall-through in getWhereConditions",
+      "description": "### Impact\n\nProviding an invalid value to the `where` option of a query caused Sequelize to ignore that option instead of throwing an error. \n\nA finder call like the following did not throw an error:\n\n```ts\nUser.findAll({\n  where: new Date(),\n});\n```\n\nAs this option is typically used with plain javascript objects, be aware that this only happens at the top level of this option.\n\n### Patches\n\nThis issue has been patched in [`sequelize@6.28.1`](https://github.com/sequelize/sequelize/pull/15699) & ",
+      "severity": "critical",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "sequelize",
+          "vulnerableVersions": "<6.28.1",
+          "patchedVersions": ">=6.28.1"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599416",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 6.28.1 or later"
+    },
+    {
+      "publicId": "CVE-2026-42334",
+      "externalId": "1117687",
+      "cveId": "CVE-2026-42334",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-wpg9-53fq-2r8h",
+      "family": "owasp_web",
+      "name": "Mongoose's Improper Sanitization of $nor in sanitizeFilter May Allow NoSQL Injection",
+      "description": "### Impact\n\nThis vulnerability allows bypassing Mongoose\u2019s sanitizeFilter query sanitization mechanism via the `$nor` operator.\n\nWhen sanitizeFilter is enabled, Mongoose wraps query operators in `$eq` to neutralize them. However, prior to the fix, `$nor` was not included in the set of logical operators that are recursively sanitized. Because `$nor` accepts an array (like `$and` and `$or`), and arrays do not trigger `hasDollarKeys()`, malicious operators such as `$ne`, `$gt`, or `$regex` could be",
+      "severity": "high",
+      "owaspRefs": [],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "mongoose",
+          "vulnerableVersions": "<6.13.9",
+          "patchedVersions": ">=6.13.9"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.599425",
+      "stacks": [
+        "express"
+      ],
+      "ruleHint": "Upgrade to version 6.13.9 or later"
+    },
+    {
+      "publicId": "CVE-2025-27415",
+      "externalId": "1103361",
+      "cveId": "CVE-2025-27415",
+      "source": "npm",
+      "sourceUrl": "https://github.com/advisories/GHSA-jvhm-gjrh-3h93",
+      "family": "owasp_web",
+      "name": "Nuxt allows DOS via cache poisoning with payload rendering response",
+      "description": "### Summary\n\nBy sending a crafted HTTP request to a server behind an CDN, it is possible in some circumstances to poison the CDN cache and highly impacts the availability of a site.\n\nIt is possible to craft a request, such as `https://mysite.com/?/_payload.json` which will be rendered as JSON. If the CDN in front of a Nuxt site ignores the query string when determining whether to cache a route, then this JSON response could be served to future visitors to the site.\n\n### Impact\n\nAn attacker can p",
+      "severity": "high",
+      "owaspRefs": [
+        "A08"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "nuxt",
+          "vulnerableVersions": ">=3.0.0 <3.16.0",
+          "patchedVersions": ">=3.16.0"
+        }
+      ],
+      "isActivelyExploited": false,
+      "publishedAt": null,
+      "syncedAt": "2026-05-06T01:08:28.768308",
+      "stacks": [
+        "nuxt"
+      ],
+      "ruleHint": "Upgrade to version 3.16.0 or later",
+      "ruleContext": "Crafted payload URLs can be cached by CDNs as JSON, causing denial-of-service or poisoning cached representations.",
+      "mustLines": [
+        "Configure CDN cache keys to respect query strings where payloads alter representations.",
+        "Upgrade Nuxt to a patched release that closes unsafe payload rendering paths."
+      ],
+      "alwaysPin": "nuxt >=3.16.0"
+    },
+    {
+      "publicId": "CVE-2025-46814",
+      "externalId": "CVE-2025-46814",
+      "cveId": "CVE-2025-46814",
+      "source": "manual",
+      "sourceUrl": "https://www.sentinelone.com/vulnerability-database/cve-2025-46814/",
+      "family": "owasp_web",
+      "name": "FastAPI Guard Auth Bypass via X-Forwarded-For",
+      "description": "Attacker manipulates X-Forwarded-For header to bypass IP-based access controls. Fixed in fastapi-guard 2.0.0.",
+      "severity": "high",
+      "owaspRefs": [
+        "A05"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "fastapi-guard",
+          "vulnerableVersions": "<2.0.0",
+          "patchedVersions": ">=2.0.0"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884021",
+      "stacks": [
+        "fastapi"
+      ],
+      "ruleHint": "Validate X-Forwarded-For using Python ipaddress module. Never trust raw header for access control.",
+      "ruleContext": "Attackers can spoof X-Forwarded-For to bypass naive IP allowlists in front of FastAPI apps.",
+      "mustLines": [
+        "Never use raw X-Forwarded-For as the sole authorization signal.",
+        "Normalize and validate forwarded IPs with Python ipaddress and a trusted proxy configuration."
+      ],
+      "alwaysPin": "fastapi-guard >=2.0.0"
+    },
+    {
+      "publicId": "CVE-2025-54365",
+      "externalId": "CVE-2025-54365",
+      "cveId": "CVE-2025-54365",
+      "source": "manual",
+      "sourceUrl": "https://www.miggo.io/vulnerability-database/cve/CVE-2025-54365",
+      "family": "owasp_web",
+      "name": "FastAPI Guard regex bypass \u2014 XSS/SQLi through middleware",
+      "description": "Bounded regex in fastapi-guard 3.0.1 bypassed with payloads exceeding length limits.",
+      "severity": "high",
+      "owaspRefs": [
+        "A03"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "fastapi-guard",
+          "vulnerableVersions": "3.0.1",
+          "patchedVersions": ">=3.0.2"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884154",
+      "stacks": [
+        "fastapi"
+      ],
+      "ruleHint": "Never rely solely on regex middleware. Always use Pydantic model validation as primary defence.",
+      "ruleContext": "Regex-only middleware was bypassed with oversized payloads, allowing XSS/SQLi-class abuse.",
+      "mustLines": [
+        "Do not rely on regex middleware alone for injection defense.",
+        "Treat Pydantic models as the primary request boundary and validation layer."
+      ],
+      "alwaysPin": "fastapi-guard >=3.0.2"
+    },
+    {
+      "publicId": "CVE-2025-59034",
+      "externalId": "CVE-2025-59034",
+      "cveId": "CVE-2025-59034",
+      "source": "manual",
+      "sourceUrl": "https://semgrep.dev/blog/2025/can-llms-detect-idors",
+      "family": "owasp_web",
+      "name": "FastAPI IDOR \u2014 route missing authorization check (found by Claude Code)",
+      "description": "FastAPI routes with resource ID path parameters had no ownership check. validate_project_access was a no-op stub.",
+      "severity": "high",
+      "owaspRefs": [
+        "A01"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "fastapi",
+          "vulnerableVersions": "any",
+          "patchedVersions": "manual fix"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884186",
+      "stacks": [
+        "fastapi"
+      ],
+      "ruleHint": "Every route with path parameter must scope DB query through current_user.",
+      "ruleContext": "Resource IDs in routes were accepted without ownership checks, enabling IDOR across tenants.",
+      "mustLines": [
+        "Authorize every handler that accepts a resource identifier.",
+        "Scope database queries through current_user (or equivalent); never fetch by id alone."
+      ],
+      "alwaysPin": "fastapi manual fix"
+    },
+    {
+      "publicId": "CVE-2021-32677",
+      "externalId": "CVE-2021-32677",
+      "cveId": "CVE-2021-32677",
+      "source": "manual",
+      "sourceUrl": "https://github.com/advisories/GHSA-8h2j-cgx8-6xv7",
+      "family": "owasp_web",
+      "name": "FastAPI CSRF via text/plain content-type bypass",
+      "description": "FastAPI <0.65.2 accepted JSON from text/plain requests enabling CSRF attacks without preflight.",
+      "severity": "high",
+      "owaspRefs": [
+        "A08"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "fastapi",
+          "vulnerableVersions": "<0.65.2",
+          "patchedVersions": ">=0.65.2"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884208",
+      "stacks": [
+        "fastapi"
+      ],
+      "ruleHint": "Use fastapi>=0.65.2. Never use cookie-only auth without CSRF validation.",
+      "ruleContext": "Older FastAPI accepted JSON bodies submitted as text/plain, weakening CSRF preflight assumptions.",
+      "mustLines": [
+        "Upgrade FastAPI to a release that closes the text/plain JSON bypass.",
+        "Avoid cookie-only authentication without CSRF defenses on mutating routes."
+      ],
+      "alwaysPin": "fastapi >=0.65.2"
+    },
+    {
+      "publicId": "CVE-2025-3248",
+      "externalId": "CVE-2025-3248",
+      "cveId": "CVE-2025-3248",
+      "source": "manual",
+      "sourceUrl": "https://cloudsmith.com/blog/cve-2025-3248",
+      "family": "owasp_web",
+      "name": "FastAPI unauthenticated RCE via code eval endpoint (Langflow)",
+      "description": "FastAPI app executed arbitrary Python via /api/v1/validate/code without authentication. Actively exploited in wild.",
+      "severity": "critical",
+      "owaspRefs": [
+        "A03",
+        "A07"
+      ],
+      "mitreAttackIds": [
+        "AML.T0051"
+      ],
+      "affectedProducts": [
+        {
+          "name": "langflow",
+          "vulnerableVersions": "<1.3.0",
+          "patchedVersions": ">=1.3.0"
+        }
+      ],
+      "isActivelyExploited": true,
+      "syncedAt": "2026-05-06T01:08:27.884230",
+      "stacks": [
+        "fastapi"
+      ],
+      "ruleHint": "Never expose code execution endpoints without auth. Never eval() user input.",
+      "ruleContext": "An unauthenticated code-validation endpoint allowed arbitrary Python execution via Langflow integration.",
+      "mustLines": [
+        "Never expose remote code execution or validation endpoints without strong authentication.",
+        "Never eval(), exec(), or dynamically run untrusted Python from HTTP payloads."
+      ],
+      "alwaysPin": "langflow >=1.3.0"
+    },
+    {
+      "publicId": "CVE-2024-53907",
+      "externalId": "CVE-2024-53907",
+      "cveId": "CVE-2024-53907",
+      "source": "manual",
+      "sourceUrl": "https://nvd.nist.gov/vuln/detail/CVE-2024-53907",
+      "family": "owasp_web",
+      "name": "Django ReDoS in strip_tags()",
+      "description": "Denial of service via catastrophic backtracking in django.utils.html.strip_tags() with crafted input.",
+      "severity": "high",
+      "owaspRefs": [
+        "A06"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "django",
+          "vulnerableVersions": "<4.2.17",
+          "patchedVersions": ">=4.2.17"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884288",
+      "stacks": [
+        "django"
+      ],
+      "ruleHint": "Pin django>=4.2.17. Never use strip_tags() on untrusted input without length limiting."
+    },
+    {
+      "publicId": "CVE-2024-45230",
+      "externalId": "CVE-2024-45230",
+      "cveId": "CVE-2024-45230",
+      "source": "manual",
+      "sourceUrl": "https://nvd.nist.gov/vuln/detail/CVE-2024-45230",
+      "family": "owasp_web",
+      "name": "Django urlize() XSS",
+      "description": "django.utils.html.urlize() did not escape certain HTML characters, leading to XSS.",
+      "severity": "high",
+      "owaspRefs": [
+        "A03"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "django",
+          "vulnerableVersions": "<4.2.16",
+          "patchedVersions": ">=4.2.16"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884359",
+      "stacks": [
+        "django"
+      ],
+      "ruleHint": "Pin django>=4.2.16. Never use urlize() on untrusted content without |escape."
+    },
+    {
+      "publicId": "CVE-2024-38875",
+      "externalId": "CVE-2024-38875",
+      "cveId": "CVE-2024-38875",
+      "source": "manual",
+      "sourceUrl": "https://nvd.nist.gov/vuln/detail/CVE-2024-38875",
+      "family": "owasp_web",
+      "name": "Django URLValidator ReDoS",
+      "description": "URLValidator susceptible to ReDoS with specially crafted URLs.",
+      "severity": "high",
+      "owaspRefs": [
+        "A06"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "django",
+          "vulnerableVersions": "<4.2.14",
+          "patchedVersions": ">=4.2.14"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884389",
+      "stacks": [
+        "django"
+      ],
+      "ruleHint": "Pin django>=4.2.14. Pre-validate URL length before URLValidator."
+    },
+    {
+      "publicId": "DJANGO-CWE-530",
+      "externalId": "DJANGO-CWE-530",
+      "cveId": null,
+      "source": "manual",
+      "sourceUrl": null,
+      "family": "owasp_web",
+      "name": "Django DEBUG=True in production exposes stack traces and secrets",
+      "description": "AI coding tools consistently generate settings.py with DEBUG=True, exposing SQL queries, environment variables, and stack traces.",
+      "severity": "high",
+      "owaspRefs": [
+        "A05"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "django",
+          "vulnerableVersions": "any with DEBUG=True",
+          "patchedVersions": "manual fix"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884413",
+      "stacks": [
+        "django"
+      ],
+      "ruleHint": "Always set DEBUG = os.getenv(DJANGO_DEBUG, False) == True. Never hardcode DEBUG=True."
+    },
+    {
+      "publicId": "DJANGO-CWE-915",
+      "externalId": "DJANGO-CWE-915",
+      "cveId": null,
+      "source": "manual",
+      "sourceUrl": null,
+      "family": "owasp_web",
+      "name": "Django mass assignment via fields=__all__ in ModelForm",
+      "description": "AI generates ModelForms with fields=__all__ allowing attackers to set any model field including is_admin, is_staff.",
+      "severity": "high",
+      "owaspRefs": [
+        "A08"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "django",
+          "vulnerableVersions": "any",
+          "patchedVersions": "manual fix"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884442",
+      "stacks": [
+        "django"
+      ],
+      "ruleHint": "Never use fields=__all__. Always explicitly list permitted fields in ModelForm and DRF serializers."
+    },
+    {
+      "publicId": "DJANGO-CWE-284",
+      "externalId": "DJANGO-CWE-284",
+      "cveId": null,
+      "source": "manual",
+      "sourceUrl": null,
+      "family": "owasp_web",
+      "name": "Django IDOR via missing current_user scoping",
+      "description": "AI generates views using Model.objects.get(pk=pk) without scoping to request.user, enabling any authenticated user to access any record.",
+      "severity": "high",
+      "owaspRefs": [
+        "A01"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "django",
+          "vulnerableVersions": "any",
+          "patchedVersions": "manual fix"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884465",
+      "stacks": [
+        "django"
+      ],
+      "ruleHint": "Always scope queryset: request.user.models.get(pk=pk). Never use Model.objects.get(pk=pk) in authenticated views."
+    },
+    {
+      "publicId": "CVE-2024-26143",
+      "externalId": "CVE-2024-26143",
+      "cveId": "CVE-2024-26143",
+      "source": "manual",
+      "sourceUrl": "https://nvd.nist.gov/vuln/detail/CVE-2024-26143",
+      "family": "owasp_web",
+      "name": "Rails ReDoS in Accept header parsing",
+      "description": "Action Dispatch vulnerable to ReDoS via crafted Accept headers.",
+      "severity": "high",
+      "owaspRefs": [
+        "A06"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "rails",
+          "vulnerableVersions": "<7.1.3.2",
+          "patchedVersions": ">=7.1.3.2"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884516",
+      "stacks": [
+        "rails"
+      ],
+      "ruleHint": "Pin rails>=7.1.3.2. Never manually parse Accept headers."
+    },
+    {
+      "publicId": "CVE-2024-26142",
+      "externalId": "CVE-2024-26142",
+      "cveId": "CVE-2024-26142",
+      "source": "manual",
+      "sourceUrl": "https://nvd.nist.gov/vuln/detail/CVE-2024-26142",
+      "family": "owasp_web",
+      "name": "Rails ReDoS in HTTP Token authentication",
+      "description": "HTTP Token authentication parsing vulnerable to ReDoS.",
+      "severity": "high",
+      "owaspRefs": [
+        "A07"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "rails",
+          "vulnerableVersions": "<7.1.3.2",
+          "patchedVersions": ">=7.1.3.2"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884571",
+      "stacks": [
+        "rails"
+      ],
+      "ruleHint": "Pin rails>=7.1.3.2. Use Devise or Rodauth for authentication."
+    },
+    {
+      "publicId": "RAILS-CWE-915",
+      "externalId": "RAILS-CWE-915",
+      "cveId": null,
+      "source": "manual",
+      "sourceUrl": null,
+      "family": "owasp_web",
+      "name": "Rails mass assignment via permit!",
+      "description": "AI generates params.permit! or permit(:all) allowing mass assignment of protected attributes like admin, role.",
+      "severity": "high",
+      "owaspRefs": [
+        "A08"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "rails",
+          "vulnerableVersions": "any",
+          "patchedVersions": "manual fix"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884604",
+      "stacks": [
+        "rails"
+      ],
+      "ruleHint": "Never use params.permit! Always explicitly list: params.require(:user).permit(:name,:email)."
+    },
+    {
+      "publicId": "RAILS-CWE-284",
+      "externalId": "RAILS-CWE-284",
+      "cveId": null,
+      "source": "manual",
+      "sourceUrl": null,
+      "family": "owasp_web",
+      "name": "Rails IDOR via missing current_user scope",
+      "description": "AI generates controller actions finding records by bare ID without scoping to current_user.",
+      "severity": "high",
+      "owaspRefs": [
+        "A01"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "rails",
+          "vulnerableVersions": "any",
+          "patchedVersions": "manual fix"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884629",
+      "stacks": [
+        "rails"
+      ],
+      "ruleHint": "Never use Model.find(params[:id]) in authenticated controllers. Always scope: current_user.models.find(params[:id])."
+    },
+    {
+      "publicId": "CVE-2024-24790",
+      "externalId": "CVE-2024-24790",
+      "cveId": "CVE-2024-24790",
+      "source": "manual",
+      "sourceUrl": "https://nvd.nist.gov/vuln/detail/CVE-2024-24790",
+      "family": "owasp_web",
+      "name": "Go net/netip IPv4-mapped IPv6 misclassification \u2014 SSRF bypass",
+      "description": "Go stdlib misclassified IPv4-mapped IPv6 addresses as loopback/private, enabling SSRF and IP allowlist bypasses.",
+      "severity": "critical",
+      "owaspRefs": [
+        "A01",
+        "A10"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "go",
+          "vulnerableVersions": "<1.22.4",
+          "patchedVersions": ">=1.22.4"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884654",
+      "stacks": [
+        "go"
+      ],
+      "ruleHint": "Pin go>=1.22.4 in go.mod. Never use net.IP.IsLoopback() for security decisions without IPv6 normalization."
+    },
+    {
+      "publicId": "CVE-2023-39325",
+      "externalId": "CVE-2023-39325",
+      "cveId": "CVE-2023-39325",
+      "source": "manual",
+      "sourceUrl": "https://nvd.nist.gov/vuln/detail/CVE-2023-39325",
+      "family": "owasp_web",
+      "name": "Go HTTP/2 rapid reset DoS",
+      "description": "HTTP/2 server vulnerable to rapid stream reset attack causing denial of service.",
+      "severity": "high",
+      "owaspRefs": [
+        "A06"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "golang.org/x/net",
+          "vulnerableVersions": "<0.17.0",
+          "patchedVersions": ">=0.17.0"
+        }
+      ],
+      "isActivelyExploited": true,
+      "syncedAt": "2026-05-06T01:08:27.884679",
+      "stacks": [
+        "go"
+      ],
+      "ruleHint": "Pin golang.org/x/net>=0.17.0. Set http.Server ReadHeaderTimeout and WriteTimeout."
+    },
+    {
+      "publicId": "GO-CWE-89",
+      "externalId": "GO-CWE-89",
+      "cveId": null,
+      "source": "manual",
+      "sourceUrl": null,
+      "family": "owasp_web",
+      "name": "Go SQL injection via fmt.Sprintf in queries",
+      "description": "AI generates SQL queries using fmt.Sprintf with user input \u2014 safe for integers but dangerous for strings.",
+      "severity": "high",
+      "owaspRefs": [
+        "A03"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "database/sql",
+          "vulnerableVersions": "any",
+          "patchedVersions": "use parameterized queries"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884731",
+      "stacks": [
+        "go"
+      ],
+      "ruleHint": "Never build SQL with fmt.Sprintf. Always use parameterized: db.Query(\"SELECT * FROM users WHERE email = ?\", email)."
+    },
+    {
+      "publicId": "GO-CWE-798",
+      "externalId": "GO-CWE-798",
+      "cveId": null,
+      "source": "manual",
+      "sourceUrl": null,
+      "family": "owasp_web",
+      "name": "Go hardcoded secrets in source",
+      "description": "AI embeds database passwords, API keys, and JWT secrets directly in Go source files.",
+      "severity": "high",
+      "owaspRefs": [
+        "A05"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "any go app",
+          "vulnerableVersions": "any",
+          "patchedVersions": "use os.Getenv"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884784",
+      "stacks": [
+        "go"
+      ],
+      "ruleHint": "Always use os.Getenv() or viper with env binding. Use godotenv in development only."
+    },
+    {
+      "publicId": "CVE-2024-23296",
+      "externalId": "CVE-2024-23296",
+      "cveId": "CVE-2024-23296",
+      "source": "manual",
+      "sourceUrl": "https://nvd.nist.gov/vuln/detail/CVE-2024-23296",
+      "family": "owasp_web",
+      "name": "iOS RTKit memory corruption \u2014 actively exploited in the wild",
+      "description": "Memory corruption in RTKit exploited in the wild. Requires iOS 17.4+.",
+      "severity": "critical",
+      "owaspRefs": [
+        "A06"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "iOS",
+          "vulnerableVersions": "<17.4",
+          "patchedVersions": ">=17.4"
+        }
+      ],
+      "isActivelyExploited": true,
+      "syncedAt": "2026-05-06T01:08:27.884819",
+      "stacks": [
+        "ios"
+      ],
+      "ruleHint": "Always target latest iOS SDK. Set MinimumOSVersion to exclude vulnerable versions."
+    },
+    {
+      "publicId": "IOS-CWE-312",
+      "externalId": "IOS-CWE-312",
+      "cveId": null,
+      "source": "manual",
+      "sourceUrl": null,
+      "family": "owasp_web",
+      "name": "iOS sensitive data stored in UserDefaults (unencrypted)",
+      "description": "AI stores tokens, passwords, and PII in UserDefaults which is unencrypted and accessible via device backup.",
+      "severity": "high",
+      "owaspRefs": [
+        "A02"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "iOS app",
+          "vulnerableVersions": "any",
+          "patchedVersions": "use Keychain"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884848",
+      "stacks": [
+        "ios"
+      ],
+      "ruleHint": "Never store credentials in UserDefaults. Always use Keychain with kSecAttrAccessibleWhenUnlockedThisDeviceOnly."
+    },
+    {
+      "publicId": "IOS-CWE-295",
+      "externalId": "IOS-CWE-295",
+      "cveId": null,
+      "source": "manual",
+      "sourceUrl": null,
+      "family": "owasp_web",
+      "name": "iOS missing certificate pinning \u2014 MITM vulnerable",
+      "description": "AI generates URLSession networking without certificate pinning.",
+      "severity": "high",
+      "owaspRefs": [
+        "A07"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "iOS app",
+          "vulnerableVersions": "any",
+          "patchedVersions": "add TrustKit"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.884880",
+      "stacks": [
+        "ios"
+      ],
+      "ruleHint": "Always implement certificate pinning via URLSessionDelegate. Use TrustKit library for management."
+    },
+    {
+      "publicId": "AND-CWE-312",
+      "externalId": "AND-CWE-312",
+      "cveId": null,
+      "source": "manual",
+      "sourceUrl": null,
+      "family": "owasp_web",
+      "name": "Android sensitive data in SharedPreferences (plaintext)",
+      "description": "AI stores auth tokens in plaintext SharedPreferences, accessible to rooted devices and backups.",
+      "severity": "high",
+      "owaspRefs": [
+        "A02"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "android app",
+          "vulnerableVersions": "any",
+          "patchedVersions": "use EncryptedSharedPreferences"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.885030",
+      "stacks": [
+        "android"
+      ],
+      "ruleHint": "Never use SharedPreferences for sensitive data. Always use EncryptedSharedPreferences with MasterKey.Builder."
+    },
+    {
+      "publicId": "AND-CWE-295",
+      "externalId": "AND-CWE-295",
+      "cveId": null,
+      "source": "manual",
+      "sourceUrl": null,
+      "family": "owasp_web",
+      "name": "Android missing network_security_config.xml",
+      "description": "AI generates apps without network security config, allowing cleartext traffic and missing certificate pinning.",
+      "severity": "high",
+      "owaspRefs": [
+        "A07"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "android app",
+          "vulnerableVersions": "any",
+          "patchedVersions": "add network_security_config.xml"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.885066",
+      "stacks": [
+        "android"
+      ],
+      "ruleHint": "Always create res/xml/network_security_config.xml. Set cleartextTrafficPermitted=false."
+    },
+    {
+      "publicId": "CVE-2024-0045",
+      "externalId": "CVE-2024-0045",
+      "cveId": "CVE-2024-0045",
+      "source": "manual",
+      "sourceUrl": "https://nvd.nist.gov/vuln/detail/CVE-2024-0045",
+      "family": "owasp_web",
+      "name": "Android Bluetooth permission bypass",
+      "description": "Missing permission check in Bluetooth stack.",
+      "severity": "high",
+      "owaspRefs": [
+        "A01"
+      ],
+      "mitreAttackIds": [],
+      "affectedProducts": [
+        {
+          "name": "android",
+          "vulnerableVersions": "patch<2024-01-01",
+          "patchedVersions": "patch>=2024-01-01"
+        }
+      ],
+      "isActivelyExploited": false,
+      "syncedAt": "2026-05-06T01:08:27.885097",
+      "stacks": [
+        "android"
+      ],
+      "ruleHint": "Always runtime-check Bluetooth permissions with ActivityCompat.checkSelfPermission() before every operation."
+    }
+  ]
+}

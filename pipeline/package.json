@@ -1,0 +1,30 @@
+{
+  "name": "@aigently/pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "db:seed": "tsx scripts/seed.ts",
+    "db:seed:upsert": "SEED_MODE=upsert tsx scripts/seed.ts",
+    "sync:threats": "tsx scripts/sync-threats.ts",
+    "amplify:threats": "tsx scripts/amplify-threats.ts",
+    "summarize:rules": "tsx scripts/summarize-rules.ts",
+    "export:catalog": "tsx scripts/export-catalog.ts"
+  },
+  "dependencies": {
+    "@aigently/db": "*",
+    "@aigently/mvp-catalog": "*",
+    "@anthropic-ai/bedrock-sdk": "^0.29.1",
+    "@anthropic-ai/sdk": "^0.96.0",
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "^0.45.2",
+    "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/pg": "^8.20.0",
+    "drizzle-kit": "^0.31.10",
+    "tsx": "^4.21.0",
+    "typescript": "^5"
+  }
+}
