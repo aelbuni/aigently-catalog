@@ -16,7 +16,7 @@ import {
   threatStack,
 } from "../lib/db";
 
-const OUT_DIR = path.resolve(__dirname, "../../../packages/catalog-data");
+const OUT_DIR = path.resolve(__dirname, "../../packages/catalog-data");
 
 function write(filename: string, data: unknown): void {
   fs.writeFileSync(path.join(OUT_DIR, filename), JSON.stringify(data, null, 2) + "\n");

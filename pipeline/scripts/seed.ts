@@ -34,7 +34,7 @@ import {
 } from "../lib/db";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const REPO_ROOT = join(__dirname, "..", "..", "..");
+const REPO_ROOT = join(__dirname, "..", "..");
 const CATALOG_DIR = join(REPO_ROOT, "packages", "catalog-data");
 
 const CONTEXT_WARN_CHARS = 450;
