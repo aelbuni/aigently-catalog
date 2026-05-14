@@ -1,0 +1,23 @@
+node_modules/
+
+# IDE / AI assistant workspaces
+.claude/
+.cursor/
+
+# Secrets — never commit
+pipeline/.env
+.env
+.env.local
+
+# Build outputs
+dist/
+*.tsbuildinfo
+
+# Drizzle snapshots (auto-generated, large — migrations themselves are committed)
+pipeline/drizzle/meta/*.json
+
+# Logs
+*.log
+
+# OS
+.DS_Store

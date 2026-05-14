@@ -1,0 +1,16 @@
+{
+  "name": "aigently-catalog",
+  "private": true,
+  "workspaces": ["packages/*", "pipeline"],
+  "scripts": {
+    "db:up": "docker compose up -d",
+    "db:setup": "npm run db:up && sleep 2 && npm run db:migrate && npm run db:seed",
+    "db:migrate": "npm run db:migrate -w @aigently/pipeline",
+    "db:seed": "npm run db:seed -w @aigently/pipeline",
+    "db:seed:upsert": "npm run db:seed:upsert -w @aigently/pipeline",
+    "sync:threats": "npm run sync:threats -w @aigently/pipeline",
+    "amplify:threats": "npm run amplify:threats -w @aigently/pipeline",
+    "summarize:rules": "npm run summarize:rules -w @aigently/pipeline",
+    "export:catalog": "npm run export:catalog -w @aigently/pipeline"
+  }
+}

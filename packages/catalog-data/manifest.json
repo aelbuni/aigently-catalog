@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-05-17T18:01:05.586Z",
+  "counts": {
+    "threats": 520,
+    "rules": 12,
+    "stacks": 11,
+    "guardrails": 6
+  }
+}

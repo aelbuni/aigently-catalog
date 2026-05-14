@@ -1,0 +1,65 @@
+name: Weekly MCP Release
+
+on:
+  schedule:
+    - cron: "0 8 * * 1" # Every Monday at 08:00 UTC (after weekly sync at 06:00)
+  workflow_dispatch:     # Allow manual trigger
+
+jobs:
+  release:
+    name: Bump version → Tag → Publish
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write   # required for npm provenance
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          registry-url: "https://registry.npmjs.org"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Bump patch version (skip if already tagged)
+        id: bump
+        working-directory: packages/mcp-server
+        run: |
+          CURRENT=$(node -p "require('./package.json').version")
+          if git tag -l "mcp-server/v$CURRENT" | grep -q .; then
+            echo "Tag mcp-server/v$CURRENT already exists — reusing version for re-run"
+            VERSION=$CURRENT
+          else
+            npm version patch --no-git-tag-version
+            VERSION=$(node -p "require('./package.json').version")
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Build (includes catalog-data copy)
+        run: npm run build -w @aigently/mcp-server
+
+      - name: Smoke test
+        run: npm test -w @aigently/mcp-server
+
+      - name: Commit and tag (skip if already done)
+        run: |
+          git config user.name  "aigently-bot"
+          git config user.email "bot@aigently.io"
+          git add packages/mcp-server/package.json
+          git diff --staged --quiet || git commit -m "chore(mcp-server): weekly release v${{ steps.bump.outputs.version }}"
+          git tag "mcp-server/v${{ steps.bump.outputs.version }}" 2>/dev/null || echo "Tag already exists, skipping"
+          git push origin main 2>/dev/null || echo "Nothing new to push"
+          git push origin "mcp-server/v${{ steps.bump.outputs.version }}" 2>/dev/null || echo "Tag already pushed"
+
+      - name: Publish to npm
+        working-directory: packages/mcp-server
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

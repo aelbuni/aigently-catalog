@@ -1,0 +1,90 @@
+[
+  {
+    "slug": "nextjs",
+    "name": "Next.js",
+    "ecosystem": "npm",
+    "catalogStatus": "launch",
+    "securityGrade": null,
+    "sortOrder": 1
+  },
+  {
+    "slug": "express",
+    "name": "Express / Node.js",
+    "ecosystem": "npm",
+    "catalogStatus": "launch",
+    "securityGrade": null,
+    "sortOrder": 2
+  },
+  {
+    "slug": "fastapi",
+    "name": "FastAPI / Python",
+    "ecosystem": "pypi",
+    "catalogStatus": "launch",
+    "securityGrade": null,
+    "sortOrder": 3
+  },
+  {
+    "slug": "nestjs",
+    "name": "NestJS",
+    "ecosystem": "npm",
+    "catalogStatus": "launch",
+    "securityGrade": null,
+    "sortOrder": 4
+  },
+  {
+    "slug": "nuxt",
+    "name": "Nuxt",
+    "ecosystem": "npm",
+    "catalogStatus": "launch",
+    "securityGrade": null,
+    "sortOrder": 5
+  },
+  {
+    "slug": "react-spa",
+    "name": "React SPA",
+    "ecosystem": "npm",
+    "catalogStatus": "launch",
+    "securityGrade": null,
+    "sortOrder": 6
+  },
+  {
+    "slug": "django",
+    "name": "Django",
+    "ecosystem": "pypi",
+    "catalogStatus": "launch",
+    "securityGrade": "",
+    "sortOrder": 7
+  },
+  {
+    "slug": "rails",
+    "name": "Ruby on Rails",
+    "ecosystem": "rubygems",
+    "catalogStatus": "launch",
+    "securityGrade": "",
+    "sortOrder": 8
+  },
+  {
+    "slug": "go",
+    "name": "Go",
+    "ecosystem": "go",
+    "catalogStatus": "launch",
+    "securityGrade": "",
+    "sortOrder": 9
+  },
+  {
+    "slug": "ios",
+    "name": "iOS / Swift",
+    "ecosystem": "swift",
+    "catalogStatus": "launch",
+    "securityGrade": "",
+    "sortOrder": 10
+  },
+  {
+    "slug": "android",
+    "name": "Android / Kotlin",
+    "ecosystem": "maven",
+    "catalogStatus": "launch",
+    "securityGrade": "",
+    "sortOrder": 11
+  }
+]
