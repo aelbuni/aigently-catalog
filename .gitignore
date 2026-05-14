@@ -9,8 +9,8 @@ pipeline/.env
 dist/
 *.tsbuildinfo
 
-# Drizzle
-pipeline/drizzle/
+# Drizzle snapshots (auto-generated, large — migrations themselves are committed)
+pipeline/drizzle/meta/*.json
 
 # Logs
 *.log
