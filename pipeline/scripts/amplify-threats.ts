@@ -90,13 +90,25 @@ async function amplifyThreat(
 
   try {
     const response = await client.messages.create({
-      model:       MODEL,
-      max_tokens:  400,
-      system:      SYSTEM_PROMPT,
+      model:      MODEL,
+      max_tokens: 400,
+      system: [
+        {
+          type:          "text",
+          text:          SYSTEM_PROMPT,
+          cache_control: { type: "ephemeral" },
+        },
+      ],
       tools:       [amplifyTool],
       tool_choice: { type: "tool", name: "write_threat_guardrail" },
       messages:    [{ role: "user", content: userPrompt }],
     });
+
+    const { usage } = response;
+    const cacheCreated = (usage as { cache_creation_input_tokens?: number }).cache_creation_input_tokens ?? 0;
+    const cacheRead    = (usage as { cache_read_input_tokens?: number }).cache_read_input_tokens    ?? 0;
+    if (cacheCreated) process.stdout.write(` [cache warmed: ${cacheCreated}t]`);
+    if (cacheRead)    process.stdout.write(` [cache hit: ${cacheRead}t]`);
 
     const toolUse = response.content.find(b => b.type === "tool_use");
     if (!toolUse || toolUse.type !== "tool_use") return null;
