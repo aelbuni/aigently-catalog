@@ -293,6 +293,13 @@ async function summarizeRule(
   }
 }
 
+function computeStrengthScore(r: { certified: boolean; bodyMdx?: string | null; lineCount?: number | null }): number {
+  const doNot     = /DO NOT|NEVER|AVOID/i.test(r.bodyMdx ?? "") ? 10 : 0;
+  const cert      = r.certified ? 20 : 0;
+  const lineScore = Math.min(Math.floor((r.lineCount ?? 0) / 5), 20);
+  return Math.min(doNot + cert + lineScore + 10, 100);
+}
+
 // ── Main ──────────────────────────────────────────────────────────────────────
 async function main() {
   console.log(`Model: ${MODEL}`);
@@ -305,7 +312,7 @@ async function main() {
   if (!FORCE) conditions.push(isNull(rule.summaryMdx));
 
   const rules = await db
-    .select({ id: rule.id, slug: rule.slug })
+    .select({ id: rule.id, slug: rule.slug, certified: rule.certified, bodyMdx: rule.bodyMdx, lineCount: rule.lineCount })
     .from(rule)
     .where(and(...conditions));
 
@@ -371,9 +378,10 @@ async function main() {
       continue;
     }
 
+    const strengthScore = computeStrengthScore(r);
     await db
       .update(rule)
-      .set({ summaryMdx: rendered, updatedAt: new Date() })
+      .set({ summaryMdx: rendered, strengthScore, updatedAt: new Date() })
       .where(eq(rule.id, r.id));
 
     console.log("✓");

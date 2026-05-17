@@ -141,7 +141,8 @@ export async function runSummarizerForStack(
   stackSlug: string,
   layerSlugs: string[],
   ruleType = "all",
-  onLayerComplete?: (result: LayerSummaryResult) => void
+  onLayerComplete?: (result: LayerSummaryResult) => void,
+  force = false,
 ): Promise<LayerSummaryResult[]> {
   if (layerSlugs.length === 0) return [];
 
@@ -181,12 +182,14 @@ export async function runSummarizerForStack(
       continue;
     }
 
-    const [cached] = await db.select().from(summarizedGuardrail).where(eq(summarizedGuardrail.cacheKey, cacheKey)).limit(1);
-    if (cached && (!cached.expiresAt || cached.expiresAt > new Date())) {
-      const result: LayerSummaryResult = { layerSlug, layerName: layerRow?.name ?? layerSlug, summarizedContent: cached.content, ruleCount: cached.sourceRuleIds.length, conflictCount: cached.conflictCount ?? 0, cacheHit: true, cacheKey };
-      results.push(result);
-      onLayerComplete?.(result);
-      continue;
+    if (!force) {
+      const [cached] = await db.select().from(summarizedGuardrail).where(eq(summarizedGuardrail.cacheKey, cacheKey)).limit(1);
+      if (cached && (!cached.expiresAt || cached.expiresAt > new Date())) {
+        const result: LayerSummaryResult = { layerSlug, layerName: layerRow?.name ?? layerSlug, summarizedContent: cached.content, ruleCount: cached.sourceRuleIds.length, conflictCount: cached.conflictCount ?? 0, cacheHit: true, cacheKey };
+        results.push(result);
+        onLayerComplete?.(result);
+        continue;
+      }
     }
 
     toGenerate.push(ld);
@@ -302,7 +305,7 @@ export async function bulkRunSummarizer(
     if (layerSlugsToProcess.length === 0) continue;
 
     try {
-      const stackResults = await runSummarizerForStack(stackSlug, layerSlugsToProcess);
+      const stackResults = await runSummarizerForStack(stackSlug, layerSlugsToProcess, "all", undefined, mode === "all");
       for (const r of stackResults) {
         if (r.ruleCount > 0) generated++;
       }
