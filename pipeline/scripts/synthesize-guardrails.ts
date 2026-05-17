@@ -3,12 +3,13 @@ import "../lib/load-env.js";
 import { pool } from "../lib/db/index.js";
 import { bulkRunSummarizer } from "../lib/summarizer/pipeline.js";
 
-const MODE = (process.env.SYNTHESIZE_MODE ?? "empty") as "empty" | "stale" | "all";
+const MODE       = (process.env.SYNTHESIZE_MODE ?? "empty") as "empty" | "stale" | "all";
+const STACK_SLUG = process.env.STACK_SLUG;
 
 async function main() {
-  console.log(`Synthesizing guardrails (mode: ${MODE})...`);
+  console.log(`Synthesizing guardrails (mode: ${MODE}${STACK_SLUG ? `, stack: ${STACK_SLUG}` : ""})...`);
 
-  const { generated, skipped, errors } = await bulkRunSummarizer(MODE);
+  const { generated, skipped, errors } = await bulkRunSummarizer(MODE, STACK_SLUG);
 
   if (errors.length > 0) {
     console.error(`\nErrors (${errors.length}):`);

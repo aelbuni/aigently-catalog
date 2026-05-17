@@ -12725,6 +12725,35 @@
     "layers": []
   },
   {
+    "publicId": "CVE-2018-18282",
+    "cveId": "CVE-2018-18282",
+    "source": "osv",
+    "sourceUrl": "https://nvd.nist.gov/vuln/detail/CVE-2018-18282",
+    "family": "owasp_web",
+    "name": "Next.js has cross site scripting (XSS) vulnerability via the 404 or 500 /_error page",
+    "description": "Next.js 7.0.0 and 7.0.1 has XSS via the 404 or 500 /_error page.",
+    "severity": "medium",
+    "owaspRefs": [
+      "A03"
+    ],
+    "isActivelyExploited": false,
+    "affectedProducts": [
+      {
+        "name": "next",
+        "ecosystem": "npm",
+        "patchedVersions": "7.0.2",
+        "vulnerableVersionRange": ">=7.0.0 <7.0.2"
+      }
+    ],
+    "aiAmplification": "{\"patternLines\":[\"ALWAYS escape or sanitize user-controlled query parameters before rendering in error pages.\",\"NEVER trust URL path or query string data in 404/500 error page templates without sanitization.\",\"ALWAYS use framework-provided escaping functions (e.g., JSX auto-escaping) when displaying request data in error responses.\"],\"ruleContext\":\"Error pages can execute unsanitized user input as JavaScript if not properly escaped.\",\"generatedAt\":\"2026-05-17T17:43:09.516Z\",\"model\":\"claude-haiku-4-5-20251001\"}",
+    "publishedAt": "2018-10-15T21:43:12.000Z",
+    "syncedAt": "2026-05-17T08:07:30.373Z",
+    "stacks": [
+      "nextjs"
+    ],
+    "layers": []
+  },
+  {
     "publicId": "CVE-2021-23337",
     "cveId": "CVE-2021-23337",
     "source": "ghsa",
@@ -12780,35 +12809,6 @@
     "aiAmplification": "{\"patternLines\":[\"NEVER pass raw incoming request headers directly into NextResponse.next() without explicit filtering.\",\"ALWAYS construct a clean, explicit headers object containing only the specific headers your middleware needs to forward.\",\"NEVER assume incoming client-supplied headers are safe to reflect back into server-side middleware responses.\",\"ALWAYS audit middleware logic in self-hosted deployments to ensure no sensitive headers such as Authorization or Host are unintentionally propagated.\"],\"ruleContext\":\"Passing raw incoming request headers into middleware responses can enable SSRF by reflecting sensitive headers to unintended internal destinations.\",\"generatedAt\":\"2026-05-14T03:42:20.382Z\",\"model\":\"claude-sonnet-4-6\"}",
     "publishedAt": null,
     "syncedAt": "2026-05-17T08:07:28.516Z",
-    "stacks": [
-      "nextjs"
-    ],
-    "layers": []
-  },
-  {
-    "publicId": "CVE-2018-18282",
-    "cveId": "CVE-2018-18282",
-    "source": "osv",
-    "sourceUrl": "https://nvd.nist.gov/vuln/detail/CVE-2018-18282",
-    "family": "owasp_web",
-    "name": "Next.js has cross site scripting (XSS) vulnerability via the 404 or 500 /_error page",
-    "description": "Next.js 7.0.0 and 7.0.1 has XSS via the 404 or 500 /_error page.",
-    "severity": "medium",
-    "owaspRefs": [
-      "A03"
-    ],
-    "isActivelyExploited": false,
-    "affectedProducts": [
-      {
-        "name": "next",
-        "ecosystem": "npm",
-        "patchedVersions": "7.0.2",
-        "vulnerableVersionRange": ">=7.0.0 <7.0.2"
-      }
-    ],
-    "aiAmplification": null,
-    "publishedAt": "2018-10-15T21:43:12.000Z",
-    "syncedAt": "2026-05-17T08:07:30.373Z",
     "stacks": [
       "nextjs"
     ],

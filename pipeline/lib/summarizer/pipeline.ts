@@ -256,9 +256,10 @@ export async function runSummarizerForStack(
   return results;
 }
 
-/** Bulk generate for all (stack, layer) pairs that have rules. */
+/** Bulk generate for all (stack, layer) pairs that have rules. Pass stackSlugFilter to limit to one stack. */
 export async function bulkRunSummarizer(
-  mode: "empty" | "stale" | "all" = "empty"
+  mode: "empty" | "stale" | "all" = "empty",
+  stackSlugFilter?: string,
 ): Promise<{ generated: number; skipped: number; errors: string[] }> {
   const pairs = await db
     .selectDistinct({ stackSlug: stack.slug, layerSlug: layer.slug, stackId: stack.id, layerId: layer.id })
@@ -280,6 +281,7 @@ export async function bulkRunSummarizer(
   }
 
   for (const [stackSlug, allLayerSlugs] of stackGroups) {
+    if (stackSlugFilter && stackSlug !== stackSlugFilter) continue;
     const layerSlugsToProcess: string[] = [];
 
     for (const layerSlug of allLayerSlugs) {

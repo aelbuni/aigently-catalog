@@ -1,9 +1,9 @@
 import "../lib/load-env";
 
 import Anthropic from "@anthropic-ai/sdk";
-import { eq, isNull } from "drizzle-orm";
+import { and, eq, exists, isNull, sql } from "drizzle-orm";
 
-import { db, pool, threat } from "../lib/db";
+import { db, pool, stack, threat, threatStack } from "../lib/db";
 
 // ── Client setup ─────────────────────────────────────────────────────────────
 // Reads ANTHROPIC_API_KEY from env automatically.
@@ -13,7 +13,8 @@ const MODEL = process.env.AMPLIFY_MODEL ?? "claude-haiku-4-5-20251001";
 const client = new Anthropic();
 
 // ── Config ────────────────────────────────────────────────────────────────────
-const BATCH_SIZE = parseInt(process.env.BATCH_SIZE ?? "50");
+const BATCH_SIZE   = parseInt(process.env.BATCH_SIZE ?? "50");
+const STACK_FILTER = process.env.STACK_FILTER;
 const sleep = (ms: number) => new Promise<void>(r => setTimeout(r, ms));
 
 // ── Tool schema ───────────────────────────────────────────────────────────────
@@ -124,12 +125,26 @@ async function amplifyThreat(
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 async function main() {
-  console.log(`Model: ${MODEL}\n`);
+  console.log(`Model: ${MODEL}`);
+  if (STACK_FILTER) console.log(`Stack filter: ${STACK_FILTER}`);
+  console.log();
+
+  const stackCondition = STACK_FILTER
+    ? exists(
+        db.select({ one: sql`1` })
+          .from(threatStack)
+          .innerJoin(stack, eq(stack.id, threatStack.stackId))
+          .where(and(
+            eq(threatStack.threatId, threat.publicId),
+            eq(stack.slug, STACK_FILTER)
+          ))
+      )
+    : undefined;
 
   const rows = await db
     .select()
     .from(threat)
-    .where(isNull(threat.aiAmplification))
+    .where(stackCondition ? and(isNull(threat.aiAmplification), stackCondition) : isNull(threat.aiAmplification))
     .limit(BATCH_SIZE);
 
   if (rows.length === 0) {
