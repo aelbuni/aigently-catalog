@@ -27,7 +27,8 @@
       "nestjs",
       "nuxt",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-1000225",
@@ -55,7 +56,8 @@
     "syncedAt": "2026-05-17T08:07:31.006Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-39325",
@@ -83,7 +85,8 @@
     "syncedAt": "2026-05-17T08:07:40.653Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-23437",
@@ -112,7 +115,8 @@
     "syncedAt": "2026-05-17T08:07:36.394Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-25292",
@@ -141,7 +145,8 @@
     "syncedAt": "2026-05-17T08:07:36.420Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-24304",
@@ -168,7 +173,8 @@
     "syncedAt": "2026-05-17T08:07:29.432Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-54121",
@@ -194,7 +200,8 @@
     "syncedAt": "2026-05-17T08:07:31.214Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-0222",
@@ -226,7 +233,8 @@
     "syncedAt": "2026-05-17T08:07:32.920Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-3598",
@@ -252,7 +260,8 @@
     "syncedAt": "2026-05-17T08:07:36.814Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-1369",
@@ -280,7 +289,8 @@
     "syncedAt": "2026-05-17T08:07:31.162Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-8213",
@@ -320,7 +330,8 @@
     "syncedAt": "2026-05-17T08:07:33.025Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2012-3442",
@@ -354,7 +365,8 @@
     "syncedAt": "2026-05-17T08:07:33.076Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-2533",
@@ -380,7 +392,8 @@
     "syncedAt": "2026-05-17T08:07:35.899Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2010-4535",
@@ -415,7 +428,8 @@
     "syncedAt": "2026-05-17T08:07:33.261Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-32677",
@@ -442,7 +456,8 @@
     "syncedAt": "2026-05-17T08:07:31.188Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-53907",
@@ -467,7 +482,8 @@
     "syncedAt": "2026-05-17T08:07:33.313Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-59034",
@@ -494,7 +510,8 @@
     "syncedAt": "2026-05-06T05:08:27.884Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-26142",
@@ -521,7 +538,8 @@
     "syncedAt": "2026-05-06T05:08:27.884Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-33131",
@@ -547,7 +565,8 @@
     "syncedAt": "2026-05-17T08:07:31.687Z",
     "stacks": [
       "nuxt"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-12308",
@@ -587,7 +606,8 @@
     "syncedAt": "2026-05-17T08:07:33.235Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-7818",
@@ -633,7 +653,8 @@
     "syncedAt": "2026-05-17T08:07:37.857Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-56332",
@@ -659,7 +680,8 @@
     "syncedAt": "2026-05-17T08:07:28.350Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-44373",
@@ -693,7 +715,8 @@
     "syncedAt": "2026-05-17T08:07:31.739Z",
     "stacks": [
       "nuxt"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-48432",
@@ -731,7 +754,8 @@
     "syncedAt": "2026-05-17T08:07:33.287Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-43864",
@@ -757,7 +781,8 @@
     "syncedAt": "2026-05-17T08:07:31.924Z",
     "stacks": [
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42039",
@@ -786,7 +811,8 @@
       "nextjs",
       "nestjs",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42037",
@@ -812,7 +838,8 @@
     "syncedAt": "2026-05-17T08:07:32.030Z",
     "stacks": [
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-0697",
@@ -846,7 +873,8 @@
     "syncedAt": "2026-05-17T08:07:33.420Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-1855",
@@ -886,7 +914,8 @@
     "syncedAt": "2026-05-17T08:07:38.902Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-4315",
@@ -920,7 +949,8 @@
     "syncedAt": "2026-05-17T08:07:35.403Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-0481",
@@ -961,7 +991,8 @@
     "syncedAt": "2026-05-17T08:07:32.215Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-36359",
@@ -995,7 +1026,8 @@
     "syncedAt": "2026-05-17T08:07:33.472Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-24580",
@@ -1036,7 +1068,8 @@
     "syncedAt": "2026-05-17T08:07:32.267Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-22818",
@@ -1076,7 +1109,8 @@
     "syncedAt": "2026-05-17T08:07:33.524Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-39330",
@@ -1110,7 +1144,8 @@
     "syncedAt": "2026-05-17T08:07:33.576Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-3498",
@@ -1151,7 +1186,8 @@
     "syncedAt": "2026-05-17T08:07:32.319Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-7401",
@@ -1183,7 +1219,8 @@
     "syncedAt": "2026-05-17T08:07:33.758Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-47887",
@@ -1227,7 +1264,8 @@
     "syncedAt": "2026-05-17T08:07:39.033Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2012-4520",
@@ -1262,7 +1300,8 @@
     "syncedAt": "2026-05-17T08:07:32.189Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-39614",
@@ -1294,7 +1333,8 @@
     "syncedAt": "2026-05-17T08:07:33.784Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-34343",
@@ -1322,7 +1362,8 @@
     "syncedAt": "2026-05-17T08:07:29.918Z",
     "stacks": [
       "nuxt"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-23633",
@@ -1368,7 +1409,8 @@
     "syncedAt": "2026-05-17T08:07:39.111Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-1443",
@@ -1403,7 +1445,8 @@
     "syncedAt": "2026-05-17T08:07:32.501Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-2048",
@@ -1432,7 +1475,8 @@
     "syncedAt": "2026-05-17T08:07:32.449Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-0482",
@@ -1478,7 +1522,8 @@
     "syncedAt": "2026-05-17T08:07:32.737Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-35653",
@@ -1504,7 +1549,8 @@
     "syncedAt": "2026-05-17T08:07:36.577Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-44566",
@@ -1539,7 +1585,8 @@
     "syncedAt": "2026-05-17T08:07:39.294Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-1287",
@@ -1579,7 +1626,8 @@
     "syncedAt": "2026-05-17T08:07:34.019Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-44579",
@@ -1611,7 +1659,8 @@
     "syncedAt": "2026-05-17T08:07:30.319Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2010-3933",
@@ -1646,7 +1695,8 @@
     "syncedAt": "2026-05-17T08:07:39.530Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-45590",
@@ -1672,7 +1722,8 @@
     "syncedAt": "2026-05-17T08:07:30.822Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-0276",
@@ -1713,7 +1764,8 @@
     "syncedAt": "2026-05-17T08:07:39.582Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-59681",
@@ -1753,7 +1805,8 @@
     "syncedAt": "2026-05-17T08:07:34.202Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-2316",
@@ -1791,7 +1844,8 @@
     "syncedAt": "2026-05-17T08:07:34.255Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-53908",
@@ -1849,7 +1903,8 @@
     "syncedAt": "2026-05-17T08:07:34.411Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-7035",
@@ -1884,7 +1939,8 @@
     "stacks": [
       "nextjs",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-55184",
@@ -1962,7 +2018,8 @@
     "syncedAt": "2026-05-17T08:07:30.586Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2008-2302",
@@ -2002,7 +2059,8 @@
     "syncedAt": "2026-05-17T08:07:32.553Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-9013",
@@ -2042,7 +2100,8 @@
     "syncedAt": "2026-05-17T08:07:34.437Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2012-3464",
@@ -2088,7 +2147,8 @@
     "syncedAt": "2026-05-17T08:07:40.026Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-55173",
@@ -2117,7 +2177,8 @@
     "syncedAt": "2026-05-17T08:07:28.542Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-23870",
@@ -2194,7 +2255,8 @@
     "syncedAt": "2026-05-17T08:07:30.744Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-28120",
@@ -2228,7 +2290,8 @@
     "syncedAt": "2026-05-17T08:07:40.078Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-13465",
@@ -2260,7 +2323,8 @@
       "nestjs",
       "nuxt",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-27152",
@@ -2290,7 +2354,8 @@
       "nestjs",
       "nuxt",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-10550",
@@ -2318,7 +2383,8 @@
     "syncedAt": "2026-05-17T08:07:31.032Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-10553",
@@ -2346,7 +2412,8 @@
     "syncedAt": "2026-05-17T08:07:30.980Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-62727",
@@ -2375,7 +2442,8 @@
     "syncedAt": "2026-05-17T08:07:31.267Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2012-3444",
@@ -2407,7 +2475,8 @@
     "syncedAt": "2026-05-17T08:07:32.607Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-2950",
@@ -2439,7 +2508,8 @@
       "nestjs",
       "nuxt",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-29057",
@@ -2465,7 +2535,8 @@
     "syncedAt": "2026-05-17T08:07:28.703Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-30798",
@@ -2494,7 +2565,8 @@
     "syncedAt": "2026-05-17T08:07:31.240Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-62718",
@@ -2525,7 +2597,8 @@
       "nextjs",
       "nestjs",
       "nuxt"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-3749",
@@ -2556,6 +2629,9 @@
       "nestjs",
       "nuxt",
       "react-spa"
+    ],
+    "layers": [
+      "auth_session"
     ]
   },
   {
@@ -2586,7 +2662,8 @@
     "syncedAt": "2026-05-17T08:07:31.346Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-45857",
@@ -2617,7 +2694,8 @@
       "nestjs",
       "nuxt",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-3772",
@@ -2649,7 +2727,8 @@
     "syncedAt": "2026-05-17T08:07:31.425Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-57752",
@@ -2675,7 +2754,8 @@
     "syncedAt": "2026-05-17T08:07:28.460Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-26125",
@@ -2704,7 +2784,8 @@
     "syncedAt": "2026-05-17T08:07:40.444Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-59057",
@@ -2738,7 +2819,8 @@
     "syncedAt": "2026-05-17T08:07:31.820Z",
     "stacks": [
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-23541",
@@ -2768,7 +2850,8 @@
       "nextjs",
       "express",
       "nestjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-33128",
@@ -2800,7 +2883,8 @@
     "syncedAt": "2026-05-17T08:07:31.635Z",
     "stacks": [
       "nuxt"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-47831",
@@ -2826,7 +2910,8 @@
     "syncedAt": "2026-05-17T08:07:28.322Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-23527",
@@ -2852,7 +2937,8 @@
     "syncedAt": "2026-05-17T08:07:31.713Z",
     "stacks": [
       "nuxt"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-58754",
@@ -2884,7 +2970,8 @@
     "syncedAt": "2026-05-17T08:07:32.057Z",
     "stacks": [
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-23540",
@@ -2915,7 +3002,8 @@
       "nextjs",
       "express",
       "nestjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-7919",
@@ -2955,7 +3043,8 @@
     "syncedAt": "2026-05-17T08:07:41.122Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-43865",
@@ -2981,7 +3070,8 @@
     "syncedAt": "2026-05-17T08:07:31.898Z",
     "stacks": [
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-28500",
@@ -3014,7 +3104,8 @@
       "nestjs",
       "nuxt",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42264",
@@ -3042,7 +3133,8 @@
     "syncedAt": "2026-05-17T08:07:32.136Z",
     "stacks": [
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-28346",
@@ -3082,7 +3174,8 @@
     "syncedAt": "2026-05-17T08:07:32.241Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-13596",
@@ -3116,7 +3209,8 @@
     "syncedAt": "2026-05-17T08:07:32.293Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-4249",
@@ -3144,7 +3238,8 @@
     "syncedAt": "2026-05-17T08:07:32.475Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-27980",
@@ -3173,7 +3268,8 @@
     "syncedAt": "2026-05-17T08:07:28.732Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-4800",
@@ -3204,7 +3300,8 @@
       "nuxt",
       "react-spa",
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-40175",
@@ -3235,7 +3332,8 @@
       "nestjs",
       "nuxt",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-41990",
@@ -3267,7 +3365,8 @@
     "syncedAt": "2026-05-17T08:07:33.102Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-1312",
@@ -3307,7 +3406,8 @@
     "syncedAt": "2026-05-17T08:07:32.763Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-47914",
@@ -3333,7 +3433,8 @@
     "syncedAt": "2026-05-17T08:07:41.148Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-11840",
@@ -3361,7 +3462,8 @@
     "syncedAt": "2026-05-17T08:07:41.278Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-3982",
@@ -3387,7 +3489,8 @@
     "syncedAt": "2026-05-17T08:07:33.051Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-45337",
@@ -3416,7 +3519,8 @@
     "syncedAt": "2026-05-17T08:07:41.304Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "GHSA-npm-1112182",
@@ -3446,7 +3550,8 @@
     "syncedAt": "2026-05-17T08:07:41.461Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2018-16984",
@@ -3472,7 +3577,8 @@
     "syncedAt": "2026-05-17T08:07:32.946Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-0473",
@@ -3512,7 +3618,8 @@
     "syncedAt": "2026-05-17T08:07:33.339Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "GHSA-9qr9-h5gf-34mp",
@@ -3576,7 +3683,8 @@
     "syncedAt": "2026-05-17T08:07:41.539Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-25293",
@@ -3602,7 +3710,8 @@
     "syncedAt": "2026-05-17T08:07:36.994Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-0219",
@@ -3640,7 +3749,8 @@
     "syncedAt": "2026-05-17T08:07:33.208Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-6044",
@@ -3674,7 +3784,8 @@
     "syncedAt": "2026-05-17T08:07:33.550Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-0081",
@@ -3720,7 +3831,8 @@
     "syncedAt": "2026-05-17T08:07:37.726Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-0751",
@@ -3758,7 +3870,8 @@
     "syncedAt": "2026-05-17T08:07:38.536Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-25673",
@@ -3799,7 +3912,8 @@
     "syncedAt": "2026-05-17T08:07:33.446Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-5145",
@@ -3828,7 +3942,8 @@
     "syncedAt": "2026-05-17T08:07:33.732Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-22902",
@@ -3863,7 +3978,8 @@
     "syncedAt": "2026-05-17T08:07:38.614Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-6186",
@@ -3903,7 +4019,8 @@
     "syncedAt": "2026-05-17T08:07:33.706Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42041",
@@ -3935,7 +4052,8 @@
       "nestjs",
       "nuxt",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2007-5712",
@@ -3976,7 +4094,8 @@
     "syncedAt": "2026-05-17T08:07:33.628Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-0220",
@@ -4016,7 +4135,8 @@
     "syncedAt": "2026-05-17T08:07:33.993Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2017-7234",
@@ -4054,7 +4174,8 @@
     "syncedAt": "2026-05-17T08:07:34.046Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-2097",
@@ -4100,7 +4221,8 @@
     "syncedAt": "2026-05-17T08:07:39.059Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-0306",
@@ -4135,7 +4257,8 @@
     "syncedAt": "2026-05-17T08:07:33.967Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2010-3082",
@@ -4163,7 +4286,8 @@
     "syncedAt": "2026-05-17T08:07:33.940Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-4140",
@@ -4197,7 +4321,8 @@
     "syncedAt": "2026-05-17T08:07:34.150Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-7577",
@@ -4244,7 +4369,8 @@
     "syncedAt": "2026-05-17T08:07:39.817Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-8165",
@@ -4278,7 +4404,8 @@
     "syncedAt": "2026-05-17T08:07:39.869Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-27777",
@@ -4324,7 +4451,8 @@
     "syncedAt": "2026-05-17T08:07:40.261Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42036",
@@ -4353,7 +4481,8 @@
       "nestjs",
       "nuxt",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-0221",
@@ -4394,7 +4523,8 @@
     "syncedAt": "2026-05-17T08:07:34.333Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-44578",
@@ -4422,7 +4552,8 @@
     "syncedAt": "2026-05-17T08:07:29.245Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-6316",
@@ -4462,7 +4593,8 @@
     "syncedAt": "2026-05-17T08:07:40.339Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-45452",
@@ -4502,7 +4634,8 @@
     "syncedAt": "2026-05-17T08:07:34.359Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42035",
@@ -4532,7 +4665,8 @@
       "react-spa",
       "nextjs",
       "nestjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-23913",
@@ -4566,7 +4700,8 @@
     "syncedAt": "2026-05-17T08:07:40.365Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-2512",
@@ -4600,7 +4735,8 @@
     "syncedAt": "2026-05-17T08:07:34.698Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-42005",
@@ -4634,7 +4770,8 @@
     "syncedAt": "2026-05-17T08:07:34.672Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-44580",
@@ -4662,7 +4799,8 @@
     "syncedAt": "2026-05-17T08:07:29.189Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-46695",
@@ -4703,7 +4841,8 @@
     "syncedAt": "2026-05-17T08:07:34.906Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-1664",
@@ -4735,7 +4874,8 @@
     "syncedAt": "2026-05-17T08:07:34.932Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-1418",
@@ -4781,7 +4921,8 @@
     "syncedAt": "2026-05-17T08:07:34.776Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-2564",
@@ -4808,7 +4949,8 @@
     "syncedAt": "2026-05-17T08:07:29.378Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-30204",
@@ -4846,7 +4988,8 @@
     "syncedAt": "2026-05-17T08:07:40.548Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-4139",
@@ -4882,7 +5025,8 @@
     "syncedAt": "2026-05-17T08:07:35.168Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-0305",
@@ -4916,7 +5060,8 @@
     "syncedAt": "2026-05-17T08:07:35.090Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-33571",
@@ -4956,7 +5101,8 @@
     "syncedAt": "2026-05-17T08:07:34.619Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-31542",
@@ -4997,7 +5143,8 @@
     "syncedAt": "2026-05-17T08:07:35.299Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-44420",
@@ -5037,7 +5184,8 @@
     "syncedAt": "2026-05-17T08:07:35.325Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-14235",
@@ -5075,7 +5223,8 @@
     "syncedAt": "2026-05-17T08:07:35.351Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-19844",
@@ -5113,7 +5262,8 @@
     "syncedAt": "2026-05-17T08:07:35.377Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-0472",
@@ -5153,7 +5303,8 @@
     "syncedAt": "2026-05-17T08:07:35.247Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-28347",
@@ -5193,7 +5344,8 @@
     "syncedAt": "2026-05-17T08:07:35.507Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-5766",
@@ -5225,7 +5377,8 @@
     "syncedAt": "2026-05-17T08:07:35.533Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-6975",
@@ -5263,7 +5416,8 @@
     "syncedAt": "2026-05-17T08:07:35.559Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-13254",
@@ -5297,7 +5451,8 @@
     "syncedAt": "2026-05-17T08:07:35.585Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-27556",
@@ -5329,7 +5484,8 @@
     "syncedAt": "2026-05-17T08:07:35.611Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-3730",
@@ -5376,7 +5532,8 @@
     "syncedAt": "2026-05-17T08:07:35.455Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-64460",
@@ -5414,7 +5571,8 @@
     "syncedAt": "2026-05-17T08:07:35.481Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-1665",
@@ -5448,7 +5606,8 @@
     "syncedAt": "2026-05-17T08:07:35.716Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-39329",
@@ -5480,7 +5639,8 @@
     "syncedAt": "2026-05-17T08:07:35.742Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-4136",
@@ -5515,7 +5675,8 @@
     "syncedAt": "2026-05-17T08:07:35.768Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-28658",
@@ -5555,7 +5716,8 @@
     "syncedAt": "2026-05-17T08:07:35.794Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-35042",
@@ -5589,7 +5751,8 @@
     "syncedAt": "2026-05-17T08:07:35.820Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-24680",
@@ -5627,7 +5790,8 @@
     "syncedAt": "2026-05-17T08:07:35.846Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-25626",
@@ -5656,7 +5820,8 @@
     "syncedAt": "2026-05-17T08:07:35.873Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-4138",
@@ -5691,7 +5856,8 @@
     "syncedAt": "2026-05-17T08:07:35.663Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-5964",
@@ -5723,7 +5889,8 @@
     "syncedAt": "2026-05-17T08:07:35.690Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-28219",
@@ -5749,7 +5916,8 @@
     "syncedAt": "2026-05-17T08:07:36.030Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-25289",
@@ -5775,7 +5943,8 @@
     "syncedAt": "2026-05-17T08:07:36.056Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-19911",
@@ -5801,7 +5970,8 @@
     "syncedAt": "2026-05-17T08:07:36.082Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42309",
@@ -5827,7 +5997,8 @@
     "syncedAt": "2026-05-17T08:07:36.108Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-34552",
@@ -5853,7 +6024,8 @@
     "syncedAt": "2026-05-17T08:07:36.134Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-25287",
@@ -5879,7 +6051,8 @@
     "syncedAt": "2026-05-17T08:07:36.160Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-28676",
@@ -5905,7 +6078,8 @@
     "syncedAt": "2026-05-17T08:07:36.186Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-10379",
@@ -5931,7 +6105,8 @@
     "syncedAt": "2026-05-17T08:07:36.212Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-44271",
@@ -5960,7 +6135,8 @@
     "syncedAt": "2026-05-17T08:07:36.238Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-10378",
@@ -5986,7 +6162,8 @@
     "syncedAt": "2026-05-17T08:07:35.977Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-11538",
@@ -6012,7 +6189,8 @@
     "syncedAt": "2026-05-17T08:07:36.004Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-0775",
@@ -6038,7 +6216,8 @@
     "syncedAt": "2026-05-17T08:07:36.342Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-27923",
@@ -6069,7 +6248,8 @@
     "syncedAt": "2026-05-17T08:07:36.368Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-24303",
@@ -6097,7 +6277,8 @@
     "syncedAt": "2026-05-17T08:07:36.446Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-25990",
@@ -6123,7 +6304,8 @@
     "syncedAt": "2026-05-17T08:07:36.472Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-3589",
@@ -6158,7 +6340,8 @@
     "syncedAt": "2026-05-17T08:07:36.498Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-10177",
@@ -6184,7 +6367,8 @@
     "syncedAt": "2026-05-17T08:07:36.524Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-27921",
@@ -6215,7 +6399,8 @@
     "syncedAt": "2026-05-17T08:07:36.551Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-22817",
@@ -6243,7 +6428,8 @@
     "syncedAt": "2026-05-17T08:07:36.290Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-25290",
@@ -6269,7 +6455,8 @@
     "syncedAt": "2026-05-17T08:07:36.316Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-47944",
@@ -6294,7 +6481,8 @@
     "syncedAt": "2026-05-17T08:07:29.458Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-30595",
@@ -6320,7 +6508,8 @@
     "syncedAt": "2026-05-17T08:07:36.762Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-4009",
@@ -6346,7 +6535,8 @@
     "syncedAt": "2026-05-17T08:07:36.788Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-28677",
@@ -6375,7 +6565,8 @@
     "syncedAt": "2026-05-17T08:07:37.125Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-9601",
@@ -6404,7 +6595,8 @@
     "syncedAt": "2026-05-17T08:07:36.630Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-35655",
@@ -6430,7 +6622,8 @@
     "syncedAt": "2026-05-17T08:07:36.657Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-0740",
@@ -6456,7 +6649,8 @@
     "syncedAt": "2026-05-17T08:07:36.683Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-5313",
@@ -6482,7 +6676,8 @@
     "syncedAt": "2026-05-17T08:07:36.709Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-28678",
@@ -6508,7 +6703,8 @@
     "syncedAt": "2026-05-17T08:07:36.736Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-7338",
@@ -6533,7 +6729,8 @@
     "syncedAt": "2026-05-17T08:07:29.539Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-45198",
@@ -6559,7 +6756,8 @@
     "syncedAt": "2026-05-17T08:07:36.893Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-25291",
@@ -6585,7 +6783,8 @@
     "syncedAt": "2026-05-17T08:07:36.968Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-45199",
@@ -6614,7 +6813,8 @@
     "syncedAt": "2026-05-17T08:07:37.099Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-29409",
@@ -6642,7 +6842,8 @@
     "syncedAt": "2026-05-17T08:07:29.838Z",
     "stacks": [
       "nestjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-5312",
@@ -6668,7 +6869,8 @@
     "syncedAt": "2026-05-17T08:07:37.021Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-22815",
@@ -6694,7 +6896,8 @@
     "syncedAt": "2026-05-17T08:07:37.047Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2018-17142",
@@ -6720,7 +6923,8 @@
     "syncedAt": "2026-05-17T08:07:40.574Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-9189",
@@ -6746,7 +6950,8 @@
     "syncedAt": "2026-05-17T08:07:37.230Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-25288",
@@ -6772,7 +6977,8 @@
     "syncedAt": "2026-05-17T08:07:37.256Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-3076",
@@ -6798,7 +7004,8 @@
     "syncedAt": "2026-05-17T08:07:37.282Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-5310",
@@ -6824,7 +7031,8 @@
     "syncedAt": "2026-05-17T08:07:37.308Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-10994",
@@ -6850,7 +7058,8 @@
     "syncedAt": "2026-05-17T08:07:37.334Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-35654",
@@ -6876,7 +7085,8 @@
     "syncedAt": "2026-05-17T08:07:37.360Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-9190",
@@ -6905,7 +7115,8 @@
     "syncedAt": "2026-05-17T08:07:37.386Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-40192",
@@ -6934,7 +7145,8 @@
     "syncedAt": "2026-05-17T08:07:37.412Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42308",
@@ -6960,7 +7172,8 @@
     "syncedAt": "2026-05-17T08:07:37.438Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-5311",
@@ -6986,7 +7199,8 @@
     "syncedAt": "2026-05-17T08:07:37.178Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-1933",
@@ -7014,7 +7228,8 @@
     "syncedAt": "2026-05-17T08:07:37.204Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-2359",
@@ -7039,7 +7254,8 @@
     "syncedAt": "2026-05-17T08:07:29.645Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-22816",
@@ -7065,7 +7281,8 @@
     "syncedAt": "2026-05-17T08:07:37.517Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2008-5189",
@@ -7093,7 +7310,8 @@
     "syncedAt": "2026-05-17T08:07:37.674Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2007-5380",
@@ -7119,7 +7337,8 @@
     "syncedAt": "2026-05-17T08:07:37.700Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2012-1099",
@@ -7159,7 +7378,8 @@
     "syncedAt": "2026-05-17T08:07:37.910Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2006-4112",
@@ -7185,7 +7405,8 @@
     "syncedAt": "2026-05-17T08:07:37.596Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2007-5379",
@@ -7213,7 +7434,8 @@
     "syncedAt": "2026-05-17T08:07:37.622Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2007-3227",
@@ -7241,7 +7463,8 @@
     "syncedAt": "2026-05-17T08:07:37.648Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42042",
@@ -7270,7 +7493,8 @@
       "nextjs",
       "nuxt",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2006-4111",
@@ -7298,7 +7522,8 @@
     "syncedAt": "2026-05-17T08:07:37.779Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-3520",
@@ -7323,7 +7548,8 @@
     "syncedAt": "2026-05-17T08:07:29.672Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2009-2422",
@@ -7351,7 +7577,8 @@
     "syncedAt": "2026-05-17T08:07:37.805Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-0447",
@@ -7385,7 +7612,8 @@
     "syncedAt": "2026-05-17T08:07:37.831Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-30951",
@@ -7412,7 +7640,8 @@
     "syncedAt": "2026-05-17T08:07:29.700Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-0449",
@@ -7438,7 +7667,8 @@
     "syncedAt": "2026-05-17T08:07:38.015Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-0130",
@@ -7478,7 +7708,8 @@
     "syncedAt": "2026-05-17T08:07:38.119Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2008-7248",
@@ -7513,7 +7744,8 @@
     "syncedAt": "2026-05-17T08:07:38.327Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-22903",
@@ -7539,7 +7771,8 @@
     "syncedAt": "2026-05-17T08:07:38.041Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-4491",
@@ -7573,7 +7806,8 @@
     "syncedAt": "2026-05-17T08:07:38.067Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-6415",
@@ -7607,7 +7841,8 @@
     "syncedAt": "2026-05-17T08:07:38.093Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-2098",
@@ -7648,7 +7883,8 @@
     "syncedAt": "2026-05-17T08:07:38.171Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-22881",
@@ -7680,7 +7916,8 @@
     "syncedAt": "2026-05-17T08:07:38.301Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-0082",
@@ -7709,7 +7946,8 @@
     "syncedAt": "2026-05-17T08:07:38.197Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "GHSA-mwv6-3258-q52c",
@@ -7793,7 +8031,8 @@
     "syncedAt": "2026-05-17T08:07:41.591Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2012-3465",
@@ -7839,7 +8078,8 @@
     "syncedAt": "2026-05-17T08:07:38.223Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-44577",
@@ -7865,7 +8105,8 @@
     "syncedAt": "2026-05-17T08:07:29.218Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-9512",
@@ -7894,7 +8135,8 @@
     "syncedAt": "2026-05-17T08:07:40.626Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-37699",
@@ -7920,7 +8162,8 @@
     "syncedAt": "2026-05-17T08:07:30.399Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2012-3463",
@@ -7960,7 +8203,8 @@
     "syncedAt": "2026-05-17T08:07:38.431Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-7581",
@@ -7986,7 +8230,8 @@
     "syncedAt": "2026-05-17T08:07:38.457Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-3186",
@@ -8014,7 +8259,8 @@
     "syncedAt": "2026-05-17T08:07:38.509Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-44573",
@@ -8042,7 +8288,8 @@
     "syncedAt": "2026-05-17T08:07:29.271Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "GHSA-h25m-26qc-wcjf",
@@ -8120,7 +8367,8 @@
     "syncedAt": "2026-05-17T08:07:41.565Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-55183",
@@ -8196,7 +8444,8 @@
     "syncedAt": "2026-05-17T08:07:30.691Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2009-3086",
@@ -8242,7 +8491,8 @@
     "syncedAt": "2026-05-17T08:07:38.562Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2012-2660",
@@ -8289,7 +8539,8 @@
     "syncedAt": "2026-05-17T08:07:38.666Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42334",
@@ -8316,7 +8567,8 @@
     "syncedAt": "2026-05-17T08:07:29.783Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-45231",
@@ -8354,7 +8606,8 @@
     "syncedAt": "2026-05-17T08:07:35.220Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-8166",
@@ -8388,7 +8641,8 @@
     "syncedAt": "2026-05-17T08:07:38.771Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-35515",
@@ -8416,7 +8670,8 @@
     "syncedAt": "2026-05-17T08:07:29.864Z",
     "stacks": [
       "nestjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-1207",
@@ -8456,7 +8711,8 @@
     "syncedAt": "2026-05-17T08:07:34.489Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-6414",
@@ -8491,7 +8747,8 @@
     "syncedAt": "2026-05-17T08:07:38.824Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-25813",
@@ -8518,7 +8775,8 @@
     "syncedAt": "2026-05-17T08:07:29.298Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-44575",
@@ -8550,7 +8808,8 @@
     "syncedAt": "2026-05-17T08:07:29.970Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-3902",
@@ -8588,7 +8847,8 @@
     "syncedAt": "2026-05-17T08:07:34.463Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-11069",
@@ -8617,7 +8877,8 @@
     "syncedAt": "2026-05-17T08:07:30.953Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-2929",
@@ -8646,7 +8907,8 @@
     "syncedAt": "2026-05-17T08:07:38.955Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-2931",
@@ -8680,7 +8942,8 @@
     "syncedAt": "2026-05-17T08:07:38.981Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-48997",
@@ -8705,7 +8968,8 @@
     "syncedAt": "2026-05-17T08:07:29.486Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-0277",
@@ -8739,7 +9003,8 @@
     "syncedAt": "2026-05-17T08:07:39.478Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-10752",
@@ -8773,7 +9038,8 @@
     "syncedAt": "2026-05-17T08:07:31.109Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-6416",
@@ -8801,7 +9067,8 @@
     "syncedAt": "2026-05-17T08:07:39.085Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-34265",
@@ -8835,7 +9102,8 @@
     "syncedAt": "2026-05-17T08:07:34.567Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-47935",
@@ -8860,7 +9128,8 @@
     "syncedAt": "2026-05-17T08:07:29.512Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-4319",
@@ -8894,7 +9163,8 @@
     "syncedAt": "2026-05-17T08:07:39.216Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-1854",
@@ -8935,7 +9205,8 @@
     "syncedAt": "2026-05-17T08:07:39.242Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-0448",
@@ -8963,7 +9234,8 @@
     "syncedAt": "2026-05-17T08:07:39.687Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-5963",
@@ -9001,7 +9273,8 @@
     "syncedAt": "2026-05-17T08:07:34.646Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-29041",
@@ -9027,7 +9300,8 @@
     "syncedAt": "2026-05-17T08:07:29.565Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-3514",
@@ -9062,7 +9336,8 @@
     "syncedAt": "2026-05-17T08:07:39.399Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2012-2661",
@@ -9102,7 +9377,8 @@
     "syncedAt": "2026-05-17T08:07:39.452Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2012-2695",
@@ -9148,7 +9424,8 @@
     "syncedAt": "2026-05-17T08:07:39.347Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-22880",
@@ -9189,7 +9466,8 @@
     "syncedAt": "2026-05-17T08:07:39.373Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-3221",
@@ -9218,7 +9496,8 @@
     "syncedAt": "2026-05-17T08:07:39.426Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-53900",
@@ -9245,7 +9524,8 @@
     "syncedAt": "2026-05-17T08:07:29.592Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-2930",
@@ -9285,7 +9565,8 @@
     "syncedAt": "2026-05-17T08:07:39.609Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-0080",
@@ -9319,7 +9600,8 @@
     "syncedAt": "2026-05-17T08:07:39.661Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-33664",
@@ -9348,7 +9630,8 @@
     "syncedAt": "2026-05-17T08:07:31.477Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2009-3695",
@@ -9383,7 +9666,8 @@
     "syncedAt": "2026-05-17T08:07:34.593Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-22579",
@@ -9408,7 +9692,8 @@
     "syncedAt": "2026-05-17T08:07:29.756Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2017-16877",
@@ -9436,7 +9721,8 @@
     "syncedAt": "2026-05-17T08:07:30.023Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-32052",
@@ -9476,7 +9762,8 @@
     "syncedAt": "2026-05-17T08:07:34.880Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-34344",
@@ -9504,7 +9791,8 @@
     "syncedAt": "2026-05-17T08:07:31.609Z",
     "stacks": [
       "nuxt"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-3483",
@@ -9538,7 +9826,8 @@
     "syncedAt": "2026-05-17T08:07:39.765Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2008-4094",
@@ -9566,7 +9855,8 @@
     "syncedAt": "2026-05-17T08:07:39.791Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-28483",
@@ -9592,7 +9882,8 @@
     "syncedAt": "2026-05-17T08:07:40.522Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-2932",
@@ -9626,7 +9917,8 @@
     "syncedAt": "2026-05-17T08:07:39.948Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-33169",
@@ -9667,7 +9959,8 @@
     "syncedAt": "2026-05-17T08:07:39.974Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-5144",
@@ -9708,7 +10001,8 @@
     "syncedAt": "2026-05-17T08:07:34.750Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-22029",
@@ -9742,7 +10036,8 @@
     "syncedAt": "2026-05-17T08:07:31.794Z",
     "stacks": [
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2007-0404",
@@ -9768,7 +10063,8 @@
     "syncedAt": "2026-05-17T08:07:34.802Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-68470",
@@ -9800,7 +10096,8 @@
     "syncedAt": "2026-05-17T08:07:31.872Z",
     "stacks": [
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-27415",
@@ -9827,7 +10124,8 @@
     "syncedAt": "2026-05-17T08:07:29.890Z",
     "stacks": [
       "nuxt"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-45109",
@@ -9859,7 +10157,8 @@
     "syncedAt": "2026-05-17T08:07:29.997Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2012-1098",
@@ -9899,7 +10198,8 @@
     "syncedAt": "2026-05-17T08:07:40.105Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-3226",
@@ -9933,7 +10233,8 @@
     "syncedAt": "2026-05-17T08:07:40.131Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-59472",
@@ -10052,7 +10353,8 @@
     "syncedAt": "2026-05-17T08:07:30.075Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-3281",
@@ -10092,7 +10394,8 @@
     "syncedAt": "2026-05-17T08:07:33.889Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-8163",
@@ -10120,7 +10423,8 @@
     "syncedAt": "2026-05-17T08:07:40.287Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-33194",
@@ -10146,7 +10450,8 @@
     "syncedAt": "2026-05-17T08:07:40.783Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-45116",
@@ -10187,7 +10492,8 @@
     "syncedAt": "2026-05-17T08:07:33.366Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-14233",
@@ -10228,7 +10534,8 @@
     "syncedAt": "2026-05-17T08:07:34.098Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-29401",
@@ -10256,7 +10563,8 @@
     "syncedAt": "2026-05-17T08:07:40.418Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-41989",
@@ -10291,7 +10599,8 @@
     "syncedAt": "2026-05-17T08:07:34.307Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-25211",
@@ -10325,7 +10634,8 @@
     "syncedAt": "2026-05-17T08:07:40.496Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-41164",
@@ -10366,7 +10676,8 @@
     "syncedAt": "2026-05-17T08:07:33.181Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-43665",
@@ -10407,7 +10718,8 @@
     "syncedAt": "2026-05-17T08:07:34.124Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-49826",
@@ -10433,7 +10745,8 @@
     "syncedAt": "2026-05-17T08:07:30.102Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-3978",
@@ -10461,7 +10774,8 @@
     "syncedAt": "2026-05-17T08:07:40.600Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2018-17847",
@@ -10487,7 +10801,8 @@
     "syncedAt": "2026-05-17T08:07:40.679Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-26699",
@@ -10525,7 +10840,8 @@
     "syncedAt": "2026-05-17T08:07:34.541Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2018-17075",
@@ -10551,7 +10867,8 @@
     "syncedAt": "2026-05-17T08:07:40.731Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-27664",
@@ -10583,7 +10900,8 @@
     "syncedAt": "2026-05-17T08:07:40.757Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-24583",
@@ -10621,7 +10939,8 @@
     "syncedAt": "2026-05-17T08:07:34.385Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-31525",
@@ -10647,7 +10966,8 @@
     "syncedAt": "2026-05-17T08:07:40.861Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-22870",
@@ -10676,7 +10996,8 @@
     "syncedAt": "2026-05-17T08:07:40.914Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2018-17846",
@@ -10702,7 +11023,8 @@
     "syncedAt": "2026-05-17T08:07:40.940Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-22872",
@@ -10730,7 +11052,8 @@
     "syncedAt": "2026-05-17T08:07:40.966Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-41723",
@@ -10759,7 +11082,8 @@
     "syncedAt": "2026-05-17T08:07:40.992Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-41717",
@@ -10791,7 +11115,8 @@
     "syncedAt": "2026-05-17T08:07:41.018Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2018-7536",
@@ -10829,7 +11154,8 @@
     "syncedAt": "2026-05-17T08:07:35.011Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-44487",
@@ -10984,7 +11310,8 @@
     "syncedAt": "2026-05-17T08:07:40.887Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-34350",
@@ -11010,7 +11337,8 @@
     "syncedAt": "2026-05-17T08:07:30.130Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-16865",
@@ -11036,7 +11364,8 @@
     "syncedAt": "2026-05-17T08:07:36.867Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2008-3909",
@@ -11076,7 +11405,8 @@
     "syncedAt": "2026-05-17T08:07:35.064Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2018-6184",
@@ -11104,7 +11434,8 @@
     "syncedAt": "2026-05-17T08:07:30.293Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-27191",
@@ -11132,7 +11463,8 @@
     "syncedAt": "2026-05-17T08:07:41.096Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-9283",
@@ -11158,7 +11490,8 @@
     "syncedAt": "2026-05-17T08:07:41.174Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-43565",
@@ -11184,7 +11517,8 @@
     "syncedAt": "2026-05-17T08:07:41.200Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-0341",
@@ -11212,7 +11546,8 @@
     "syncedAt": "2026-05-17T08:07:41.383Z",
     "stacks": [
       "android"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-11841",
@@ -11238,7 +11573,8 @@
     "syncedAt": "2026-05-17T08:07:41.331Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-2402",
@@ -11272,7 +11608,8 @@
     "syncedAt": "2026-05-17T08:07:41.409Z",
     "stacks": [
       "android"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-27978",
@@ -11300,7 +11637,8 @@
     "syncedAt": "2026-05-17T08:07:30.346Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2017-3204",
@@ -11326,7 +11664,8 @@
     "syncedAt": "2026-05-17T08:07:41.357Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-28362",
@@ -11361,7 +11700,8 @@
     "syncedAt": "2026-05-17T08:07:37.989Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-39178",
@@ -11389,7 +11729,8 @@
     "syncedAt": "2026-05-17T08:07:30.157Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42311",
@@ -11415,7 +11756,8 @@
     "syncedAt": "2026-05-17T08:07:37.073Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-23646",
@@ -11441,7 +11783,8 @@
     "syncedAt": "2026-05-17T08:07:30.186Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-41991",
@@ -11473,7 +11816,8 @@
     "syncedAt": "2026-05-17T08:07:35.116Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2018-6188",
@@ -11507,7 +11851,8 @@
     "syncedAt": "2026-05-17T08:07:35.142Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "GHSA-w37m-7fhw-fmv9",
@@ -11583,7 +11928,8 @@
     "syncedAt": "2026-05-17T08:07:41.617Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "GHSA-hg79-j56m-fxgv",
@@ -11611,7 +11957,8 @@
     "syncedAt": "2026-05-17T08:07:41.643Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-39693",
@@ -11640,7 +11987,8 @@
     "syncedAt": "2026-05-17T08:07:30.212Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "GHSA-q5pr-72pq-83v3",
@@ -11669,7 +12017,8 @@
     "syncedAt": "2026-05-17T08:07:41.695Z",
     "stacks": [
       "nuxt"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42043",
@@ -11699,7 +12048,8 @@
       "nestjs",
       "nuxt",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-23296",
@@ -11726,7 +12076,8 @@
     "syncedAt": "2026-05-06T05:08:27.884Z",
     "stacks": [
       "ios"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-0483",
@@ -11772,7 +12123,8 @@
     "syncedAt": "2026-05-17T08:07:35.272Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-51479",
@@ -11800,7 +12152,8 @@
     "syncedAt": "2026-05-17T08:07:28.488Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-29927",
@@ -11828,7 +12181,8 @@
     "syncedAt": "2026-05-17T08:07:28.676Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-22578",
@@ -11853,7 +12207,8 @@
     "syncedAt": "2026-05-17T08:07:29.351Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-3696",
@@ -11880,7 +12235,8 @@
     "syncedAt": "2026-05-17T08:07:29.406Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2007-6077",
@@ -11906,7 +12262,8 @@
     "syncedAt": "2026-05-17T08:07:37.753Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-23061",
@@ -11933,7 +12290,8 @@
     "syncedAt": "2026-05-17T08:07:29.728Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-46814",
@@ -11960,7 +12318,8 @@
     "syncedAt": "2026-05-06T05:08:27.884Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-3248",
@@ -11988,7 +12347,8 @@
     "syncedAt": "2026-05-06T05:08:27.884Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-0045",
@@ -12015,7 +12375,8 @@
     "syncedAt": "2026-05-06T05:08:27.885Z",
     "stacks": [
       "android"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-24790",
@@ -12043,7 +12404,8 @@
     "syncedAt": "2026-05-06T05:08:27.884Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-26143",
@@ -12070,7 +12432,8 @@
     "syncedAt": "2026-05-17T08:07:37.544Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-45230",
@@ -12098,7 +12461,8 @@
     "syncedAt": "2026-05-17T08:07:32.659Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-38875",
@@ -12123,7 +12487,8 @@
     "syncedAt": "2026-05-17T08:07:34.854Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-22942",
@@ -12155,7 +12520,8 @@
     "syncedAt": "2026-05-17T08:07:37.884Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-0235",
@@ -12182,7 +12548,8 @@
     "syncedAt": "2026-05-17T08:07:27.891Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-3187",
@@ -12211,7 +12578,8 @@
     "syncedAt": "2026-05-17T08:07:37.963Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-59471",
@@ -12240,7 +12608,8 @@
     "syncedAt": "2026-05-17T08:07:28.649Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-46982",
@@ -12268,7 +12637,8 @@
     "syncedAt": "2026-05-17T08:07:28.296Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-3304",
@@ -12293,7 +12663,8 @@
     "syncedAt": "2026-05-17T08:07:29.618Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-34351",
@@ -12320,7 +12691,8 @@
     "syncedAt": "2026-05-17T08:07:28.179Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-23539",
@@ -12349,7 +12721,8 @@
       "nextjs",
       "express",
       "nestjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-23337",
@@ -12380,7 +12753,8 @@
       "react-spa",
       "nestjs",
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-57822",
@@ -12408,7 +12782,8 @@
     "syncedAt": "2026-05-17T08:07:28.516Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2018-18282",
@@ -12436,7 +12811,8 @@
     "syncedAt": "2026-05-17T08:07:30.373Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42034",
@@ -12465,7 +12841,8 @@
       "nestjs",
       "nuxt",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42033",
@@ -12495,7 +12872,8 @@
       "nestjs",
       "nuxt",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-44574",
@@ -12527,7 +12905,8 @@
     "syncedAt": "2026-05-17T08:07:30.049Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42038",
@@ -12558,7 +12937,8 @@
       "nestjs",
       "nuxt",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2018-6341",
@@ -12611,7 +12991,8 @@
     "stacks": [
       "nextjs",
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-44581",
@@ -12639,7 +13020,8 @@
     "syncedAt": "2026-05-17T08:07:29.162Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-22580",
@@ -12667,7 +13049,8 @@
     "syncedAt": "2026-05-17T08:07:29.325Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-55182",
@@ -12743,7 +13126,8 @@
     "syncedAt": "2026-05-17T08:07:30.717Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-26108",
@@ -12771,7 +13155,8 @@
     "syncedAt": "2026-05-17T08:07:29.811Z",
     "stacks": [
       "nestjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-43803",
@@ -12806,7 +13191,8 @@
     "syncedAt": "2026-05-17T08:07:29.944Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-5284",
@@ -12834,7 +13220,8 @@
     "syncedAt": "2026-05-17T08:07:30.240Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-27979",
@@ -12860,7 +13247,8 @@
     "syncedAt": "2026-05-17T08:07:30.267Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-44576",
@@ -12892,7 +13280,8 @@
     "syncedAt": "2026-05-17T08:07:30.425Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-12781",
@@ -12930,7 +13319,8 @@
     "syncedAt": "2026-05-17T08:07:32.867Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-67779",
@@ -13008,7 +13398,8 @@
     "syncedAt": "2026-05-17T08:07:30.639Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-23864",
@@ -13085,7 +13476,8 @@
     "syncedAt": "2026-05-17T08:07:30.665Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-13466",
@@ -13114,7 +13506,8 @@
     "syncedAt": "2026-05-17T08:07:30.848Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-36046",
@@ -13140,7 +13533,8 @@
     "syncedAt": "2026-05-17T08:07:30.451Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-21721",
@@ -13171,7 +13565,8 @@
     "syncedAt": "2026-05-17T08:07:30.477Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-9235",
@@ -13200,7 +13595,8 @@
     "syncedAt": "2026-05-17T08:07:30.873Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-10749",
@@ -13228,7 +13624,8 @@
     "syncedAt": "2026-05-17T08:07:30.927Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-2317",
@@ -13274,7 +13671,8 @@
     "syncedAt": "2026-05-17T08:07:33.128Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-15242",
@@ -13300,7 +13698,8 @@
     "syncedAt": "2026-05-17T08:07:30.504Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-3224",
@@ -13328,7 +13727,8 @@
     "syncedAt": "2026-05-17T08:07:31.583Z",
     "stacks": [
       "nuxt"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-10748",
@@ -13368,7 +13768,8 @@
     "syncedAt": "2026-05-17T08:07:31.084Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-23869",
@@ -13446,7 +13847,8 @@
     "syncedAt": "2026-05-17T08:07:30.612Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-0696",
@@ -13480,7 +13882,8 @@
     "syncedAt": "2026-05-17T08:07:32.685Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-47874",
@@ -13506,7 +13909,8 @@
     "syncedAt": "2026-05-17T08:07:31.293Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2017-7233",
@@ -13544,7 +13948,8 @@
     "syncedAt": "2026-05-17T08:07:32.345Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-33033",
@@ -13582,7 +13987,8 @@
     "syncedAt": "2026-05-17T08:07:32.711Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-14232",
@@ -13623,7 +14029,8 @@
     "syncedAt": "2026-05-17T08:07:33.680Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-0480",
@@ -13664,7 +14071,8 @@
     "syncedAt": "2026-05-17T08:07:33.810Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-24584",
@@ -13702,7 +14110,8 @@
     "syncedAt": "2026-05-17T08:07:33.836Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-64459",
@@ -13742,7 +14151,8 @@
     "syncedAt": "2026-05-17T08:07:33.862Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-5143",
@@ -13780,7 +14190,8 @@
     "syncedAt": "2026-05-17T08:07:34.072Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-41323",
@@ -13818,7 +14229,8 @@
     "syncedAt": "2026-05-17T08:07:34.959Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2017-12794",
@@ -13852,7 +14264,8 @@
     "syncedAt": "2026-05-17T08:07:33.602Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-10491",
@@ -13880,7 +14293,8 @@
     "syncedAt": "2026-05-17T08:07:30.770Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-23969",
@@ -13921,7 +14335,8 @@
     "syncedAt": "2026-05-17T08:07:34.724Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-6393",
@@ -13955,7 +14370,8 @@
     "syncedAt": "2026-05-17T08:07:30.796Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2007-0405",
@@ -13981,7 +14397,8 @@
     "syncedAt": "2026-05-17T08:07:34.515Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-13372",
@@ -14021,7 +14438,8 @@
     "syncedAt": "2026-05-17T08:07:35.194Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-27351",
@@ -14059,7 +14477,8 @@
     "syncedAt": "2026-05-17T08:07:35.429Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-0474",
@@ -14099,7 +14518,8 @@
     "syncedAt": "2026-05-17T08:07:35.637Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-50447",
@@ -14127,7 +14547,8 @@
     "syncedAt": "2026-05-17T08:07:35.925Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-27922",
@@ -14158,7 +14579,8 @@
     "syncedAt": "2026-05-17T08:07:35.951Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-3007",
@@ -14186,7 +14608,8 @@
     "syncedAt": "2026-05-17T08:07:36.264Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-28675",
@@ -14212,7 +14635,8 @@
     "syncedAt": "2026-05-17T08:07:36.604Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-31047",
@@ -14253,7 +14677,8 @@
     "syncedAt": "2026-05-17T08:07:35.037Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42310",
@@ -14279,7 +14704,8 @@
     "syncedAt": "2026-05-17T08:07:37.151Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-17426",
@@ -14314,7 +14740,8 @@
     "syncedAt": "2026-05-17T08:07:30.899Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-1932",
@@ -14342,7 +14769,8 @@
     "syncedAt": "2026-05-17T08:07:37.465Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2009-4214",
@@ -14376,7 +14804,8 @@
     "syncedAt": "2026-05-17T08:07:37.570Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-8264",
@@ -14404,7 +14833,8 @@
     "syncedAt": "2026-05-17T08:07:37.937Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2009-3009",
@@ -14450,7 +14880,8 @@
     "syncedAt": "2026-05-17T08:07:38.353Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-10556",
@@ -14478,7 +14909,8 @@
     "syncedAt": "2026-05-17T08:07:31.058Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-8185",
@@ -14507,7 +14939,8 @@
     "syncedAt": "2026-05-17T08:07:38.483Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-0446",
@@ -14553,7 +14986,8 @@
     "syncedAt": "2026-05-17T08:07:38.145Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-28103",
@@ -14600,7 +15034,8 @@
     "syncedAt": "2026-05-17T08:07:38.588Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-10554",
@@ -14628,7 +15063,8 @@
     "syncedAt": "2026-05-17T08:07:31.136Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-7829",
@@ -14674,7 +15110,8 @@
     "syncedAt": "2026-05-17T08:07:38.640Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-54365",
@@ -14702,7 +15139,8 @@
     "syncedAt": "2026-05-17T08:07:31.557Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2012-2694",
@@ -14740,7 +15178,8 @@
     "syncedAt": "2026-05-17T08:07:38.850Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-29159",
@@ -14768,7 +15207,8 @@
     "syncedAt": "2026-05-17T08:07:31.319Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-7695",
@@ -14796,7 +15236,8 @@
     "syncedAt": "2026-05-17T08:07:31.372Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-2197",
@@ -14842,7 +15283,8 @@
     "syncedAt": "2026-05-17T08:07:39.007Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-29510",
@@ -14880,7 +15322,8 @@
     "syncedAt": "2026-05-17T08:07:31.398Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-44372",
@@ -14912,7 +15355,8 @@
     "syncedAt": "2026-05-17T08:07:31.766Z",
     "stacks": [
       "nuxt"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-21884",
@@ -14946,7 +15390,8 @@
     "syncedAt": "2026-05-17T08:07:31.846Z",
     "stacks": [
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-22030",
@@ -14981,7 +15426,8 @@
     "syncedAt": "2026-05-17T08:07:31.950Z",
     "stacks": [
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2012-6496",
@@ -15027,7 +15473,8 @@
     "syncedAt": "2026-05-17T08:07:39.504Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-6317",
@@ -15056,7 +15503,8 @@
     "syncedAt": "2026-05-17T08:07:39.739Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-33663",
@@ -15084,7 +15532,8 @@
     "syncedAt": "2026-05-17T08:07:31.451Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-33170",
@@ -15124,7 +15573,8 @@
     "syncedAt": "2026-05-17T08:07:39.895Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-38037",
@@ -15158,7 +15608,8 @@
     "syncedAt": "2026-05-17T08:07:40.000Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-15169",
@@ -15192,7 +15643,8 @@
     "syncedAt": "2026-05-17T08:07:40.235Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-7036",
@@ -15218,7 +15670,8 @@
     "syncedAt": "2026-05-17T08:07:31.503Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-5419",
@@ -15271,7 +15724,8 @@
     "syncedAt": "2026-05-17T08:07:40.313Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-45288",
@@ -15318,7 +15772,8 @@
     "syncedAt": "2026-05-17T08:07:40.705Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-53539",
@@ -15344,7 +15799,8 @@
     "syncedAt": "2026-05-17T08:07:31.530Z",
     "stacks": [
       "fastapi"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-29652",
@@ -15370,7 +15826,8 @@
     "syncedAt": "2026-05-17T08:07:41.044Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2018-17143",
@@ -15396,7 +15853,8 @@
     "syncedAt": "2026-05-17T08:07:40.809Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "GHSA-npm-1111391",
@@ -15426,7 +15884,8 @@
     "syncedAt": "2026-05-17T08:07:41.435Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-33129",
@@ -15452,7 +15911,8 @@
     "syncedAt": "2026-05-17T08:07:31.661Z",
     "stacks": [
       "nuxt"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-42044",
@@ -15481,7 +15941,8 @@
     "syncedAt": "2026-05-17T08:07:31.976Z",
     "stacks": [
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-9402",
@@ -15521,7 +15982,8 @@
     "syncedAt": "2026-05-17T08:07:32.397Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-10742",
@@ -15550,7 +16012,8 @@
     "syncedAt": "2026-05-17T08:07:32.003Z",
     "stacks": [
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-28168",
@@ -15578,7 +16041,8 @@
     "syncedAt": "2026-05-17T08:07:32.083Z",
     "stacks": [
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-22885",
@@ -15624,7 +16088,8 @@
     "syncedAt": "2026-05-17T08:07:38.693Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-1857",
@@ -15664,7 +16129,8 @@
     "syncedAt": "2026-05-17T08:07:38.719Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-39338",
@@ -15692,7 +16158,8 @@
     "syncedAt": "2026-05-17T08:07:32.109Z",
     "stacks": [
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-41128",
@@ -15736,7 +16203,8 @@
     "syncedAt": "2026-05-17T08:07:39.163Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-0752",
@@ -15788,7 +16256,8 @@
     "syncedAt": "2026-05-17T08:07:39.190Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-32224",
@@ -15834,7 +16303,8 @@
     "syncedAt": "2026-05-17T08:07:39.268Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-39865",
@@ -15863,7 +16333,8 @@
     "syncedAt": "2026-05-17T08:07:32.162Z",
     "stacks": [
       "react-spa"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2016-9014",
@@ -15901,7 +16372,8 @@
     "syncedAt": "2026-05-17T08:07:32.370Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-4137",
@@ -15933,7 +16405,8 @@
     "syncedAt": "2026-05-17T08:07:32.423Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-3227",
@@ -15971,7 +16444,8 @@
     "syncedAt": "2026-05-17T08:07:40.052Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2012-3443",
@@ -16008,7 +16482,8 @@
     "syncedAt": "2026-05-17T08:07:32.579Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2018-14574",
@@ -16040,7 +16515,8 @@
     "syncedAt": "2026-05-17T08:07:32.633Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-8167",
@@ -16074,7 +16550,8 @@
     "syncedAt": "2026-05-17T08:07:40.392Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2015-2241",
@@ -16108,7 +16585,8 @@
     "syncedAt": "2026-05-17T08:07:32.789Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-33203",
@@ -16148,7 +16626,8 @@
     "syncedAt": "2026-05-17T08:07:32.815Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-11358",
@@ -16212,7 +16691,8 @@
     "syncedAt": "2026-05-17T08:07:32.841Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-48795",
@@ -16256,7 +16736,8 @@
     "syncedAt": "2026-05-17T08:07:41.070Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-23833",
@@ -16294,7 +16775,8 @@
     "syncedAt": "2026-05-17T08:07:32.893Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-14234",
@@ -16334,7 +16816,8 @@
     "syncedAt": "2026-05-17T08:07:32.972Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "GHSA-npm-1112653",
@@ -16364,7 +16847,8 @@
     "syncedAt": "2026-05-17T08:07:41.487Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-58181",
@@ -16390,7 +16874,8 @@
     "syncedAt": "2026-05-17T08:07:41.252Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-45115",
@@ -16431,7 +16916,8 @@
     "syncedAt": "2026-05-17T08:07:32.527Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-57833",
@@ -16471,7 +16957,8 @@
     "syncedAt": "2026-05-17T08:07:32.999Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-55193",
@@ -16509,7 +16996,8 @@
     "syncedAt": "2026-05-17T08:07:39.320Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-4863",
@@ -16643,7 +17131,8 @@
     "syncedAt": "2026-05-17T08:07:36.840Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-48379",
@@ -16669,7 +17158,8 @@
     "syncedAt": "2026-05-17T08:07:37.491Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-22797",
@@ -16695,7 +17185,8 @@
     "syncedAt": "2026-05-17T08:07:38.405Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-22904",
@@ -16742,7 +17233,8 @@
     "syncedAt": "2026-05-17T08:07:38.249Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-8164",
@@ -16776,7 +17268,8 @@
     "syncedAt": "2026-05-17T08:07:38.275Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2012-3424",
@@ -16822,7 +17315,8 @@
     "syncedAt": "2026-05-17T08:07:38.379Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-0698",
@@ -16856,7 +17350,8 @@
     "syncedAt": "2026-05-17T08:07:33.154Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-0156",
@@ -16903,7 +17398,8 @@
     "syncedAt": "2026-05-17T08:07:38.745Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-22577",
@@ -16949,7 +17445,8 @@
     "syncedAt": "2026-05-17T08:07:38.798Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2011-1497",
@@ -16977,7 +17474,8 @@
     "syncedAt": "2026-05-17T08:07:38.876Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2021-44528",
@@ -17009,7 +17507,8 @@
     "syncedAt": "2026-05-17T08:07:38.929Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-6417",
@@ -17044,7 +17543,8 @@
     "syncedAt": "2026-05-17T08:07:39.137Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-0155",
@@ -17085,7 +17585,8 @@
     "syncedAt": "2026-05-17T08:07:39.556Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-22794",
@@ -17125,7 +17626,8 @@
     "syncedAt": "2026-05-17T08:07:39.635Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2014-3482",
@@ -17153,7 +17655,8 @@
     "syncedAt": "2026-05-17T08:07:39.713Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-33176",
@@ -17194,7 +17697,8 @@
     "syncedAt": "2026-05-17T08:07:39.843Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-1856",
@@ -17229,7 +17733,8 @@
     "syncedAt": "2026-05-17T08:07:39.922Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2013-0333",
@@ -17263,7 +17768,8 @@
     "syncedAt": "2026-05-17T08:07:40.157Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-5267",
@@ -17297,7 +17803,8 @@
     "syncedAt": "2026-05-17T08:07:40.183Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-5418",
@@ -17343,7 +17850,8 @@
     "syncedAt": "2026-05-17T08:07:40.209Z",
     "stacks": [
       "rails"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-36567",
@@ -17372,7 +17880,8 @@
     "syncedAt": "2026-05-17T08:07:40.470Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2022-41721",
@@ -17398,7 +17907,8 @@
     "syncedAt": "2026-05-17T08:07:40.835Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-22869",
@@ -17424,7 +17934,8 @@
     "syncedAt": "2026-05-17T08:07:41.226Z",
     "stacks": [
       "go"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "GHSA-5j59-xgg2-r9c4",
@@ -17508,7 +18019,8 @@
     "syncedAt": "2026-05-17T08:07:41.513Z",
     "stacks": [
       "nextjs"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "GHSA-wfp9-vr4j-f49j",
@@ -17536,7 +18048,8 @@
     "syncedAt": "2026-05-17T08:07:41.669Z",
     "stacks": [
       "express"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-32873",
@@ -17574,7 +18087,8 @@
     "syncedAt": "2026-05-17T08:07:33.392Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2026-33034",
@@ -17612,7 +18126,8 @@
     "syncedAt": "2026-05-17T08:07:33.498Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2009-2659",
@@ -17646,7 +18161,8 @@
     "syncedAt": "2026-05-17T08:07:33.654Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2010-4534",
@@ -17681,7 +18197,8 @@
     "syncedAt": "2026-05-17T08:07:33.914Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2020-7471",
@@ -17721,7 +18238,8 @@
     "syncedAt": "2026-05-17T08:07:34.176Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2019-19118",
@@ -17753,7 +18271,8 @@
     "syncedAt": "2026-05-17T08:07:34.229Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2023-36053",
@@ -17791,7 +18310,8 @@
     "syncedAt": "2026-05-17T08:07:34.281Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2024-56374",
@@ -17847,7 +18367,8 @@
     "syncedAt": "2026-05-17T08:07:34.828Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   },
   {
     "publicId": "CVE-2025-64458",
@@ -17885,6 +18406,7 @@
     "syncedAt": "2026-05-17T08:07:34.984Z",
     "stacks": [
       "django"
-    ]
+    ],
+    "layers": []
   }
 ]

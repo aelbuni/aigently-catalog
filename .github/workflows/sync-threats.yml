@@ -51,12 +51,18 @@ jobs:
           FORCE: ${{ github.event.inputs.force_summarize == 'true' && '1' || '' }}
         run: npm run summarize:rules
 
-      - name: Phase 4 — Export catalog to JSON
+      - name: Phase 4 — Synthesize guardrails
+        env:
+          DATABASE_URL:      ${{ secrets.DATABASE_URL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npm run synthesize:guardrails
+
+      - name: Phase 5 — Export catalog to JSON
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: npm run export:catalog
 
-      - name: Phase 5 — Commit updated catalog artifacts
+      - name: Phase 6 — Commit updated catalog artifacts
         run: |
           git config user.name  "aigently-bot"
           git config user.email "bot@aigently.io"
@@ -66,4 +72,4 @@ jobs:
 
       - name: Notify on failure
         if: failure()
-        run: echo "Pipeline failed — check sync_log table and step logs above"
+        run: echo "Pipeline failed — check sync_log table and step logs above. Phases: 1=sync 2=amplify 3=summarize-rules 4=synthesize-guardrails 5=export 6=commit"

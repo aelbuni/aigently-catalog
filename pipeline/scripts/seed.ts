@@ -16,6 +16,7 @@ import { getCwePatternLines } from "./lib/cwe-patterns";
 import {
   db,
   ide,
+  layer,
   policyTemplate,
   policyTemplateStack,
   rule,
@@ -32,6 +33,16 @@ import {
   threat,
   threatStack,
 } from "../lib/db";
+
+// Lazy-loaded auth_session layer ID (looked up once from the live layer table)
+let _authSessionLayerId: string | undefined;
+async function getAuthSessionLayerId(): Promise<string> {
+  if (_authSessionLayerId) return _authSessionLayerId;
+  const [row] = await db.select({ id: layer.id }).from(layer).where(eq(layer.slug, "auth_session")).limit(1);
+  if (!row) throw new Error("layer 'auth_session' not found in DB — run migrations first");
+  _authSessionLayerId = row.id;
+  return row.id;
+}
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, "..", "..");
@@ -476,8 +487,9 @@ async function reconcileRuleForStack(
     }
   }
 
+  const authSessionLayerId = await getAuthSessionLayerId();
   await db.delete(ruleLayerMap).where(eq(ruleLayerMap.ruleId, ruleId));
-  await db.insert(ruleLayerMap).values({ ruleId, layer: "security" }).onConflictDoNothing();
+  await db.insert(ruleLayerMap).values({ ruleId, layerId: authSessionLayerId }).onConflictDoNothing();
 }
 
 function todayDateStr(): string {
@@ -692,7 +704,8 @@ async function seedFull(master: MasterFile, threatStacks: ThreatStackFile, shipp
           await db.insert(ruleIde).values({ ruleId, ideId }).onConflictDoNothing();
         }
       }
-      await db.insert(ruleLayerMap).values({ ruleId, layer: "security" }).onConflictDoNothing();
+      const authLayerId = await getAuthSessionLayerId();
+      await db.insert(ruleLayerMap).values({ ruleId, layerId: authLayerId }).onConflictDoNothing();
 
       const linkThreats = await db
         .select({ publicId: threat.publicId })

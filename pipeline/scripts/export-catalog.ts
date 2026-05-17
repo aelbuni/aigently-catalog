@@ -8,12 +8,16 @@ import { eq } from "drizzle-orm";
 
 import {
   db,
+  layer,
   pool,
   rule,
+  ruleLayerMap,
   ruleStack,
   ruleThreatMap,
   stack,
+  summarizedGuardrail,
   threat,
+  threatLayer,
   threatStack,
 } from "../lib/db";
 
@@ -73,28 +77,43 @@ async function main() {
     .from(threatStack)
     .innerJoin(stack, eq(threatStack.stackId, stack.id));
 
+  const threatLayerRows = await db
+    .select({ threatId: threatLayer.threatId, layerSlug: layer.slug })
+    .from(threatLayer)
+    .innerJoin(layer, eq(threatLayer.layerId, layer.id));
+
   const threatStackMap = new Map<string, string[]>();
+  const threatLayerMapJ = new Map<string, string[]>();
+
   for (const row of threatStackRows) {
     const slugs = threatStackMap.get(row.threatId) ?? [];
     slugs.push(row.stackSlug);
     threatStackMap.set(row.threatId, slugs);
   }
+  for (const row of threatLayerRows) {
+    const slugs = threatLayerMapJ.get(row.threatId) ?? [];
+    slugs.push(row.layerSlug);
+    threatLayerMapJ.set(row.threatId, slugs);
+  }
 
   const threats = threatRows.map(t => ({
     ...t,
-    stacks: threatStackMap.get(t.publicId) ?? [],
+    stacks:  threatStackMap.get(t.publicId)  ?? [],
+    layers:  threatLayerMapJ.get(t.publicId) ?? [],
   }));
 
   // ── Rules ──────────────────────────────────────────────────────────────────
   const ruleRows = await db
     .select({
-      id:          rule.id,
-      slug:        rule.slug,
-      name:        rule.name,
-      description: rule.description,
-      version:     rule.version,
-      bodyMdx:     rule.bodyMdx,
-      summaryMdx:  rule.summaryMdx,
+      id:            rule.id,
+      slug:          rule.slug,
+      name:          rule.name,
+      description:   rule.description,
+      version:       rule.version,
+      ruleType:      rule.ruleType,
+      strengthScore: rule.strengthScore,
+      bodyMdx:       rule.bodyMdx,
+      summaryMdx:    rule.summaryMdx,
     })
     .from(rule);
 
@@ -107,8 +126,14 @@ async function main() {
     .select({ ruleId: ruleThreatMap.ruleId, threatId: ruleThreatMap.threatId })
     .from(ruleThreatMap);
 
+  const ruleLayerRows = await db
+    .select({ ruleId: ruleLayerMap.ruleId, layerSlug: layer.slug })
+    .from(ruleLayerMap)
+    .innerJoin(layer, eq(ruleLayerMap.layerId, layer.id));
+
   const ruleStackMap   = new Map<string, string[]>();
   const ruleThreatMapJ = new Map<string, string[]>();
+  const ruleLayerMapJ  = new Map<string, string[]>();
 
   for (const row of ruleStackRows) {
     const slugs = ruleStackMap.get(row.ruleId) ?? [];
@@ -120,31 +145,57 @@ async function main() {
     ids.push(row.threatId);
     ruleThreatMapJ.set(row.ruleId, ids);
   }
+  for (const row of ruleLayerRows) {
+    const slugs = ruleLayerMapJ.get(row.ruleId) ?? [];
+    slugs.push(row.layerSlug);
+    ruleLayerMapJ.set(row.ruleId, slugs);
+  }
 
   const rules = ruleRows.map(r => ({
     ...r,
-    stacks:    ruleStackMap.get(r.id)    ?? [],
+    stacks:    ruleStackMap.get(r.id)   ?? [],
+    layers:    ruleLayerMapJ.get(r.id)  ?? [],
     threatIds: ruleThreatMapJ.get(r.id) ?? [],
   }));
+
+  // ── Guardrails ─────────────────────────────────────────────────────────────
+  const guardrailRows = await db
+    .select({
+      stackSlug:         stack.slug,
+      layerSlug:         layer.slug,
+      content:           summarizedGuardrail.content,
+      qualityScore:      summarizedGuardrail.qualityScore,
+      scoreOverride:     summarizedGuardrail.scoreOverride,
+      conflictCount:     summarizedGuardrail.conflictCount,
+      sourceRuleIds:     summarizedGuardrail.sourceRuleIds,
+      summarizerVersion: summarizedGuardrail.summarizerVersion,
+      generatedAt:       summarizedGuardrail.generatedAt,
+      cacheKey:          summarizedGuardrail.cacheKey,
+    })
+    .from(summarizedGuardrail)
+    .innerJoin(stack, eq(summarizedGuardrail.stackId, stack.id))
+    .innerJoin(layer, eq(summarizedGuardrail.layerId, layer.id));
 
   // ── Manifest ───────────────────────────────────────────────────────────────
   const manifest = {
     version:     "1.0.0",
     generatedAt: new Date().toISOString(),
     counts: {
-      threats: threats.length,
-      rules:   rules.length,
-      stacks:  stacks.length,
+      threats:    threats.length,
+      rules:      rules.length,
+      stacks:     stacks.length,
+      guardrails: guardrailRows.length,
     },
   };
 
   // ── Write files ────────────────────────────────────────────────────────────
-  write("manifest.json", manifest);
-  write("stacks.json",   stacks);
-  write("threats.json",  threats);
-  write("rules.json",    rules);
+  write("manifest.json",   manifest);
+  write("stacks.json",     stacks);
+  write("threats.json",    threats);
+  write("rules.json",      rules);
+  write("guardrails.json", guardrailRows);
 
-  console.log(`\nDone: ${threats.length} threats, ${rules.length} rules, ${stacks.length} stacks.`);
+  console.log(`\nDone: ${threats.length} threats, ${rules.length} rules, ${stacks.length} stacks, ${guardrailRows.length} guardrails.`);
 }
 
 main()

@@ -10,6 +10,7 @@
     "sync:threats": "tsx scripts/sync-threats.ts",
     "amplify:threats": "tsx scripts/amplify-threats.ts",
     "summarize:rules": "tsx scripts/summarize-rules.ts",
+    "synthesize:guardrails": "tsx scripts/synthesize-guardrails.ts",
     "export:catalog": "tsx scripts/export-catalog.ts"
   },
   "dependencies": {

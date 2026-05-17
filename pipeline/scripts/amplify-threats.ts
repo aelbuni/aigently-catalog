@@ -8,7 +8,7 @@ import { db, pool, threat } from "../lib/db";
 // ── Client setup ─────────────────────────────────────────────────────────────
 // Reads ANTHROPIC_API_KEY from env automatically.
 
-const MODEL = "claude-sonnet-4-6";
+const MODEL = process.env.AMPLIFY_MODEL ?? "claude-haiku-4-5-20251001";
 
 const client = new Anthropic();
 

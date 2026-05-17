@@ -195,6 +195,8 @@ export const rule = pgTable("rule", {
   certified: boolean("certified").notNull().default(false),
   complexity: text("complexity"),
   lineCount: integer("line_count"),
+  ruleType: text("rule_type", { enum: ["pattern", "deps", "config", "runtime"] }),
+  strengthScore: integer("strength_score").notNull().default(0),
   contentPath: text("content_path"),
   bodyMdx: text("body_mdx"),
   summaryMdx: text("summary_mdx"),
@@ -232,16 +234,48 @@ export const ruleIde = pgTable(
   })
 );
 
+/** First-class layer entity — slug-keyed, replaces the hardcoded ruleLayerEnum in rule_layer_map. */
+export const layer = pgTable("layer", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  slug: text("slug").notNull().unique(),
+  name: text("name").notNull(),
+  concernStatement: text("concern_statement").notNull().default(""),
+  isActive: boolean("is_active").notNull().default(true),
+  sortOrder: integer("sort_order").notNull().default(100),
+});
+
+/** Maps threats to protection layers (primary/secondary relevance). */
+export const threatLayer = pgTable(
+  "threat_layer",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    threatId: text("threat_id")
+      .notNull()
+      .references(() => threat.publicId, { onDelete: "cascade" }),
+    layerId: uuid("layer_id")
+      .notNull()
+      .references(() => layer.id, { onDelete: "cascade" }),
+    relevance: text("relevance", { enum: ["primary", "secondary"] }).notNull().default("primary"),
+    rationale: text("rationale"),
+    addedAt: timestamp("added_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => ({
+    uniq: uniqueIndex("uq_threat_layer").on(t.threatId, t.layerId),
+  })
+);
+
 export const ruleLayerMap = pgTable(
   "rule_layer_map",
   {
     ruleId: uuid("rule_id")
       .notNull()
       .references(() => rule.id, { onDelete: "cascade" }),
-    layer: ruleLayerEnum("layer").notNull(),
+    layerId: uuid("layer_id")
+      .notNull()
+      .references(() => layer.id, { onDelete: "cascade" }),
   },
   (t) => ({
-    pk: primaryKey({ columns: [t.ruleId, t.layer] }),
+    pk: primaryKey({ columns: [t.ruleId, t.layerId] }),
   })
 );
 
@@ -334,6 +368,25 @@ export const syncLog = pgTable("sync_log", {
   coveragePercent: smallint("coverage_percent"),
   status: text("status").notNull().default("running"),
   errorMessage: text("error_message"),
+});
+
+/** AI-synthesized guardrail content per (stack, layer) pair. Written by the catalog pipeline CI and readable by the admin dashboard. */
+export const summarizedGuardrail = pgTable("summarized_guardrail", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  stackId: smallint("stack_id").notNull().references(() => stack.id),
+  layerId: uuid("layer_id").notNull().references(() => layer.id),
+  ideSlug: text("ide_slug").notNull().default("all"),
+  content: text("content").notNull(),
+  sourceRuleIds: uuid("source_rule_ids").array().notNull(),
+  provenance: jsonb("provenance"),
+  conflictCount: integer("conflict_count").notNull().default(0),
+  cacheKey: text("cache_key").notNull().unique(),
+  summarizerVersion: text("summarizer_version").notNull(),
+  generatedAt: timestamp("generated_at", { withTimezone: true }).notNull().defaultNow(),
+  expiresAt: timestamp("expires_at", { withTimezone: true }),
+  qualityScore: smallint("quality_score").notNull().default(0),
+  scoreOverride: smallint("score_override"),
+  scoreNote: text("score_note"),
 });
 
 export const policyTemplate = pgTable("policy_template", {
