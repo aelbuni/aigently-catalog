@@ -51,40 +51,40 @@
     "slug": "django",
     "name": "Django",
     "ecosystem": "pypi",
-    "catalogStatus": "coming_soon",
-    "securityGrade": null,
+    "catalogStatus": "launch",
+    "securityGrade": "",
     "sortOrder": 7
   },
   {
     "slug": "rails",
     "name": "Ruby on Rails",
     "ecosystem": "rubygems",
-    "catalogStatus": "coming_soon",
-    "securityGrade": null,
+    "catalogStatus": "launch",
+    "securityGrade": "",
     "sortOrder": 8
   },
   {
     "slug": "go",
     "name": "Go",
     "ecosystem": "go",
-    "catalogStatus": "coming_soon",
-    "securityGrade": null,
+    "catalogStatus": "launch",
+    "securityGrade": "",
     "sortOrder": 9
   },
   {
     "slug": "ios",
     "name": "iOS / Swift",
     "ecosystem": "swift",
-    "catalogStatus": "coming_soon",
-    "securityGrade": null,
+    "catalogStatus": "launch",
+    "securityGrade": "",
     "sortOrder": 10
   },
   {
     "slug": "android",
     "name": "Android / Kotlin",
     "ecosystem": "maven",
-    "catalogStatus": "coming_soon",
-    "securityGrade": null,
+    "catalogStatus": "launch",
+    "securityGrade": "",
     "sortOrder": 11
   }
 ]
