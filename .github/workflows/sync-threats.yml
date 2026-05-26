@@ -72,4 +72,6 @@ jobs:
 
       - name: Notify on failure
         if: failure()
-        run: echo "Pipeline failed — check sync_log table and step logs above. Phases: 1=sync 2=amplify 3=summarize-rules 4=synthesize-guardrails 5=export 6=commit"
+        run: |
+          echo "Pipeline failed - check sync_log table and step logs above"
+          echo "Phases: 1=sync 2=amplify 3=summarize-rules 4=synthesize-guardrails 5=export 6=commit"
