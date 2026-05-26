@@ -1,6 +1,6 @@
 {
   "name": "@aigently/mcp-server",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "MCP server for aigently security guardrails — reads static catalog-data JSON, zero API dependency",
   "keywords": [
     "mcp",
