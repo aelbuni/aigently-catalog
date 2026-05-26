@@ -1,8 +1,17 @@
 {
   "name": "@aigently/mcp-server",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "MCP server for aigently security guardrails — reads static catalog-data JSON, zero API dependency",
-  "keywords": ["mcp", "security", "cve", "cursor", "claude", "windsurf", "guardrails", "vibe-coding"],
+  "keywords": [
+    "mcp",
+    "security",
+    "cve",
+    "cursor",
+    "claude",
+    "windsurf",
+    "guardrails",
+    "vibe-coding"
+  ],
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
