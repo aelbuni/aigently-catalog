@@ -85,7 +85,6 @@ export function normaliseNpmAdvisory(
     patchedVersion:      adv.patched_versions ?? null,
     isActivelyExploited: !!kevEntry,
     cisaActionDue:       kevEntry?.dueDate ?? null,
-    details:             { rawAdvisory: adv },
     affectedStackSlugs:  [stackSlug],
   };
 }

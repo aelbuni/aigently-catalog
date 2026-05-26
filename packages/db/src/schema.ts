@@ -159,7 +159,6 @@ export const threat = pgTable("threat", {
   severity: severityLevelEnum("severity"),
   description: text("description"),
   aiAmplification: text("ai_amplification"),
-  details: jsonb("details").notNull().default({}),
   cveId: text("cve_id"),
   /** Stable upsert key for OSV/GHSA/NVD; curated rows may mirror public_id after backfill. */
   externalId: text("external_id").unique(),

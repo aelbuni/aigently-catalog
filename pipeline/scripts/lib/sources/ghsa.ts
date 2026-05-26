@@ -102,7 +102,6 @@ export function normaliseGhsa(
     patchedVersion:      affected[0]?.patchedVersions ?? null,
     isActivelyExploited: !!kevEntry,
     cisaActionDue:       kevEntry?.dueDate ?? null,
-    details:             { rawGhsa: adv },
     affectedStackSlugs:  [stackSlug],
   };
 }

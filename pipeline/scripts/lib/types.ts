@@ -29,7 +29,6 @@ export interface NormalisedThreat {
   patchedVersion: string | null;
   isActivelyExploited: boolean;
   cisaActionDue: string | null;
-  details: Record<string, unknown>;
   affectedStackSlugs: string[];
 }
 

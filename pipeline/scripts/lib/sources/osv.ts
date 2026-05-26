@@ -101,7 +101,6 @@ export function normaliseOsvVuln(
     patchedVersion:      affected[0]?.patchedVersions ?? null,
     isActivelyExploited: !!kevEntry,
     cisaActionDue:       kevEntry?.dueDate ?? null,
-    details:             { rawOsv: vuln },
     affectedStackSlugs:  [stackSlug],
   };
 }

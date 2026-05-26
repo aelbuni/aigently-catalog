@@ -22,7 +22,6 @@ export async function upsertThreat(t: NormalisedThreat): Promise<void> {
     patchedVersion:      t.patchedVersion,
     isActivelyExploited: t.isActivelyExploited,
     cisaActionDue:       t.cisaActionDue,
-    details:             t.details,
     updatedAt:           now,
     // aiAmplification intentionally absent — editorial-only field
   };
