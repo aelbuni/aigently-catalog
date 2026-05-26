@@ -28,12 +28,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Bump patch version
+      - name: Bump patch version (skip if already tagged)
         id: bump
         working-directory: packages/mcp-server
         run: |
-          npm version patch --no-git-tag-version
-          VERSION=$(node -p "require('./package.json').version")
+          CURRENT=$(node -p "require('./package.json').version")
+          if git tag -l "mcp-server/v$CURRENT" | grep -q .; then
+            echo "Tag mcp-server/v$CURRENT already exists — reusing version for re-run"
+            VERSION=$CURRENT
+          else
+            npm version patch --no-git-tag-version
+            VERSION=$(node -p "require('./package.json').version")
+          fi
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Build (includes catalog-data copy)
@@ -42,17 +48,15 @@ jobs:
       - name: Smoke test
         run: npm test -w @aigently/mcp-server
 
-      - name: Commit version bump
+      - name: Commit and tag (skip if already done)
         run: |
           git config user.name  "aigently-bot"
           git config user.email "bot@aigently.io"
           git add packages/mcp-server/package.json
-          git commit -m "chore(mcp-server): weekly release v${{ steps.bump.outputs.version }}"
-
-      - name: Tag and push
-        run: |
-          git tag "mcp-server/v${{ steps.bump.outputs.version }}"
-          git push origin main "mcp-server/v${{ steps.bump.outputs.version }}"
+          git diff --staged --quiet || git commit -m "chore(mcp-server): weekly release v${{ steps.bump.outputs.version }}"
+          git tag "mcp-server/v${{ steps.bump.outputs.version }}" 2>/dev/null || echo "Tag already exists, skipping"
+          git push origin main 2>/dev/null || echo "Nothing new to push"
+          git push origin "mcp-server/v${{ steps.bump.outputs.version }}" 2>/dev/null || echo "Tag already pushed"
 
       - name: Publish to npm
         working-directory: packages/mcp-server
