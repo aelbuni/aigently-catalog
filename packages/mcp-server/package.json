@@ -1,0 +1,42 @@
+{
+  "name": "@aigently/mcp-server",
+  "version": "0.2.0",
+  "description": "MCP server for aigently security guardrails — reads static catalog-data JSON, zero API dependency",
+  "keywords": ["mcp", "security", "cve", "cursor", "claude", "windsurf", "guardrails", "vibe-coding"],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aelbuni/aigently-catalog",
+    "directory": "packages/mcp-server"
+  },
+  "homepage": "https://github.com/aelbuni/aigently-catalog/tree/main/packages/mcp-server#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "aigently-mcp": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "type": "module",
+  "scripts": {
+    "prebuild": "mkdir -p dist/catalog-data",
+    "build": "tsc && cp ../catalog-data/threats.json ../catalog-data/rules.json ../catalog-data/stacks.json ../catalog-data/guardrails.json ../catalog-data/manifest.json dist/catalog-data/",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "test": "node scripts/test-tools.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  },
+  "files": [
+    "dist/",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}

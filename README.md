@@ -32,7 +32,7 @@ The daily CI pipeline commits fresh CVE data to `packages/catalog-data/` — clo
 
 ```bash
 git clone https://github.com/aelbuni/aigently-catalog
-cd catalog
+cd aigently-catalog
 npm install
 
 # Copy env template and set DATABASE_URL (default matches docker-compose)

@@ -1,0 +1,60 @@
+name: Weekly MCP Release
+
+on:
+  schedule:
+    - cron: "0 8 * * 1" # Every Monday at 08:00 UTC (after daily sync at 06:00)
+  workflow_dispatch:     # Allow manual trigger
+
+jobs:
+  release:
+    name: Bump version → Tag → Publish
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          registry-url: "https://registry.npmjs.org"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Bump patch version
+        id: bump
+        working-directory: packages/mcp-server
+        run: |
+          npm version patch --no-git-tag-version
+          VERSION=$(node -p "require('./package.json').version")
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Build (includes catalog-data copy)
+        run: npm run build -w @aigently/mcp-server
+
+      - name: Smoke test
+        run: npm test -w @aigently/mcp-server
+
+      - name: Commit version bump
+        run: |
+          git config user.name  "aigently-bot"
+          git config user.email "bot@aigently.io"
+          git add packages/mcp-server/package.json
+          git commit -m "chore(mcp-server): weekly release v${{ steps.bump.outputs.version }}"
+
+      - name: Tag and push
+        run: |
+          git tag "mcp-server/v${{ steps.bump.outputs.version }}"
+          git push origin main "mcp-server/v${{ steps.bump.outputs.version }}"
+
+      - name: Publish to npm
+        working-directory: packages/mcp-server
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

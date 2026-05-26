@@ -8,9 +8,11 @@ import { eq } from "drizzle-orm";
 
 import {
   db,
+  ide,
   layer,
   pool,
   rule,
+  ruleIde,
   ruleLayerMap,
   ruleStack,
   ruleThreatMap,
@@ -131,9 +133,15 @@ async function main() {
     .from(ruleLayerMap)
     .innerJoin(layer, eq(ruleLayerMap.layerId, layer.id));
 
+  const ruleIdeRows = await db
+    .select({ ruleId: ruleIde.ruleId, ideSlug: ide.slug })
+    .from(ruleIde)
+    .innerJoin(ide, eq(ruleIde.ideId, ide.id));
+
   const ruleStackMap   = new Map<string, string[]>();
   const ruleThreatMapJ = new Map<string, string[]>();
   const ruleLayerMapJ  = new Map<string, string[]>();
+  const ruleIdeMapJ    = new Map<string, string[]>();
 
   for (const row of ruleStackRows) {
     const slugs = ruleStackMap.get(row.ruleId) ?? [];
@@ -150,11 +158,17 @@ async function main() {
     slugs.push(row.layerSlug);
     ruleLayerMapJ.set(row.ruleId, slugs);
   }
+  for (const row of ruleIdeRows) {
+    const slugs = ruleIdeMapJ.get(row.ruleId) ?? [];
+    slugs.push(row.ideSlug);
+    ruleIdeMapJ.set(row.ruleId, slugs);
+  }
 
   const rules = ruleRows.map(r => ({
     ...r,
     stacks:    ruleStackMap.get(r.id)   ?? [],
     layers:    ruleLayerMapJ.get(r.id)  ?? [],
+    ides:      ruleIdeMapJ.get(r.id)    ?? [],  // empty = applies to all IDEs
     threatIds: ruleThreatMapJ.get(r.id) ?? [],
   }));
 
