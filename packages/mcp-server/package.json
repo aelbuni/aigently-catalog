@@ -39,7 +39,7 @@
     "@modelcontextprotocol/sdk": "^1.29.0"
   },
   "devDependencies": {
-    "typescript": "^5"
+    "typescript": "^6"
   },
   "files": [
     "dist/",
