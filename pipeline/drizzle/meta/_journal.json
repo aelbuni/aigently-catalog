@@ -5,43 +5,8 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1777860433280,
-      "tag": "0000_init",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1777867319109,
-      "tag": "0001_serious_gamma_corps",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "7",
-      "when": 1777869000000,
-      "tag": "0002_stack_catalog_status",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "7",
-      "when": 1778707398339,
-      "tag": "0003_sticky_gorgon",
-      "breakpoints": true
-    },
-    {
-      "idx": 4,
-      "version": "7",
-      "when": 1747526400000,
-      "tag": "0004_layer_entity",
-      "breakpoints": true
-    },
-    {
-      "idx": 5,
-      "version": "7",
-      "when": 1747612800000,
-      "tag": "0005_summarized_guardrail",
+      "when": 1779915179796,
+      "tag": "0000_init_v2",
       "breakpoints": true
     }
   ]
