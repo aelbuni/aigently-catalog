@@ -1,4 +1,4 @@
-![Aigent.ly](brand/wordmark/logo-light.svg)
+![Aigent.ly](brand/wordmark/logo-dark-transparent.svg)
 
 ---
 
