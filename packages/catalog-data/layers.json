@@ -1,0 +1,167 @@
+[
+  {
+    "slug": "auth_session",
+    "name": "Authentication & Session",
+    "description": "Prevents auth bypass, session fixation, and credential exposure",
+    "concernStatement": "preventing authentication bypass, session fixation, insecure token storage, and credential exposure",
+    "iconName": "lock",
+    "colorToken": "--layer-auth",
+    "isSystem": true,
+    "isActive": true,
+    "sortOrder": 10
+  },
+  {
+    "slug": "authz_access",
+    "name": "Authorization & Access Control",
+    "description": "Enforces ownership checks, RLS, and privilege boundaries",
+    "concernStatement": "enforcing authorization checks, row-level security, ownership validation, and privilege separation",
+    "iconName": "shield_person",
+    "colorToken": "--layer-authz",
+    "isSystem": true,
+    "isActive": true,
+    "sortOrder": 20
+  },
+  {
+    "slug": "input_validation",
+    "name": "Input Validation & Sanitization",
+    "description": "Prevents injection, path traversal, and malformed input exploitation",
+    "concernStatement": "preventing injection attacks, path traversal, prototype pollution, and malformed input exploitation",
+    "iconName": "filter_alt",
+    "colorToken": "--layer-input",
+    "isSystem": true,
+    "isActive": true,
+    "sortOrder": 30
+  },
+  {
+    "slug": "secrets_credentials",
+    "name": "Secrets & Credentials",
+    "description": "Prevents API key leakage, hardcoded credentials, and client bundle exposure",
+    "concernStatement": "preventing credential leakage, hardcoded secrets, and sensitive value exposure in client bundles or logs",
+    "iconName": "key",
+    "colorToken": "--layer-secrets",
+    "isSystem": true,
+    "isActive": true,
+    "sortOrder": 40
+  },
+  {
+    "slug": "dependency_supply",
+    "name": "Dependency & Supply Chain",
+    "description": "Enforces package pinning, audit hygiene, and transitive dep safety",
+    "concernStatement": "maintaining dependency hygiene, pinning package versions, and preventing compromised transitive dependencies",
+    "iconName": "package_2",
+    "colorToken": "--layer-deps",
+    "isSystem": true,
+    "isActive": true,
+    "sortOrder": 50
+  },
+  {
+    "slug": "data_privacy",
+    "name": "Data Privacy & Compliance",
+    "description": "Governs PII handling, encryption at rest, and GDPR-pattern compliance",
+    "concernStatement": "protecting personal data, enforcing encryption at rest, and preventing PII leakage in logs or responses",
+    "iconName": "privacy_tip",
+    "colorToken": "--layer-privacy",
+    "isSystem": true,
+    "isActive": true,
+    "sortOrder": 60
+  },
+  {
+    "slug": "api_security",
+    "name": "API Security & Rate Limiting",
+    "description": "Prevents abuse via throttling, CORS, versioning, and endpoint authentication",
+    "concernStatement": "preventing API abuse, enforcing rate limits, securing CORS policy, and authenticating all endpoints",
+    "iconName": "api",
+    "colorToken": "--layer-api",
+    "isSystem": false,
+    "isActive": false,
+    "sortOrder": 70
+  },
+  {
+    "slug": "database",
+    "name": "Database Hardening",
+    "description": "Enforces RLS, connection pooling, backup hygiene, and column-level encryption",
+    "concernStatement": "enforcing row-level security, connection pooling, backup strategies, and preventing plaintext sensitive columns",
+    "iconName": "database",
+    "colorToken": "--layer-db",
+    "isSystem": false,
+    "isActive": false,
+    "sortOrder": 80
+  },
+  {
+    "slug": "infrastructure",
+    "name": "Infrastructure & Deployment",
+    "description": "Governs CI/CD secret hygiene, IAM least-privilege, and environment isolation",
+    "concernStatement": "preventing secret exposure in CI/CD, enforcing least-privilege IAM, and maintaining environment isolation",
+    "iconName": "cloud",
+    "colorToken": "--layer-infra",
+    "isSystem": false,
+    "isActive": false,
+    "sortOrder": 90
+  },
+  {
+    "slug": "caching_cdn",
+    "name": "Caching & CDN",
+    "description": "Prevents cache poisoning, stale auth data, and CDN security header bypass",
+    "concernStatement": "preventing cache poisoning, ensuring stale auth data is not served, and enforcing CDN security header policy",
+    "iconName": "cached",
+    "colorToken": "--layer-cache",
+    "isSystem": false,
+    "isActive": false,
+    "sortOrder": 100
+  },
+  {
+    "slug": "frontend_network",
+    "name": "Frontend & Network Security",
+    "description": "Enforces CSP, HTTPS-only cookies, SRI, and clickjacking defenses",
+    "concernStatement": "enforcing Content Security Policy, HTTPS-only cookies, subresource integrity, and anti-clickjacking headers",
+    "iconName": "language",
+    "colorToken": "--layer-frontend",
+    "isSystem": false,
+    "isActive": false,
+    "sortOrder": 110
+  },
+  {
+    "slug": "observability",
+    "name": "Observability & Incident Response",
+    "description": "Enforces log hygiene, alerting, audit trails, and error boundary patterns",
+    "concernStatement": "ensuring clean log hygiene, anomaly alerting, audit trail coverage, and proper error boundary instrumentation",
+    "iconName": "monitoring",
+    "colorToken": "--layer-obs",
+    "isSystem": false,
+    "isActive": false,
+    "sortOrder": 120
+  },
+  {
+    "slug": "resilience",
+    "name": "Resilience & Recovery",
+    "description": "Governs backup strategy, failover, AZ distribution, and runbook coverage",
+    "concernStatement": "enforcing backup strategies, failover configuration, multi-AZ distribution, and runbook documentation",
+    "iconName": "health_and_safety",
+    "colorToken": "--layer-resilience",
+    "isSystem": false,
+    "isActive": false,
+    "sortOrder": 130
+  },
+  {
+    "slug": "ai_safety",
+    "name": "AI & LLM Safety",
+    "description": "Defends against prompt injection, raw LLM output rendering, and context leakage",
+    "concernStatement": "preventing prompt injection, validating LLM outputs before rendering, and preventing context window leakage",
+    "iconName": "smart_toy",
+    "colorToken": "--layer-ai",
+    "isSystem": false,
+    "isActive": false,
+    "sortOrder": 140
+  },
+  {
+    "slug": "code_quality",
+    "name": "Code Quality & Patterns",
+    "description": "Enforces error handling, null safety, and patterns that prevent vulnerability entry points",
+    "concernStatement": "maintaining error handling hygiene, null safety, and structural patterns that prevent vulnerability entry",
+    "iconName": "code",
+    "colorToken": "--layer-quality",
+    "isSystem": false,
+    "isActive": false,
+    "sortOrder": 150
+  }
+]
