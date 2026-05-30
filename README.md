@@ -11,6 +11,8 @@ The open-source CVE catalog, pipeline, and MCP server behind [aigent.ly](https:/
 
 ## How it works
 
+[![asciicast](https://asciinema.org/a/hvKBCjRDdgQVEZQH.svg)](https://asciinema.org/a/hvKBCjRDdgQVEZQH)
+
 ```text
 CVE published  →  pipeline detects it  →  Claude generates safe-code patterns
     →  rule committed to this repo  →  your IDE enforces it while you type
