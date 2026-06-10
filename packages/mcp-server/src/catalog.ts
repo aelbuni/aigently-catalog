@@ -34,6 +34,10 @@ export interface CatalogThreat {
   severity: string | null;
   owaspRefs: string[];
   isActivelyExploited: boolean;
+  /** EPSS exploit-prediction probability (0–1). null when unscored. */
+  epssScore: number | null;
+  /** EPSS percentile rank (0–1) within the global CVE corpus. null when unscored. */
+  epssPercentile: number | null;
   affectedProducts: unknown;
   // The pipeline exports aiAmplification as a JSON object (jsonb column).
   // Some older exports serialised it as a JSON string — handle both.

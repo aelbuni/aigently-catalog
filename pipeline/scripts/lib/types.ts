@@ -29,6 +29,8 @@ export interface NormalisedThreat {
   patchedVersion: string | null;
   isActivelyExploited: boolean;
   cisaActionDue: string | null;
+  epssScore: number | null;
+  epssPercentile: number | null;
   affectedStackSlugs: string[];
 }
 
@@ -44,5 +46,6 @@ export interface SyncSummary {
   osv:       SourceCount;
   ghsa:      SourceCount;
   nvd:       SourceCount;
+  epss:      SourceCount;
   cisa_kev:  { totalKev: number; newlyFlagged: number };
 }

@@ -2,6 +2,7 @@ import { sql } from "drizzle-orm";
 import {
   boolean,
   date,
+  doublePrecision,
   integer,
   jsonb,
   pgEnum,
@@ -178,6 +179,10 @@ export const threat = pgTable("threat", {
   patchedVersion: text("patched_version"),
   isActivelyExploited: boolean("is_actively_exploited").notNull().default(false),
   cisaActionDue: text("cisa_action_due"),
+  /** EPSS exploit-prediction score (0–1). Refreshed daily by the EPSS phase. */
+  epssScore: doublePrecision("epss_score"),
+  /** EPSS percentile rank (0–1) within the global CVE corpus on the same day. */
+  epssPercentile: doublePrecision("epss_percentile"),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
 });

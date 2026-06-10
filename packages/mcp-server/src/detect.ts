@@ -16,6 +16,13 @@ const STACK_SIGNALS: Record<string, string[]> = {
   django:      ["django", "views.py", "urls.py", "models.py", "settings.py", "manage.py"],
   rails:       ["rails", "activerecord", "actioncontroller", "gemfile", "ruby on rails"],
   go:          ["golang", "gin", "echo", "fiber", "net/http", "func main()"],
+  ios:         ["swift", "swiftui", "uikit", "alamofire", "xcode", "ios sdk"],
+  android:     ["android", "kotlin", "androidx", "okhttp", "retrofit", "jetpack compose"],
+  "ai-llm":    [
+    "langchain", "llama-index", "llama_index", "llamaindex", "huggingface", "hugging face",
+    "transformers", "vllm", "ollama", "embeddings", "embedding", "rag", "vector store",
+    "vectorstore", "agent", "agents", "prompt template", "llm", "chat completion", "gradio",
+  ],
 };
 
 // File-path signals — matched against the lowercased file path only.
@@ -29,8 +36,13 @@ const FILE_PATH_SIGNALS: Record<string, string[]> = {
   nuxt:        ["nuxt.config", "/composables/", "/server/api/", ".vue", "/plugins/"],
   "react-spa": ["vite.config", "src/app.tsx", "src/app.jsx", "src/components/", "craco.config"],
   django:      ["settings.py", "views.py", "models.py", "urls.py", "manage.py", "wsgi.py", "asgi.py"],
-  rails:       ["gemfile", "app/controllers/", "app/models/", "config/routes.rb", "db/schema.rb"],
+  rails:       ["gemfile", "gemfile.lock", "app/controllers/", "app/models/", "config/routes.rb", "db/schema.rb", ".rb"],
   go:          ["go.mod", "go.sum", "/cmd/", "/internal/", "/pkg/", ".go"],
+  ios:         ["package.swift", "podfile", "*.xcodeproj", "*.xcworkspace", "/sources/", ".swift", "info.plist"],
+  android:     ["build.gradle", "build.gradle.kts", "androidmanifest.xml", "app/src/main/", ".kt", "settings.gradle"],
+  // ai-llm: file-path-only detection is intentionally lenient since most AI
+  // projects share requirements.txt with FastAPI; the name signals carry the load.
+  "ai-llm":    ["langchain", "llama_index", "llama-index", "/agents/", "/chains/", "/prompts/", "/embeddings/", "ollama"],
 };
 
 const PATTERNS_SIGNALS = [

@@ -88,7 +88,7 @@ export function normaliseGhsa(
   return {
     publicId,
     externalId,
-    family:              "owasp_web",
+    family:              config.family ?? "owasp_web",
     name:                adv.summary,
     severity:            sev,
     description:         adv.description ?? null,
@@ -102,6 +102,8 @@ export function normaliseGhsa(
     patchedVersion:      affected[0]?.patchedVersions ?? null,
     isActivelyExploited: !!kevEntry,
     cisaActionDue:       kevEntry?.dueDate ?? null,
+    epssScore:           null,
+    epssPercentile:      null,
     affectedStackSlugs:  [stackSlug],
   };
 }

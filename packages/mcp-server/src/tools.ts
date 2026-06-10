@@ -21,11 +21,21 @@ function scoreThreat(t: CatalogThreat, ruleIds: Set<string>, intentLower: string
   if (ruleIds.has(t.publicId))    score += 3;
   if (t.isActivelyExploited)      score += 2;
   if (sevScore(t.severity) <= 1)  score += 2;
+  // EPSS-driven boost: high real-world exploitation probability matters more
+  // than theoretical severity. ≥0.5 is the EPSS prioritisation threshold most
+  // SOCs use; ≥0.9 marks "weaponised soon" CVEs.
+  if (t.epssScore != null) {
+    if (t.epssScore >= 0.9) score += 2;
+    else if (t.epssScore >= 0.5) score += 1;
+  }
   const owasp = (t.owaspRefs ?? []).join(" ").toLowerCase();
   if (intentLower.includes("auth") && (owasp.includes("a02") || owasp.includes("a07"))) score += 1;
   if (intentLower.includes("inject") && owasp.includes("a03")) score += 1;
   if (intentLower.includes("xss") && owasp.includes("a03"))    score += 1;
   if (intentLower.includes("csrf") && owasp.includes("a01"))   score += 1;
+  // LLM-aware intent bumps for the new ai-llm stack
+  if (intentLower.includes("prompt") && owasp.includes("llm01")) score += 1;
+  if ((intentLower.includes("rag") || intentLower.includes("retriev")) && owasp.includes("llm02")) score += 1;
   return score;
 }
 
@@ -37,6 +47,8 @@ function formatThreat(t: CatalogThreat) {
     name:                t.name,
     severity:            t.severity,
     isActivelyExploited: t.isActivelyExploited,
+    epssScore:           t.epssScore,
+    epssPercentile:      t.epssPercentile,
     ruleContext:         amp?.ruleContext ?? null,
     patternLines:        amp?.patternLines ?? [],
   };
@@ -314,7 +326,15 @@ export function handleSearchThreats(input: SearchThreatsInput) {
   });
 
   return results
-    .sort((a, b) => sevScore(a.severity) - sevScore(b.severity))
+    .sort((a, b) => {
+      // KEV first, then severity, then EPSS desc — prioritise real exploitation
+      if (a.isActivelyExploited !== b.isActivelyExploited) {
+        return a.isActivelyExploited ? -1 : 1;
+      }
+      const sevDiff = sevScore(a.severity) - sevScore(b.severity);
+      if (sevDiff !== 0) return sevDiff;
+      return (b.epssScore ?? 0) - (a.epssScore ?? 0);
+    })
     .slice(0, limit)
     .map(t => ({
       publicId:            t.publicId,
@@ -322,6 +342,8 @@ export function handleSearchThreats(input: SearchThreatsInput) {
       name:                t.name,
       severity:            t.severity,
       isActivelyExploited: t.isActivelyExploited,
+      epssScore:           t.epssScore,
+      epssPercentile:      t.epssPercentile,
       owaspRefs:           t.owaspRefs,
       stacks:              t.stacks,
       layers:              t.layers ?? [],
@@ -349,6 +371,8 @@ export function handleGetThreat(input: GetThreatInput) {
     severity:            t.severity,
     owaspRefs:           t.owaspRefs,
     isActivelyExploited: t.isActivelyExploited,
+    epssScore:           t.epssScore,
+    epssPercentile:      t.epssPercentile,
     affectedProducts:    t.affectedProducts,
     stacks:              t.stacks,
     aiAmplification:     amp,
