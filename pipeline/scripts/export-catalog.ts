@@ -78,6 +78,8 @@ async function main() {
       severity:            threat.severity,
       owaspRefs:           threat.owaspRefs,
       isActivelyExploited: threat.isActivelyExploited,
+      epssScore:           threat.epssScore,
+      epssPercentile:      threat.epssPercentile,
       affectedProducts:    threat.affectedProducts,
       aiAmplification:     threat.aiAmplification,
       publishedAt:         threat.publishedAt,

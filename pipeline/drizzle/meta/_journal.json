@@ -29,6 +29,13 @@
       "when": 1748563200000,
       "tag": "0003_guardrail_content_type",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1749168000000,
+      "tag": "0004_add_epss_columns",
+      "breakpoints": true
     }
   ]
 }

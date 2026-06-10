@@ -1,53 +1,42 @@
 ![Aigent.ly](brand/wordmark/logo-dark-transparent.svg)
 
----
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+[![MCP Compatible](https://img.shields.io/badge/MCP-compatible-7c3aed.svg)](https://modelcontextprotocol.io)
+[![Daily CI](https://img.shields.io/badge/CI-daily-2ea44f.svg)](.github/workflows/sync-threats.yml)
+[![Stacks](https://img.shields.io/badge/stacks-12-orange.svg)](packages/mvp-catalog/src/stack-registry.ts)
+[![Sources](https://img.shields.io/badge/sources-6-orange.svg)](pipeline/scripts/lib/sources)
 
-The open-source CVE catalog, pipeline, and MCP server behind [aigent.ly](https://aigent.ly). Every day, CI ingests fresh CVEs from five public threat sources, enriches them with AI-generated coding patterns, and commits ready-to-use security rules directly into this repo — formatted for Cursor, Claude Code, Windsurf, GitHub Copilot, and Cline.
+> **🆕 Catalog doubles to 12 stacks.** Django, Rails, Go, iOS, and Android graduate to launch — alongside a brand-new **AI / LLM Apps** stack covering LangChain, LlamaIndex, Hugging Face transformers, vLLM, and Ollama.
+> **Plus EPSS exploit-probability scoring on every CVE.** [Read the launch post →](./PRESS_RELEASE.md)
 
-> "We open-sourced everything the community needs — the data, the pipeline, the stack registry.
-> The web app that runs aigent.ly is private. Because a security product should practice what it preaches."
+The open-source CVE catalog, pipeline, and MCP server behind [aigent.ly](https://aigent.ly). Every day, CI ingests fresh CVEs from six public threat sources, enriches them with AI-generated coding patterns, and commits ready-to-use security rules directly into this repo — formatted for Cursor, Claude Code, Windsurf, GitHub Copilot, and Cline.
+
+**12 stacks · 6 sources · daily CI · MCP-native · Apache 2.0 · 0 keys required to consume.**
 
 ---
 
 ## How it works
 
-[![asciicast](https://asciinema.org/a/hvKBCjRDdgQVEZQH.svg)](https://asciinema.org/a/hvKBCjRDdgQVEZQH)
+<video src="brand/aigently-mcp-demo.mp4" controls width="100%"></video>
 
 ```text
 CVE published  →  pipeline detects it  →  Claude generates safe-code patterns
     →  rule committed to this repo  →  your IDE enforces it while you type
 ```
 
-AI coding assistants write production code fast. They don't know which CVEs affect your stack today, or how to write around them. Aigent.ly bridges that gap: it turns a live CVE feed into IDE rules that travel with your project, enforced at generation time — not discovered at audit time.
+AI coding assistants write production code fast. They don't know which CVEs landed last week, or how to write around them. Aigent.ly bridges that gap: it turns a live CVE feed into IDE rules that travel with your project, **enforced at generation time — not discovered at audit time**.
 
----
+### Why it exists
 
-## Repository layout
-
-| Path | Contents |
-| --- | --- |
-| `packages/catalog-data/` | Live threat snapshots — JSON committed daily by CI |
-| `packages/mcp-server/` | MCP server (`@aigently/mcp-server`) — exposes catalog to AI agents |
-| `packages/db/` | Drizzle schema shared between the pipeline and the web app |
-| `packages/mvp-catalog/` | Stack registry — add a stack entry here to onboard it |
-| `packages/api-client/` | TypeScript client generated from the OpenAPI spec |
-| `pipeline/scripts/` | `sync`, `amplify`, `summarize`, `synthesize`, `export` — the full pipeline |
-| `.github/workflows/sync-threats.yml` | Daily CI: ingest CVEs → AI guardrails → commit |
+- AI assistants don't know which CVEs landed last week.
+- SAST catches issues at audit time. Aigent.ly catches them at **generation time**.
+- Free, open data. Private, paid product. The security boundary is by design.
 
 ---
 
 ## Quick start
 
-No API keys needed. CI commits fresh snapshots daily — just clone and use.
-
-```bash
-git clone https://github.com/aelbuni/aigently-catalog
-cd aigently-catalog
-npm install
-
-cp pipeline/.env.example pipeline/.env   # default DATABASE_URL matches docker-compose
-npm run db:setup                          # start Postgres, migrate, seed
-```
+No API keys needed to consume. CI commits fresh snapshots daily — point your IDE at the MCP server and you're done.
 
 ### Use via MCP (recommended)
 
@@ -64,88 +53,160 @@ Add to your IDE's MCP config — works with Claude Code, Cursor, Windsurf, Copil
 }
 ```
 
-The MCP server reads static JSON from `packages/catalog-data/` — no database or API keys required.
+The MCP server reads static JSON from `packages/catalog-data/` — **no database, no API keys, no setup**.
 
-#### Available tools
+### Available MCP tools
 
-| Tool | Description |
-| --- | --- |
-| `get_security_context` | Detect your stack and return relevant rules and top CVEs |
-| `compose_guardrail` | Generate an IDE-ready rules file for your stack |
-| `search_threats` | Full-text and faceted CVE search |
-| `get_threat` | Full CVE detail with AI-generated safe-code patterns |
-| `detect_project_stack` | Identify stack from a file list |
+| Tool | Description | Returns EPSS? |
+| --- | --- | :---: |
+| `get_security_context` | Detect your stack and return relevant rules and top CVEs | ✅ |
+| `compose_guardrail` | Generate an IDE-ready rules file for your stack | – |
+| `search_threats` | Full-text and faceted CVE search; ranks by KEV → severity → EPSS | ✅ |
+| `get_threat` | Full CVE detail with AI-generated safe-code patterns | ✅ |
+| `detect_project_stack` | Identify stack(s) from a file list | – |
+| `list_stacks` | Enumerate all 12 supported stacks | – |
+| `get_manifest` | Catalog version + counts | – |
+
+---
+
+## 🛡 What's covered
+
+### Stacks (12)
+
+| # | Stack | Ecosystem | Family | Status |
+| --- | --- | --- | --- | --- |
+| 1 | Next.js | npm | owasp_web | live |
+| 2 | Express / Node.js | npm | owasp_web | live |
+| 3 | FastAPI / Python | PyPI | owasp_web | live |
+| 4 | NestJS | npm | owasp_web | live |
+| 5 | Nuxt | npm | owasp_web | live |
+| 6 | React SPA | npm | owasp_web | live |
+| 7 | Django | PyPI | owasp_web | **🆕 NOW LIVE** |
+| 8 | Ruby on Rails | RubyGems | owasp_web | **🆕 NOW LIVE** |
+| 9 | Go | Go | owasp_web | **🆕 NOW LIVE** |
+| 10 | iOS / Swift | SwiftURL | owasp_web | **🆕 NOW LIVE** |
+| 11 | Android / Kotlin | Maven | owasp_web | **🆕 NOW LIVE** |
+| 12 | **AI / LLM Apps** | PyPI | **owasp_llm** | **✨ NEW** |
+
+**To add a stack:** open [`packages/mvp-catalog/src/stack-registry.ts`](packages/mvp-catalog/src/stack-registry.ts), add a `StackConfig` entry (set `family: "owasp_llm"` for AI-application stacks; default is `owasp_web`), and open a PR.
+
+### Sources (6)
+
+| Source | Role | Auth | Rate limit (free) |
+| --- | --- | --- | --- |
+| **NVD** (NIST) | Authoritative CVE registry. Backfills CVSS scores and CWE IDs. | Optional API key | 5 req/30s (50 with key) |
+| **CISA KEV** | Actively-exploited CVEs. Sets `isActivelyExploited` as the hard prioritization signal. | None | Static feed |
+| **GHSA** (GitHub) | Advisories across npm, PyPI, RubyGems, Maven, Go, Swift. | `Bearer` token | 5,000 req/hr |
+| **OSV** (Google) | Per-package vulnerabilities, scoped to packages your stacks declare. | None | No published limit |
+| **npm Audit** | Direct package advisory scan per stack. Catches advisories not yet in OSV/GHSA. | None | No published limit |
+| **EPSS** (FIRST.org) | **🆕** Daily-updated exploit-probability score (0–1) per CVE. | None | 1,000 req/min |
+
+---
+
+## 🚦 How threats are prioritized
+
+Every threat in the catalog carries multiple ranking signals so the MCP layer can surface the CVEs that actually matter:
+
+```text
+final_rank =  isActivelyExploited (CISA KEV)        ← ground truth: it's being exploited NOW
+           +  severity (CVSS bucket)                 ← classic theoretical severity
+           +  epssScore ≥ 0.5  (+1) / ≥ 0.9 (+2)    ← prediction: how likely 30-day exploitation
+           +  family match (owasp_web | owasp_llm)   ← keep LLM threats from polluting web rankings
+           +  intent overlap (auth/inject/csrf/rag)  ← what the developer is actually doing
+```
+
+EPSS is the difference between "CVSS 9.8 — patch in the next sprint" and "CVSS 9.8 with EPSS 0.94 — drop everything." We expose both.
+
+---
+
+## 🧠 AI / LLM stack
+
+The `ai-llm` stack ingests CVEs against the AI application toolchain and classifies them against the **OWASP LLM Top 10** instead of the Web Top 10:
+
+**Watched packages:** `langchain`, `langchain-community`, `langchain-core`, `llama-index`, `llama-index-core`, `llama-cpp-python`, `transformers`, `huggingface_hub`, `vllm`, `gradio`, `ollama`, `anthropic`, `openai`, `pydantic-ai`, `crewai`, `autogen-agentchat`, `dspy-ai`.
+
+**OWASP LLM mapping** (excerpt — see [`pipeline/scripts/lib/normalise.ts`](pipeline/scripts/lib/normalise.ts)):
+
+| OWASP LLM | Common CWEs | Example |
+| --- | --- | --- |
+| LLM01 — Prompt Injection | CWE-20 / 77 / 78 / 94 / 1321 | Untrusted retrieval context concatenated into the system prompt |
+| LLM02 — Insecure Output / SSRF | CWE-200 / 918 | Tool-calling agent fetches arbitrary internal URLs from a crafted prompt |
+| LLM05 — Supply Chain | CWE-116 / 502 | Untrusted model checkpoint deserialization |
+| LLM06 — Sensitive Info / Authz | CWE-284 / 285 | Embeddings store leaks training-data secrets |
+
+Threats from this stack flow through a dedicated LLM-aware prompt in `amplify-threats.ts` so guardrails are framed in LLM vocabulary (`NEVER concatenate retrieved context into the system prompt without delimiters`) rather than web vocabulary.
 
 ---
 
 ## Threat intelligence pipeline
-
-### Sources
-
-The pipeline aggregates five public threat sources and normalizes them into a single schema:
-
-| Source | Contribution |
-| --- | --- |
-| **NVD** (NIST) | Authoritative CVE registry. Fills in CVSS scores and CWE IDs after deduplication. |
-| **CISA KEV** | US government list of CVEs actively exploited in the wild. Sets `isActivelyExploited` as a hard prioritization signal. |
-| **GHSA** (GitHub) | Advisory database across npm, pip, RubyGems, Maven, Go, Swift, and more. |
-| **OSV** (Google) | Open-source vulnerability database. Queried per stack — scoped to packages your stacks use. |
-| **npm Audit** | Direct package advisory scan per stack. Catches advisories not yet reflected in OSV or GHSA. |
 
 ### Pipeline stages
 
 ```text
 Daily CI run (GitHub Actions, 06:00 UTC)
 
-  Ingest     npm Audit + OSV + GHSA → raw advisories
-  Enrich     CISA KEV flags + NVD severity/CWE fill-in
-  Filter     CVEs published after 2023-01-01 (CISA KEV always included)
-  Persist    write threats + stack associations to Postgres
+  Phase 0     CISA KEV map + stack registry preflight
+  Phase 1–3   npm Audit + OSV + GHSA → raw advisories
+  Phase 5     deduplicate (source-priority based)
+  Phase 4a    EPSS exploit-probability enrichment    ← NEW (batched, 50 CVEs/req)
+  Phase 4     NVD: backfill CVSS & CWE for low-confidence rows
+  Phase 6–8   upsert threats + per-stack mapping + mitigation flags
+  Phase 9     close sync log
 
-  Amplify    Claude: 2–4 ALWAYS/NEVER patterns per CVE
-  Summarize  Claude: cluster CVEs into per-stack rule docs
-  Synthesize Claude: merge into guardrail blocks (patterns + deps)
-  Export     write JSON snapshots to packages/catalog-data/
-
-  Commit     auto-push catalog-data/ to this repo
+  Amplify     Claude: 2–4 ALWAYS/NEVER patterns per CVE (family-aware prompt)
+  Summarize   Claude: cluster CVEs into per-stack rule docs
+  Synthesize  Claude: merge into pre-built guardrail blocks (patterns + deps)
+  Export      write JSON snapshots to packages/catalog-data/
+  Commit      auto-push catalog-data/ to this repo
 ```
 
-### AI enrichment
+<details>
+<summary><strong>Repository layout</strong></summary>
 
-Each new CVE goes through three Claude passes before it becomes an IDE rule:
+| Path | Contents |
+| --- | --- |
+| [`packages/catalog-data/`](packages/catalog-data/) | Live threat snapshots — JSON committed daily by CI |
+| [`packages/mcp-server/`](packages/mcp-server/) | MCP server (`@aigently/mcp-server`) — exposes catalog to AI agents |
+| [`packages/db/`](packages/db/) | Drizzle schema shared between the pipeline and the web app |
+| [`packages/mvp-catalog/`](packages/mvp-catalog/) | Stack registry — add a stack entry here to onboard it |
+| [`packages/api-client/`](packages/api-client/) | TypeScript client generated from the OpenAPI spec |
+| [`pipeline/scripts/`](pipeline/scripts/) | `sync`, `amplify`, `summarize`, `synthesize`, `export` — the full pipeline |
+| [`pipeline/scripts/lib/sources/`](pipeline/scripts/lib/sources/) | One file per data source (NVD, OSV, GHSA, npm-audit, CISA KEV, EPSS) |
+| [`.github/workflows/sync-threats.yml`](.github/workflows/sync-threats.yml) | Daily CI: ingest CVEs → AI guardrails → commit |
 
-1. **Amplify** — Generates 2–4 `ALWAYS`/`NEVER` statements specific to the CVE's attack vector, plus a one-sentence risk summary.
-2. **Summarize** — Clusters CVEs by attack vector into per-stack rule documents with `ALWAYS`/`NEVER`/`WARN`/`CONFIRM` directives.
-3. **Synthesize** — Merges rules per stack into two pre-built guardrail blocks: `patterns` (safe-coding directives) and `deps` (dependency advisories).
-
-### Supported stacks
-
-Next.js · Express · NestJS · Nuxt · React SPA · FastAPI · Django · Ruby on Rails · Go · iOS · Android
-
-**To add a stack:** open [`packages/mvp-catalog/src/stack-registry.ts`](packages/mvp-catalog/src/stack-registry.ts), add a `StackConfig` entry, open a PR.
+</details>
 
 ---
 
 ## Run the pipeline locally
 
 ```bash
-# pipeline/.env — add your keys:
+git clone https://github.com/aelbuni/aigently-catalog
+cd aigently-catalog
+npm install
+
+cp pipeline/.env.example pipeline/.env   # default DATABASE_URL matches docker-compose
+npm run db:setup                         # start Postgres, migrate, seed
+```
+
+```bash
+# pipeline/.env — keys you need only when running the pipeline yourself:
 ANTHROPIC_API_KEY=...   # required for amplify, summarize, synthesize
 GITHUB_TOKEN=...        # required for GHSA source
 NVD_API_KEY=...         # optional — increases NVD rate limit 10×
+# EPSS requires no key.
 
-npm run sync:threats           # ingest CVEs from all five sources
-npm run amplify:threats        # Claude: ALWAYS/NEVER patterns per CVE
+npm run sync:threats           # ingest CVEs from all six sources
+npm run amplify:threats        # Claude: ALWAYS/NEVER patterns per CVE (family-aware)
 npm run summarize:rules        # Claude: cluster into per-stack rule docs
 npm run synthesize:guardrails  # Claude: pre-build guardrail blocks
 npm run export:catalog         # write JSON to packages/catalog-data/
 ```
 
----
+<details>
+<summary><strong>All scripts & environment variables</strong></summary>
 
-## Reference
-
-### All scripts
+### Scripts
 
 | Script | Purpose |
 | --- | --- |
@@ -154,7 +215,7 @@ npm run export:catalog         # write JSON to packages/catalog-data/
 | `npm run db:migrate` | Apply Drizzle migrations |
 | `npm run db:seed` | Full catalog seed |
 | `npm run db:seed:upsert` | Non-destructive upsert |
-| `npm run sync:threats` | Ingest CVEs from all five sources |
+| `npm run sync:threats` | Ingest CVEs from all six sources |
 | `npm run amplify:threats` | AI-generate patterns for new threats |
 | `npm run summarize:rules` | AI-cluster CVEs into rule summaries |
 | `npm run synthesize:guardrails` | Pre-build per-stack guardrail blocks |
@@ -168,6 +229,8 @@ npm run export:catalog         # write JSON to packages/catalog-data/
 | `ANTHROPIC_API_KEY` | AI steps | Claude API access |
 | `GITHUB_TOKEN` | Sync | GitHub advisory source (GHSA) |
 | `NVD_API_KEY` | Optional | 10× NVD rate limit |
+| `STACK_FILTER` | Optional | Limit a sync run to one stack slug (e.g. `ai-llm`) |
+| `DRY_RUN` | Optional | Enrich + dedup without writing to DB |
 
 ### Prerequisites
 
@@ -175,13 +238,29 @@ npm run export:catalog         # write JSON to packages/catalog-data/
 - Docker (for local Postgres)
 - Anthropic API key (AI pipeline steps only)
 
+</details>
+
+---
+
+## 🗺 Roadmap
+
+Already shipped: 12 stacks · 6 sources · EPSS-ranked prioritization · family-aware (web + LLM) amplifier prompts.
+
+Next on deck (PRs welcome):
+
+- **PoC / exploit-availability detection** — GitHub + Exploit-DB + Nuclei templates
+- **Vendor advisories** — MSRC + Red Hat + Ubuntu (for base-image / OS-level CVEs)
+- **STIX 2.1 export** — for SIEM ingestion
+- **KEV / EPSS watchlist webhooks** — alert when a CVE in your detected stack moves into KEV or above an EPSS threshold
+- **Spring Boot, Laravel, .NET stacks** — open to contribution
+
 ---
 
 ## Contributing
 
 PRs are welcome. The highest-value contributions are:
 
-- **New stacks** — add to [`packages/mvp-catalog/src/stack-registry.ts`](packages/mvp-catalog/src/stack-registry.ts)
+- **New stacks** — add to [`packages/mvp-catalog/src/stack-registry.ts`](packages/mvp-catalog/src/stack-registry.ts) (set `family: "owasp_llm"` for AI/LLM stacks)
 - **CVE curation** — improve `mustLines`, `ruleContext`, or `alwaysPin` in [`packages/catalog-data/seed-master.json`](packages/catalog-data/seed-master.json)
 - **Pattern quality** — open an issue if an `ALWAYS`/`NEVER` line is wrong or too generic
 - **New threat sources** — add a module under [`pipeline/scripts/lib/sources/`](pipeline/scripts/lib/sources/)
@@ -192,6 +271,8 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md) for full guidelines.
 
 ## License
 
-Apache 2.0 — threat data sourced from public domain (NVD, CISA KEV, GHSA, OSV).
+Apache 2.0 — threat data sourced from public domain (NVD, CISA KEV, GHSA, OSV, EPSS).
+
+> *"We open-sourced everything the community needs — the data, the pipeline, the stack registry. The web app that runs aigent.ly is private. Because a security product should practice what it preaches."*
 
 Aigent.ly and the Aigent.ly logo are trademarks of Aigently, Inc.

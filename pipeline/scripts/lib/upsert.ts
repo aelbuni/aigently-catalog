@@ -30,6 +30,8 @@ export async function upsertThreat(t: NormalisedThreat): Promise<boolean> {
     patchedVersion:      t.patchedVersion,
     isActivelyExploited: t.isActivelyExploited,
     cisaActionDue:       t.cisaActionDue,
+    epssScore:           t.epssScore,
+    epssPercentile:      t.epssPercentile,
     updatedAt:           now,
     // aiAmplification intentionally absent — editorial-only field
   };
@@ -49,6 +51,9 @@ export async function upsertThreat(t: NormalisedThreat): Promise<boolean> {
         cisaActionDue:       row.cisaActionDue,
         owaspRefs:           row.owaspRefs,
         patchedVersion:      row.patchedVersion,
+        // EPSS scores drift daily — always overwrite with the latest value
+        epssScore:           row.epssScore,
+        epssPercentile:      row.epssPercentile,
         updatedAt:           row.updatedAt,
         // Preserve existing curator-edited content; only fill if currently null
         description: sql`COALESCE(threat.description, EXCLUDED.description)`,

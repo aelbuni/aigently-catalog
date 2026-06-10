@@ -9,6 +9,7 @@ import { fetchNpmAdvisories, normaliseNpmAdvisory } from "./lib/sources/npm-audi
 import { fetchOsvForPackage, normaliseOsvVuln } from "./lib/sources/osv";
 import { fetchGhsaForEcosystem, normaliseGhsa } from "./lib/sources/ghsa";
 import { enrichFromNvd }                        from "./lib/sources/nvd";
+import { fetchEpssBatch }                       from "./lib/sources/epss";
 import { mapCwesToOwasp, normaliseSeverity, deduplicateThreats } from "./lib/normalise";
 import {
   upsertThreat,
@@ -42,6 +43,7 @@ async function main() {
     osv:       { fetched: 0, upserted: 0, skipped: 0, errors: 0 },
     ghsa:      { fetched: 0, upserted: 0, skipped: 0, errors: 0 },
     nvd:       { fetched: 0, upserted: 0, skipped: 0, errors: 0 },
+    epss:      { fetched: 0, upserted: 0, skipped: 0, errors: 0 },
     cisa_kev:  { totalKev: 0, newlyFlagged: 0 },
   };
 
@@ -178,6 +180,29 @@ async function main() {
       t => t.severity !== "low" && t.severity !== "info"
     );
     console.log(`  → ${toInsert.length} threats at HIGH+ severity`);
+
+    // ── Phase 4a: EPSS enrichment (batched, runs before NVD) ──────────
+    // EPSS is cheap, batch-friendly, and family-agnostic — populate it
+    // before the more expensive NVD pass so dry-run output reflects it too.
+    const cveSet = [...new Set(
+      toInsert.map(t => t.cveId).filter((x): x is string => !!x)
+    )];
+    console.log(`Phase 4a [epss]: enriching ${cveSet.length} unique CVEs...`);
+    try {
+      const epssMap = await fetchEpssBatch(cveSet);
+      for (const t of toInsert) {
+        if (!t.cveId) continue;
+        const e = epssMap.get(t.cveId);
+        if (!e) continue;
+        t.epssScore      = e.score;
+        t.epssPercentile = e.percentile;
+        counts.epss.fetched++;
+      }
+      console.log(`  → EPSS scores attached: ${counts.epss.fetched}/${cveSet.length}`);
+    } catch (e) {
+      counts.epss.errors++;
+      console.error("EPSS enrichment failed:", e);
+    }
 
     if (DRY_RUN) {
       console.log(`[DRY RUN] Would upsert ${toInsert.length} threats`);

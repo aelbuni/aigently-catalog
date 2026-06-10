@@ -33,15 +33,27 @@ export const CWE_TO_OWASP_WEB: Record<string, string> = {
 };
 
 export const CWE_TO_OWASP_LLM: Record<string, string> = {
+  // LLM01 — Prompt Injection / command-injection family
   "CWE-20":   "LLM01",
+  "CWE-77":   "LLM01",
+  "CWE-78":   "LLM01",
+  "CWE-94":   "LLM01",
+  "CWE-1321": "LLM01",
+  // LLM02 — Insecure Output Handling / SSRF via tool use
   "CWE-200":  "LLM02",
+  "CWE-918":  "LLM02",
+  // LLM03 — Training Data Poisoning
   "CWE-1104": "LLM03",
-  "CWE-506":  "LLM04",
+  // LLM04 — Model DoS
+  "CWE-400":  "LLM04",
+  // LLM05 — Supply Chain / insecure deserialization of model artifacts
   "CWE-116":  "LLM05",
+  "CWE-502":  "LLM05",
+  // LLM06 — Sensitive Information Disclosure / Authz
   "CWE-284":  "LLM06",
   "CWE-285":  "LLM06",
+  // LLM07 — Insecure Plugin Design
   "CWE-312":  "LLM07",
-  "CWE-400":  "LLM10",
 };
 
 export function mapCwesToOwasp(cwes: string[]): string[] {

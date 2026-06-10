@@ -44,8 +44,11 @@ const amplifyTool = {
   },
 };
 
-// ── System prompt ─────────────────────────────────────────────────────────────
-const SYSTEM_PROMPT = `You are a security guardrail writer for developer IDE rules (Cursor, Claude Code, Windsurf).
+// ── System prompts ────────────────────────────────────────────────────────────
+// We keep two prompt variants — one for owasp_web threats (the default) and one
+// for owasp_llm threats (LangChain / LlamaIndex / transformers / vLLM CVEs).
+// Selection happens in amplifyThreat() based on threat.family.
+const SYSTEM_PROMPT_WEB = `You are a security guardrail writer for developer IDE rules (Cursor, Claude Code, Windsurf).
 You produce concise, actionable content for pattern-level security rules.
 
 PATTERN LINES rules:
@@ -63,6 +66,30 @@ RULE CONTEXT rules:
 - Names the specific real-world risk of this CVE
 - Good: "Redirect handling can forward Authorization and cookie headers to untrusted origins."
 - Bad: "This vulnerability affects node-fetch versions before 2.6.7." (describes the patch, not the risk)`;
+
+const SYSTEM_PROMPT_LLM = `You are a security guardrail writer for developer IDE rules (Cursor, Claude Code, Windsurf).
+You produce concise, actionable content for pattern-level security rules targeting AI / LLM applications
+(LangChain, LlamaIndex, Hugging Face transformers, vLLM, llama-cpp-python, Ollama, agent frameworks).
+Frame guidance against the OWASP LLM Top 10 categories (LLM01 Prompt Injection, LLM02 Insecure Output
+Handling, LLM03 Training Data Poisoning, LLM04 Model DoS, LLM05 Supply Chain, LLM06 Sensitive Info
+Disclosure, LLM07 Insecure Plugin Design, LLM08 Excessive Agency, LLM09 Overreliance, LLM10 Model Theft).
+
+PATTERN LINES rules:
+- 2 to 4 lines, each starting with ALWAYS or NEVER (uppercase)
+- Specific to this LLM-application attack vector — not generic security advice
+- About prompt construction, tool/agent boundaries, output handling, model loading, or retrieval safety
+- Never mention package names, version numbers, or upgrade instructions
+- Good: "NEVER concatenate untrusted retrieval-augmented context directly into the system prompt."
+- Good: "ALWAYS bound agent tools to an explicit allowlist of callable functions."
+- Good: "NEVER deserialize model checkpoints from untrusted sources without integrity verification."
+- Bad: "ALWAYS sanitize input" (generic — say HOW for the LLM context)
+- Bad: "ALWAYS upgrade langchain to 0.1.0" (mentions versions)
+
+RULE CONTEXT rules:
+- Exactly one sentence, ≤120 characters, no markdown, no backticks
+- Names the specific real-world LLM risk this CVE creates
+- Good: "Tool-calling agent permits arbitrary URL fetch via crafted prompts, enabling SSRF to internal services."
+- Bad: "This vulnerability affects langchain versions before 0.0.330." (describes patch, not risk)`;
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 interface AmplifyResult {
@@ -88,6 +115,12 @@ async function amplifyThreat(
     "Write the guardrail content for this threat.",
   ].join("\n");
 
+  // Pick the prompt that matches the threat family — LLM threats need
+  // OWASP-LLM-shaped guardrails, web threats need OWASP-Web-shaped ones.
+  const systemText = t.family === "owasp_llm"
+    ? SYSTEM_PROMPT_LLM
+    : SYSTEM_PROMPT_WEB;
+
   try {
     const response = await client.messages.create({
       model:      MODEL,
@@ -95,7 +128,7 @@ async function amplifyThreat(
       system: [
         {
           type:          "text",
-          text:          SYSTEM_PROMPT,
+          text:          systemText,
           cache_control: { type: "ephemeral" },
         },
       ],

@@ -21,3 +21,6 @@ pipeline/drizzle/meta/*.json
 
 # OS
 .DS_Store
+
+# Local working docs — not for the repo
+internal_docs/

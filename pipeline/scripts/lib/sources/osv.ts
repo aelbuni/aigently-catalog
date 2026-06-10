@@ -87,7 +87,7 @@ export function normaliseOsvVuln(
   return {
     publicId,
     externalId,
-    family:              "owasp_web",
+    family:              config.family ?? "owasp_web",
     name:                vuln.summary ?? vuln.id,
     severity:            sev,
     description:         vuln.details ?? null,
@@ -101,6 +101,8 @@ export function normaliseOsvVuln(
     patchedVersion:      affected[0]?.patchedVersions ?? null,
     isActivelyExploited: !!kevEntry,
     cisaActionDue:       kevEntry?.dueDate ?? null,
+    epssScore:           null,
+    epssPercentile:      null,
     affectedStackSlugs:  [stackSlug],
   };
 }

@@ -86,5 +86,13 @@
     "catalogStatus": "coming_soon",
     "securityGrade": null,
     "sortOrder": 11
+  },
+  {
+    "slug": "ai-llm",
+    "name": "AI / LLM Apps",
+    "ecosystem": "pypi",
+    "catalogStatus": "launch",
+    "securityGrade": null,
+    "sortOrder": 12
   }
 ]

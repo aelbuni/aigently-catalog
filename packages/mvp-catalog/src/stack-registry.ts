@@ -1,4 +1,5 @@
 export type CatalogStatus = "launch" | "coming_soon";
+export type ThreatFamily  = "owasp_web" | "owasp_llm";
 
 export interface StackConfig {
   // ── DB identity (seed.ts writes these to `stack` table) ──────────────
@@ -24,6 +25,11 @@ export interface StackConfig {
   // ── Ingestion filters ────────────────────────────────────────────────
   cwePriority: string[];
   minCvss: number;
+
+  // ── Threat family (defaults to "owasp_web") ──────────────────────────
+  // Set to "owasp_llm" for AI / LLM application stacks so source normalisers
+  // emit owasp_llm threats and the amplifier branches to the LLM prompt.
+  family?: ThreatFamily;
 }
 
 export const STACK_REGISTRY: StackConfig[] = [
@@ -175,11 +181,11 @@ export const STACK_REGISTRY: StackConfig[] = [
     ],
     minCvss: 7.0,
   },
-  // ── COMING SOON ────────────────────────────────────────────────────────
+  // ── LAUNCH (newly promoted from coming_soon) ───────────────────────────
   {
     slug: "django",
     name: "Django",
-    catalogStatus: "coming_soon",
+    catalogStatus: "launch",
     sortOrder: 7,
     ecosystem: "pypi",
     osvEcosystem: "PyPI",
@@ -194,7 +200,7 @@ export const STACK_REGISTRY: StackConfig[] = [
   {
     slug: "rails",
     name: "Ruby on Rails",
-    catalogStatus: "coming_soon",
+    catalogStatus: "launch",
     sortOrder: 8,
     ecosystem: "rubygems",
     osvEcosystem: "RubyGems",
@@ -209,18 +215,22 @@ export const STACK_REGISTRY: StackConfig[] = [
   {
     slug: "go",
     name: "Go",
-    catalogStatus: "coming_soon",
+    catalogStatus: "launch",
     sortOrder: 9,
     ecosystem: "go",
     osvEcosystem: "Go",
     osvPackages: [
       "github.com/gin-gonic/gin",
+      "github.com/labstack/echo/v4",
+      "github.com/gofiber/fiber/v2",
       "github.com/golang-jwt/jwt",
+      "github.com/spf13/viper",
       "gorm.io/gorm",
       "golang.org/x/net",
       "golang.org/x/crypto",
+      "golang.org/x/text",
     ],
-    nvdKeywords: ["gin-gonic", "golang web", "go net"],
+    nvdKeywords: ["gin-gonic", "golang web", "go net", "echo framework", "gofiber"],
     ghsaEcosystem: "GO",
     cwePriority: [
       "CWE-89", "CWE-22", "CWE-285", "CWE-798", "CWE-400", "CWE-295",
@@ -230,15 +240,18 @@ export const STACK_REGISTRY: StackConfig[] = [
   {
     slug: "ios",
     name: "iOS / Swift",
-    catalogStatus: "coming_soon",
+    catalogStatus: "launch",
     sortOrder: 10,
     ecosystem: "swift",
     osvEcosystem: "SwiftURL",
     osvPackages: [
       "github.com/Alamofire/Alamofire",
       "github.com/realm/realm-swift",
+      "github.com/onevcat/Kingfisher",
+      "github.com/apple/swift-nio",
+      "github.com/firebase/firebase-ios-sdk",
     ],
-    nvdKeywords: ["ios swift", "apple ios sdk", "swiftui"],
+    nvdKeywords: ["ios swift", "apple ios sdk", "swiftui", "swift-nio", "alamofire"],
     ghsaEcosystem: "SWIFT",
     cwePriority: ["CWE-312", "CWE-295", "CWE-200", "CWE-798", "CWE-532"],
     minCvss: 6.5,
@@ -246,19 +259,63 @@ export const STACK_REGISTRY: StackConfig[] = [
   {
     slug: "android",
     name: "Android / Kotlin",
-    catalogStatus: "coming_soon",
+    catalogStatus: "launch",
     sortOrder: 11,
     ecosystem: "maven",
     osvEcosystem: "Maven",
     osvPackages: [
       "com.squareup.okhttp3:okhttp",
+      "com.squareup.okhttp3:okhttp-tls",
+      "com.squareup.retrofit2:retrofit",
       "com.google.firebase:firebase-auth",
       "androidx.security:security-crypto",
+      "androidx.work:work-runtime",
+      "com.google.android.gms:play-services-auth",
     ],
-    nvdKeywords: ["android kotlin", "android sdk", "androidx"],
+    nvdKeywords: ["android kotlin", "android sdk", "androidx", "okhttp", "retrofit"],
     ghsaEcosystem: "MAVEN",
     cwePriority: ["CWE-312", "CWE-295", "CWE-532", "CWE-798", "CWE-200"],
     minCvss: 6.5,
+  },
+  // ── LAUNCH (NEW) — AI / LLM application stack ──────────────────────────
+  {
+    slug: "ai-llm",
+    name: "AI / LLM Apps",
+    catalogStatus: "launch",
+    sortOrder: 12,
+    ecosystem: "pypi",
+    osvEcosystem: "PyPI",
+    osvPackages: [
+      "langchain",
+      "langchain-community",
+      "langchain-core",
+      "llama-index",
+      "llama-index-core",
+      "llama-cpp-python",
+      "transformers",
+      "huggingface_hub",
+      "vllm",
+      "gradio",
+      "ollama",
+      "anthropic",
+      "openai",
+      "pydantic-ai",
+      "crewai",
+      "autogen-agentchat",
+      "dspy-ai",
+    ],
+    nvdKeywords: [
+      "langchain", "llama-index", "hugging face", "transformers",
+      "vllm", "gradio", "ollama",
+    ],
+    ghsaEcosystem: "PIP",
+    cwePriority: [
+      "CWE-20",  "CWE-77",  "CWE-78",  "CWE-94",
+      "CWE-200", "CWE-284", "CWE-285", "CWE-400",
+      "CWE-502", "CWE-918", "CWE-1321",
+    ],
+    minCvss: 7.0,
+    family: "owasp_llm",
   },
 ];
 
