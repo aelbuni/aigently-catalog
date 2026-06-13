@@ -120,10 +120,20 @@ type ThreatStackFile = {
 // Stack metadata is now in STACK_REGISTRY (packages/mvp-catalog/src/stack-registry.ts)
 
 function mapThreatSource(raw: string | null | undefined, sourceUrl: string): "ghsa" | "nvd" | "osv" | "cisa_kev" {
-  const u = sourceUrl.toLowerCase();
-  if (u.includes("nvd.nist.gov")) return "nvd";
-  if (u.includes("cisa.gov")) return "cisa_kev";
-  if (u.includes("github.com/advisories") || raw === "npm") return "ghsa";
+  if (raw === "npm") return "ghsa";
+
+  try {
+    const parsed = new URL(sourceUrl);
+    const host = parsed.hostname.toLowerCase();
+    const path = parsed.pathname.toLowerCase();
+
+    if (host === "nvd.nist.gov" || host.endsWith(".nvd.nist.gov")) return "nvd";
+    if (host === "cisa.gov" || host.endsWith(".cisa.gov")) return "cisa_kev";
+    if (host === "github.com" && path.startsWith("/advisories")) return "ghsa";
+  } catch {
+    // Ignore malformed URLs and fall through to default source mapping.
+  }
+
   return "osv";
 }
 
