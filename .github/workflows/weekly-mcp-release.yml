@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
       id-token: write   # required for npm provenance
 
     steps:
@@ -49,15 +50,38 @@ jobs:
       - name: Smoke test
         run: npm test -w @aigently/mcp-server
 
-      - name: Commit and tag (skip if already done)
+      - name: Open version-bump PR and tag
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name  "aigently-bot"
           git config user.email "bot@aigently.io"
+
+          VERSION="${{ steps.bump.outputs.version }}"
+          BRANCH="bot/mcp-release-v$VERSION"
+
+          # main is protected — land the bump via PR instead of pushing directly.
           git add packages/mcp-server/package.json
-          git diff --staged --quiet || git commit -m "chore(mcp-server): weekly release v${{ steps.bump.outputs.version }}"
-          git tag "mcp-server/v${{ steps.bump.outputs.version }}" 2>/dev/null || echo "Tag already exists, skipping"
-          git push origin main 2>/dev/null || echo "Nothing new to push"
-          git push origin "mcp-server/v${{ steps.bump.outputs.version }}" 2>/dev/null || echo "Tag already pushed"
+          if git diff --staged --quiet; then
+            echo "Nothing to commit — version unchanged."
+          else
+            git checkout -B "$BRANCH"
+            git commit -m "chore(mcp-server): weekly release v$VERSION"
+            git push --force-with-lease origin "$BRANCH"
+
+            gh pr create \
+              --title "chore(mcp-server): weekly release v$VERSION" \
+              --body "Automated version bump for the weekly MCP release. npm publish (next step, this same run) doesn't wait on this merging." \
+              --base main \
+              --head "$BRANCH" \
+              || true
+
+            gh pr merge "$BRANCH" --auto --squash --delete-branch || true
+          fi
+
+          # Tags aren't branch-protected, so this can still push directly.
+          git tag "mcp-server/v$VERSION" 2>/dev/null || echo "Tag already exists, skipping"
+          git push origin "mcp-server/v$VERSION" 2>/dev/null || echo "Tag already pushed"
 
       - name: Publish to npm
         working-directory: packages/mcp-server
