@@ -28,17 +28,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Bump patch version (skip if already tagged)
+      - name: Bump patch version (skip if not yet published)
         id: bump
         working-directory: packages/mcp-server
         run: |
           CURRENT=$(node -p "require('./package.json').version")
-          if git tag -l "mcp-server/v$CURRENT" | grep -q .; then
-            echo "Tag mcp-server/v$CURRENT already exists — reusing version for re-run"
-            VERSION=$CURRENT
-          else
+          if npm view "@aigently/mcp-server@$CURRENT" version >/dev/null 2>&1; then
+            echo "$CURRENT is already published on npm — bumping to next patch"
             npm version patch --no-git-tag-version
             VERSION=$(node -p "require('./package.json').version")
+          else
+            echo "$CURRENT is not yet published — reusing it for this run (retry)"
+            VERSION=$CURRENT
           fi
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
